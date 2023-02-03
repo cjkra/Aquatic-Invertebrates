@@ -1,0 +1,23 @@
+---
+title: "Filter_Beaker_Data_Processing"
+author: "Chris Kracha"
+date: "2023-01-28"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(janitor)
+```
+
+# load in tables
+```{r}
+inv2018 <- read_csv("downloaded tables/2018_raw.csv", skip = 5)
+inv2019 <- read_csv("downloaded tables/2019_normalized.csv", skip = 1)
+inv2021 <- read_csv("downloaded tables/2021_raw.csv")
+```
+
+# remove non-data rows
+```{r}
+inv2018 <- inv2018 %>% clean_names() %>% select(1:42) %>% filter(!is.na(site_2))
+```
