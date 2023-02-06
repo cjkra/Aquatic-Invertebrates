@@ -10,6 +10,7 @@ library(tidyverse)
 library(lubridate)
 library(janitor)
 library(vegan)
+library("hydroTSM")
 ```
 
 # load in tables
@@ -68,7 +69,21 @@ inv2021_2019 <- inv2021 %>% select(-lepidoptera_crambidae,
                               -comments, -x57, -unknown, -total_number) %>%
   bind_rows(., inv2019)
 
-inv2021_2019_totals <- inv2021_2019 %>% select(1:3, ostracod, copepod, nematode, diptera_total, amphipod, hemiptera_total, annelida_total, ephemeroptera_sp, odonate, coleoptera_total, tipulidae_larva, arachnida_acari_mite, collembola_springtail, gastropod_snail) 
+inv2021_2019_totals <- inv2021_2019 %>% select(1:3, ostracod, copepod, nematode, diptera_total, amphipod, hemiptera_total, annelida_total, ephemeroptera_sp, trichoptera_sp, odonate, coleoptera_total, tipulidae_larva, arachnida_acari_mite, collembola_springtail, gastropod_snail) %>%
+  mutate(total_organisms = rowSums(.[4:18], na.rm=TRUE),
+         month = month(date),
+         season = time2season(date, out.fmt = "seasons"))
 
+testInv <- inv2021_2019_totals %>% pivot_longer(cols = ostracod:gastropod_snail, 
+                                      names_to = "species", 
+                                      values_to = "count") %>%
+  ggplot(aes(x = count, y = species, fill = species)) + geom_bar(stat = "identity") +
+  facet_wrap(~site)
+
+inv2021_2019_totals %>% filter(sample_type == "FB250") %>%
+  ggplot(aes(x = month, y = total_organisms)) + geom_bar(stat = "identity")
+
+inv2021_2019_totals %>% filter(sample_type == "FB250") %>%
+  ggplot(aes(x = season, y = total_organisms)) + geom_bar(stat = "identity")
 ```
 
