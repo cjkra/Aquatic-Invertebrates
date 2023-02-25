@@ -61,11 +61,16 @@ inv2021 <- inv2021_22csv %>% clean_names() %>%
          across(ostracod:larvae, ~as.numeric(.)),
          # format date
          date_on_vial = dmy(date_on_vial))
+inv2021[7, 5] <- (inv2021[7, 5])/10 # fix probable error ??
 
+rm(inv2018csv)
+rm(inv2019csv)
+rm(inv2021_22csv)
 ```
 
 # rename columns to match
 ```{r}
+# rename columns to match order_family format
 inv2018 <- inv2018  %>% 
   rename(date = date_1,
          site = site_2,
@@ -99,10 +104,36 @@ inv2021 <- inv2021 %>%
          diptera_ceratopogonidae = diptera_ceratopohonidae)
 ```
 
-# combine all columns
+# combine columns and fix factors
 ```{r}
-inv <- bind_rows(inv2018, inv2019, inv2021)
-colnames(inv)
+# combine rows
+inv <- bind_rows(inv2018, inv2019, inv2021) %>%
+  # standardize sample_type column
+  mutate(sample_type = case_when(sample_type %in% c("FB", "FB 250") ~ "FB250", # change FB and FB 250 to FB250
+                                 str_detect(sample_type, "CORE") ~ "CORE", # change anything with CORE to just CORE
+                                 TRUE ~ sample_type), # keep the rest
+         site = case_when(site == "NPB 2" ~ "NPB2",
+                          site %in% c("NEV", "NWC") ~ "NEC",
+                          site == "CVP1" ~ "VP1",
+                          TRUE ~ site),
+         site_type = case_when(site %in% c("CUL1", "MO1", "NDC", "NEC", "NMC", "NPB", 
+                                           "NPB1", "NPB2", "NVBR", "NWP", "PIER", "VBR1") ~ "slough",
+                               TRUE ~ "pool"),
+         season = time2season(date, out.fmt = "seasons"), 
+         season = as.factor(case_when(season == "autumm" ~ "fall",
+                            TRUE ~ season)),
+         season = factor(season, c("fall", "winter", "spring", "summer"))) %>%
+  select(date, season, site, site_type, sample_type, everything())
+  
+invLong <- inv %>% pivot_longer(6:57, names_to = "taxa", values_to = "organisms_L") %>% na.omit()
+
+ggplot(invLong, aes(fill = site_type, y = organisms_L, x = season)) + 
+    geom_bar(stat = "identity")
+
+ggplot(invLong, aes(fill = site_type, y = organisms_L, x = season)) + 
+    geom_bar(stat = "identity")
+
+
 ```
 
 # combine 2019 and 2021-22
