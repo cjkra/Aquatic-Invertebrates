@@ -22,7 +22,7 @@ inv2021_22csv <- read_csv("downloaded tables/2021_raw.csv")
 
 # format tables for each year
 ```{r}
-inv2018 <- inv2018csv %>% clean_names() %>% 
+inv2018f <- inv2018csv %>% clean_names() %>% 
   # get relevant columns
   select(1:42, -4) %>%
   # keep only the rows with dates
@@ -36,7 +36,7 @@ inv2018 <- inv2018csv %>% clean_names() %>%
           # format date
          date_1 = dmy(date_1))
 
-inv2019 <- inv2019csv %>% clean_names() %>% 
+inv2019f <- inv2019csv %>% clean_names() %>% 
   select(1:42, -4, -total_number) %>% 
   # keep only the rows with dates
   filter(!is.na(date_1), !is.na(site_2)) %>%
@@ -47,7 +47,7 @@ inv2019 <- inv2019csv %>% clean_names() %>%
          # format date
          date_1 = dmy(date_1))
 
-inv2021 <- inv2021_22csv %>% clean_names() %>%
+inv2021f <- inv2021_22csv %>% clean_names() %>%
   # remove unused variables
   select(-person_entering_data, -person_that_sorted_the_sample, 
          -total_number, -unknown, -x57, -comments) %>% 
@@ -61,17 +61,13 @@ inv2021 <- inv2021_22csv %>% clean_names() %>%
          across(ostracod:larvae, ~as.numeric(.)),
          # format date
          date_on_vial = dmy(date_on_vial))
-inv2021[7, 5] <- (inv2021[7, 5])/10 # fix probable error ??
-
-rm(inv2018csv)
-rm(inv2019csv)
-rm(inv2021_22csv)
+inv2021f[7, 5] <- (inv2021f[7, 5])/10 # fix probable error ??
 ```
 
 # rename columns to match
 ```{r}
 # rename columns to match order_family format
-inv2018 <- inv2018  %>% 
+inv2018 <- inv2018f %>% 
   rename(date = date_1,
          site = site_2,
          sample_type = sample_type_3,
@@ -89,19 +85,20 @@ inv2018 <- inv2018  %>%
          coleoptera_hydraenidae = coleoptera_hydraenidae_stripes,
          coleoptera_dytiscidae = coleoptera_dystiscidae) # fix spelling
 
-inv2019 <- inv2019 %>% 
+inv2019 <- inv2019f %>% 
   rename(date = date_1,
          site = site_2,
          sample_type = sample_type_3,
-         ephemeroptera = ephemeroptera_sp,
+         ephemeroptera = ephemeroptera_sp, # sp is only category
          arachnida_acari = arachnida_acari_mite,
          coleoptera_hydraenidae = coleoperta_hydraenidae)
 
-inv2021 <- inv2021 %>% 
+inv2021 <- inv2021f %>% 
   rename(date = date_on_vial,
          diptera_syrphidae = syrphidae,
-         plecoptera = plecoptera_sp,
-         diptera_ceratopogonidae = diptera_ceratopohonidae)
+         plecoptera = plecoptera_sp, # sp is only category
+         diptera_ceratopogonidae = diptera_ceratopohonidae,
+         coleoptera_hydraenidae = coleoperta_hydraenidae)
 ```
 
 # combine columns and fix factors
@@ -112,55 +109,115 @@ inv <- bind_rows(inv2018, inv2019, inv2021) %>%
   mutate(sample_type = case_when(sample_type %in% c("FB", "FB 250") ~ "FB250", # change FB and FB 250 to FB250
                                  str_detect(sample_type, "CORE") ~ "CORE", # change anything with CORE to just CORE
                                  TRUE ~ sample_type), # keep the rest
+         ## standardize site column
          site = case_when(site == "NPB 2" ~ "NPB2",
-                          site %in% c("NEV", "NWC") ~ "NEC",
+                          site %in% c("NEV", "NWC") ~ "NEC", # assumed typos
                           site == "CVP1" ~ "VP1",
+                          site == "VNVP2" ~ "NVP2", 
+                          site == "VNVP4" ~ "NVP4",
                           TRUE ~ site),
+         # add site_type NCOS/COPR column
          site_type = case_when(site %in% c("CUL1", "MO1", "NDC", "NEC", "NMC", "NPB", 
                                            "NPB1", "NPB2", "NVBR", "NWP", "PIER", "VBR1") ~ "slough",
                                TRUE ~ "pool"),
+         # add seasons column
          season = time2season(date, out.fmt = "seasons"), 
-         season = as.factor(case_when(season == "autumm" ~ "fall",
+         season = as.factor(case_when(season == "autumm" ~ "fall", # rename factor
                             TRUE ~ season)),
-         season = factor(season, c("fall", "winter", "spring", "summer"))) %>%
-  select(date, season, site, site_type, sample_type, everything())
+         season = factor(season, c("fall", "winter", "spring", "summer"))) %>% # reorder seasons
   
-invLong <- inv %>% pivot_longer(6:57, names_to = "taxa", values_to = "organisms_L") %>% na.omit()
+  # reorder columns to make sense
+  select(date, season, site, site_type, sample_type, ostracod, copepod, amphipod, isopod, cladocera, clam_shrimp, annelida_sp, annelida_oligochaete, annelida_polychaete, nematode, mollusk, gastropod_snail, coleoptera_sp, coleoptera_hydrophilidae, coleoptera_tropiscernus, coleoptera_dytiscidae, coleoptera_dytiscidae_agabus, coleoptera_dytiscidae_liodessus_affinis, coleoptera_dytiscidae_colymbetinae, coleoptera_hydraenidae, coleoptera_hydraenidae_larva_joe, coleoptera_curculionidae_weavil, coleoptera_gyrindae_gyrinini, dipteran_sp, diptera_chironomid, diptera_ceratopogonidae, diptera_ephydridae, diptera_stratiomyidae, diptera_culicidae, diptera_syrphidae, tipulidae_larva, ephemeroptera, ephemeroptera_sp, plecoptera, trichoptera_sp, hemiptera_corixidae_boatman, hemiptera_notonectidae, hemiptera_mesoveliidae, odonate, collembola_springtail, lepidoptera_crambidae, arachnida_acari, arachnida_acari_mite, hydrachnidia, larvae, terrestrials)
 
-ggplot(invLong, aes(fill = site_type, y = organisms_L, x = season)) + 
-    geom_bar(stat = "identity")
+# get list of columns with no IDs
+inv[, 6:length(inv)] %>% select_if(colSums(., na.rm = T) != 0) %>% colnames() %>% 
+  setdiff(colnames(inv[, 6:length(inv)]), .)
 
-ggplot(invLong, aes(fill = site_type, y = organisms_L, x = season)) + 
-    geom_bar(stat = "identity")
+inv %>% write.csv("cleaned tables/all_invert_data.csv")
 
-
+rm(inv2018csv, inv2019csv, inv2021_22csv, inv2018f, inv2019f, inv2021f)
 ```
 
-# combine 2019 and 2021-22
+# make totals table
 ```{r}
-inv2021_2019 <- inv2021 %>% 
-  # remove columns that aren;t in 2019
-  select(-lepidoptera_crambidae, -hemiptera_mesoveliidae, -ephemeroptera,
-         -coleoptera_tropiscernus, -plecoptera_sp, -mollusk, -syrphidae,
-         -terrestrials, -hydrachnidia, -isopod, -larvae, -comments, -x57, 
-         -unknown, -total_number) %>%
-  bind_rows(., inv2019)
+# roughly ordered from tolerant to sensitive
+invTotal <- inv %>% 
+  rowwise() %>%
+  mutate(flies = sum(c_across(dipteran_sp:diptera_syrphidae), na.rm = T),
+         boaters = sum(c_across(hemiptera_corixidae_boatman:hemiptera_mesoveliidae), na.rm = T),
+         mites = sum(c_across(arachnida_acari:hydrachnidia), na.rm = T),
+         crustaceans = sum(c_across(ostracod:clam_shrimp), na.rm = T),
+         worms = sum(c_across(annelida_sp:nematode), na.rm = T),
+         mollusks = sum(c_across(mollusk:gastropod_snail), na.rm = T),
+         beetles = sum(c_across(coleoptera_sp:coleoptera_gyrindae_gyrinini), na.rm = T),
+         springtail = collembola_springtail,
+         dragonfly = odonate,
+         larvae = sum(c_across(c(tipulidae_larva, larvae)), na.rm = T),
+         ept = sum(c_across(ephemeroptera:trichoptera_sp), na.rm = T),
+         total = sum(c_across(ostracod:terrestrials), na.rm = T)) %>%
+  select(date:sample_type, flies, boaters, mites, crustaceans, worms, mollusks, 
+         beetles, springtail, dragonfly, larvae, ept, total)
 
-inv2021_2019_totals <- inv2021_2019 %>% select(1:3, ostracod, copepod, nematode, diptera_total, amphipod, hemiptera_total, annelida_total, ephemeroptera_sp, trichoptera_sp, odonate, coleoptera_total, tipulidae_larva, arachnida_acari_mite, collembola_springtail, gastropod_snail) %>%
-  mutate(total_organisms = rowSums(.[4:18], na.rm=TRUE),
-         month = month(date),
-         season = time2season(date, out.fmt = "seasons"))
-
-testInv <- inv2021_2019_totals %>% pivot_longer(cols = ostracod:gastropod_snail, 
-                                      names_to = "species", 
-                                      values_to = "count") %>%
-  ggplot(aes(x = count, y = species, fill = species)) + geom_bar(stat = "identity") +
-  facet_wrap(~site)
-
-inv2021_2019_totals %>% filter(sample_type == "FB250") %>%
-  ggplot(aes(x = month, y = total_organisms)) + geom_bar(stat = "identity")
-
-inv2021_2019_totals %>% filter(sample_type == "FB250") %>%
-  ggplot(aes(x = season, y = total_organisms)) + geom_bar(stat = "identity")
+invTotal %>% write.csv("cleaned tables/all_invert_data_totals.csv")
 ```
+
+# make long tables
+```{r}
+invLong <- inv %>% pivot_longer(6:length(inv), 
+                                names_to = "taxa", 
+                                values_to = "organisms_L") %>%
+  mutate(taxa = as.factor(taxa)) %>% na.omit()
+
+invLong %>% write.csv("cleaned tables/all_invert_data_long.csv")
+
+
+invTotalLong <- invTotal %>% select(-total) %>% pivot_longer(6:(length(invTotal)-1), 
+                                                            names_to = "group", 
+                                                            values_to = "organisms_L") %>%
+  mutate(group = fct_relevel(as.factor(group), c('flies', 'boaters', 'mites', 'crustaceans', 'worms', 
+                                                 'mollusks', 'beetles', 'springtail', 'dragonfly', 
+                                                 'larvae', 'ept'))) %>% na.omit()
+
+invTotalLong %>% write.csv("cleaned tables/all_invert_data_totals_long.csv")
+```
+
+# visualize data coverages
+```{r}
+ggplot(invLong, aes(fill = site_type, y = organisms_L, x = season)) + geom_bar(stat = "identity") +
+  ggtitle("Organisms collected by season") + ylab("organisms/L") + labs(fill = "site location")
+
+ggplot(inv, aes(fill = site_type, x = season)) + geom_bar(stat = "count") +
+  ggtitle("Samples collected by season") + ylab("sample count") + labs(fill = "site location")
+
+ggplot(invLong, aes(fill = sample_type, y = organisms_L, x = year(date))) + geom_bar(stat = "identity") +
+  ggtitle("Organisms collected by year") + ylab("organisms/L") + labs(fill = "sample type")
+
+ggplot(inv, aes(fill = sample_type, x = year(date))) + geom_bar(stat = "count") +
+  ggtitle("Samples collected by year") + ylab("sample count") + labs(fill = "sample type")
+
+ggplot(inv, aes(x = date, y = site, color = sample_type)) + geom_point(shape = 15) +
+  ggtitle("Samples by site and date") + labs(fill = "sample type")
+```
+
+# visualize organisms
+```{r}
+invTotalLong %>% filter(sample_type == "FB250", site_type == "slough") %>%
+  ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
+  ggtitle("Taxa group by slough site, filter beaker method") + ylab("organisms/L") + labs(fill = "site location")
+
+invTotalLong %>% filter(sample_type == "FB250", site_type == "slough", group != "crustaceans") %>%
+  ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
+  ggtitle("Taxa group by slough site, filter beaker method \nNo crustaceans") + ylab("organisms/L") + labs(fill = "site location")
+
+invTotalLong %>% filter(sample_type == "FB250", site_type == "slough", !(group %in% c("crustaceans", "boaters"))) %>%
+  ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
+  ggtitle("Taxa group by slough site, filter beaker method \nNo crustaceans or boaters") + 
+  ylab("organisms/L") + labs(fill = "site location")
+
+invTotalLong %>% filter(sample_type == "FB250", site_type == "slough", !(group %in% c("crustaceans", "boaters", "flies"))) %>%
+  ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
+  ggtitle("Taxa group by slough site, filter beaker method \nNo crustaceans, boaters, or flies") + 
+  ylab("organisms/L") + labs(fill = "site location")
+```
+
 
