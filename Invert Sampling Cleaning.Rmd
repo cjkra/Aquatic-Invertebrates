@@ -140,7 +140,8 @@ rm(inv2018csv, inv2019csv, inv2021_22csv, inv2018f, inv2019f, inv2021f)
 
 # make totals table
 ```{r}
-# roughly ordered from tolerant to sensitive
+
+# very roughly ordered from tolerant to sensitive
 invTotal <- inv %>% 
   rowwise() %>%
   mutate(flies = sum(c_across(dipteran_sp:diptera_syrphidae), na.rm = T),
@@ -196,28 +197,61 @@ ggplot(inv, aes(fill = sample_type, x = year(date))) + geom_bar(stat = "count") 
   ggtitle("Samples collected by year") + ylab("sample count") + labs(fill = "sample type")
 
 ggplot(inv, aes(x = date, y = site, color = sample_type)) + geom_point(shape = 15) +
-  ggtitle("Samples by site and date") + labs(fill = "sample type")
+  ggtitle("Samples by site and date") + labs(color = "sample type")
 ```
 
 # visualize organisms
 ```{r}
+# visualize filter beaker organisms from slough
 invTotalLong %>% filter(sample_type == "FB250", site_type == "slough") %>%
   ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
-  ggtitle("Taxa group by slough site, filter beaker method") + ylab("organisms/L") + labs(fill = "site location")
+  ggtitle("Taxa group by slough site, filter beaker method") + ylab("organisms/L") + labs(fill = "taxa group")
 
 invTotalLong %>% filter(sample_type == "FB250", site_type == "slough", group != "crustaceans") %>%
   ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
-  ggtitle("Taxa group by slough site, filter beaker method \nNo crustaceans") + ylab("organisms/L") + labs(fill = "site location")
+  ggtitle("Taxa group by slough site, filter beaker method \nNo crustaceans") + ylab("organisms/L") + labs(fill = "taxa group")
 
 invTotalLong %>% filter(sample_type == "FB250", site_type == "slough", !(group %in% c("crustaceans", "boaters"))) %>%
   ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
   ggtitle("Taxa group by slough site, filter beaker method \nNo crustaceans or boaters") + 
-  ylab("organisms/L") + labs(fill = "site location")
+  ylab("organisms/L") + labs(fill = "taxa group")
 
 invTotalLong %>% filter(sample_type == "FB250", site_type == "slough", !(group %in% c("crustaceans", "boaters", "flies"))) %>%
   ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
   ggtitle("Taxa group by slough site, filter beaker method \nNo crustaceans, boaters, or flies") + 
-  ylab("organisms/L") + labs(fill = "site location")
+  ylab("organisms/L") + labs(fill = "taxa group")
+
+# visualize core organisms from slough
+invTotalLong %>% filter(sample_type == "CORE", site_type == "slough") %>%
+  ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
+  ggtitle("Taxa group by slough site, sediment core method") + ylab("organisms/L") + labs(fill = "taxa group")
+
+invTotalLong %>% filter(sample_type == "CORE", site_type == "slough", group != "crustaceans") %>%
+  ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
+  ggtitle("Taxa group by slough site, sediment core method \nNo crustaceans") + ylab("organisms/L") + labs(fill = "taxa group")
+
+invTotalLong %>% filter(sample_type == "CORE", site_type == "slough", !(group %in% c("crustaceans", "boaters"))) %>%
+  ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
+  ggtitle("Taxa group by slough site, sediment core method \nNo crustaceans or boaters") + 
+  ylab("organisms/L") + labs(fill = "taxa group")
+
+# visualize filter beaker organisms from vernal pools
+invTotalLong %>% filter(sample_type == "FB250", site_type == "pool") %>%
+  ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
+  ggtitle("Taxa group by vernal pool, filter beaker method") + ylab("organisms/L") + labs(fill = "taxa group")
+
+invTotalLong %>% filter(sample_type == "FB250", site_type == "pool", !(group %in% c("crustaceans"))) %>%
+  ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
+  ggtitle("Taxa group by vernal pool, filter beaker method \nNo crustaceans") + ylab("organisms/L") + labs(fill = "taxa group")
+
+# visualize core organisms from vernal pools
+invTotalLong %>% filter(sample_type == "CORE", site_type == "pool") %>%
+  ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
+  ggtitle("Taxa group by vernal pool, sediment core method") + ylab("organisms/L") + labs(fill = "taxa group")
+
+invTotalLong %>% filter(sample_type == "CORE", site_type == "pool", !(group %in% c("crustaceans"))) %>%
+  ggplot(aes(x = site, y = organisms_L, fill = group)) + geom_bar(stat = "identity") +
+  ggtitle("Taxa group by vernal pool, sediment core method \nNo crustaceans") + ylab("organisms/L") + labs(fill = "taxa group")
 ```
 
 
