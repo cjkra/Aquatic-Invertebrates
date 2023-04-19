@@ -5,27 +5,28 @@ date: "2023-01-28"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-# This document contains cleaning scripts for data from manual invert sampling conducted from 2018-3/2020 and 4/2021-2023. Tables are reformatted to fit our needs, factors are reordered and relabeled, additional metadata is created, taxa columns are renamed, and all rounds of sampling are combined. Products of this document include long and wide tables, as well as summary tables that make the data more accessible.
+This document contains cleaning scripts for data from manual invert sampling conducted from 2018-3/2020 and 4/2021-2023. Tables are reformatted to fit our needs, factors are reordered and relabeled, additional metadata is created, taxa columns are renamed, and all rounds of sampling are combined. Products of this document include long and wide tables, as well as summary tables that make the data more accessible.
 
+```{r setup, include=FALSE}
+library(dplyr)
 library(janitor)
 library(vegan) # for analysis
 library("hydroTSM") # for time series, made for hydrology applications
-library(tidyverse)
 library(lubridate)
+library(tidyverse)
 ```
 
-# clean tables
-## load in tables
+# Clean tables
+## Load in tables
 ```{r message=FALSE}
 inv2018csv <- read_csv("raw_data/invert_sampling_downloads/2018_raw_normalized.csv", skip = 5)
 inv2019csv <- read_csv("raw_data/invert_sampling_downloads/2019_normalized.csv", skip = 1)
 inv2021_22csv <- read_csv("raw_data/invert_sampling_downloads/2021_raw.csv")
 ```
 
-## format tables for each year
+## Format tables for each year
 ```{r}
-inv2018f <- inv2018csv %>% clean_names() %>% 
+inv2018f <- inv2018csv %>% clean_names() %>%
   # get relevant columns, including species and WQ
   select(1:42, 47:55, -4) %>%
   # keep only the rows with dates
@@ -45,30 +46,33 @@ inv2019f <- inv2019csv %>% clean_names() %>%
   # keep only the rows with dates
   filter(!is.na(date_1), !is.na(site_2)) %>%
   # make species numeric
-  mutate(across(ostracod:clam_shrimp, ~as.numeric(.)),
+  dplyr::mutate(across(ostracod:clam_shrimp, ~as.numeric(.))) %>%
          # replace species NAs with zeroes
-         across(ostracod:clam_shrimp, ~replace_na(.,0)),
+  dplyr::mutate(across(ostracod:clam_shrimp, ~replace_na(.,0))) %>%
          # format date
-         date_1 = dmy(date_1))
+  dplyr::mutate(date_1 = dmy(date_1))
 
 inv2021f <- inv2021_22csv %>% clean_names() %>%
   # remove unused variables
   select(-person_entering_data, -person_that_sorted_the_sample, 
          -total_number, -unknown, -x57, -comments) %>% 
   # remove unfinished samples
-  filter(!row_number() %in% c(7, 24, 26)) %>%
+  filter(!row_number() %in% c(7, 24, 26),
+         # remove CORE samples (no results)
+         sample_type %in% c("FB250", "FB 250")) %>%
+  # make species numeric
+  dplyr::mutate(across(ostracod:larvae, as.numeric)) %>%
   # replace species NAs with zeroes
-  mutate(across(ostracod:larvae, ~replace_na(.,0)),
-         # make species numeric
-         across(ostracod:larvae, ~as.numeric(.)),
-         # normalize species counts by liter
-         across(ostracod:larvae, ~.x/7.5),
-         # format date
-         date_on_vial = dmy(date_on_vial))
+  dplyr::mutate(across(ostracod:larvae, ~replace_na(.,0))) %>%
+  # normalize species counts by liter
+  dplyr::mutate(across(ostracod:larvae, ~.x/7.5)) %>%
+  # format date
+  mutate(date_on_vial = dmy(date_on_vial))
+
 inv2021f[7, 5] <- (inv2021f[7, 5])/10 # fix probable error ??
 ```
 
-## rename columns to match
+## Rename columns to match
 ```{r}
 # rename columns to match order_family format
 inv2018 <- inv2018f %>% 
@@ -103,15 +107,17 @@ inv2021 <- inv2021f %>%
          plecoptera = plecoptera_sp, # sp is only category
          diptera_ceratopogonidae = diptera_ceratopohonidae,
          coleoptera_hydraenidae = coleoperta_hydraenidae,
-         arachnida_acari = arachnida_acari_mite)
+         arachnida_acari = arachnida_acari_mite) %>%
+  mutate(ephemeroptera = ephemeroptera + ephemeroptera_sp) %>%
+  select(-ephemeroptera_sp)
 ```
 
-## combine columns and fix factors
+## Combine columns and fix factors
 ```{r}
 # combine rows
 inv <- bind_rows(inv2018, inv2019, inv2021) %>%
   # standardize sample_type column
-  mutate(sample_type = case_when(sample_type %in% c("FB", "FB 250") ~ "FB250", # change FB and FB 250 to FB250
+  dplyr::mutate(sample_type = case_when(sample_type %in% c("FB", "FB 250") ~ "FB250", # change FB and FB 250 to FB250
                                  str_detect(sample_type, "CORE") ~ "CORE", # change anything with CORE to just CORE
                                  TRUE ~ sample_type), # keep the rest
          ## standardize site column
@@ -133,42 +139,44 @@ inv <- bind_rows(inv2018, inv2019, inv2021) %>%
          year = year(date)) %>% # reorder seasons
   
   # reorder columns to make sense
-  select(date, year, season, site, site_type, sample_type, ostracod, copepod, amphipod, isopod, cladocera, clam_shrimp, annelida_sp, annelida_oligochaete, annelida_polychaete, nematode, mollusk, gastropod_snail, coleoptera_sp, coleoptera_hydrophilidae, coleoptera_tropiscernus, coleoptera_dytiscidae, coleoptera_dytiscidae_agabus, coleoptera_dytiscidae_liodessus_affinis, coleoptera_dytiscidae_colymbetinae, coleoptera_hydraenidae, coleoptera_hydraenidae_larva_joe, coleoptera_curculionidae_weavil, coleoptera_gyrindae_gyrinini, dipteran_sp, diptera_chironomid, diptera_ceratopogonidae, diptera_ephydridae, diptera_stratiomyidae, diptera_culicidae, diptera_syrphidae, tipulidae_larva, ephemeroptera, ephemeroptera_sp, plecoptera, trichoptera_sp, hemiptera_corixidae_boatman, hemiptera_notonectidae, hemiptera_mesoveliidae, odonate, collembola_springtail, lepidoptera_crambidae, arachnida_acari, hydrachnidia, larvae, terrestrials)
-  
-# make season and year sample totals, for accounting for the different number of samples per 
-inv_szn_samp <- inv %>% group_by(season) %>%
-  summarize(season_samples = n())
+  select(date, year, season, site, site_type, sample_type, ostracod, copepod, amphipod, isopod, cladocera, clam_shrimp, annelida_sp, annelida_oligochaete, annelida_polychaete, nematode, mollusk, gastropod_snail, coleoptera_sp, coleoptera_hydrophilidae, coleoptera_tropiscernus, coleoptera_dytiscidae, coleoptera_dytiscidae_agabus, coleoptera_dytiscidae_liodessus_affinis, coleoptera_dytiscidae_colymbetinae, coleoptera_hydraenidae, coleoptera_hydraenidae_larva_joe, coleoptera_curculionidae_weavil, coleoptera_gyrindae_gyrinini, dipteran_sp, diptera_chironomid, diptera_ceratopogonidae, diptera_ephydridae, diptera_stratiomyidae, diptera_culicidae, diptera_syrphidae, tipulidae_larva, ephemeroptera, plecoptera, trichoptera_sp, hemiptera_corixidae_boatman, hemiptera_notonectidae, hemiptera_mesoveliidae, odonate, collembola_springtail, lepidoptera_crambidae, arachnida_acari, hydrachnidia, larvae, terrestrials)
 
-inv_yr_samp <- inv %>% group_by(year) %>%
-  summarize(year_samples = n())
+# get list of columns with no IDs
+inv[, 10:length(inv)] %>% select_if(colSums(., na.rm = T) != 0) %>% colnames() %>% 
+  setdiff(colnames(inv[, 10:length(inv)]), .)
+```
 
-inv_site_samp <- inv %>% group_by(site, sample_type) %>%
-  summarize(site_samples = n())
+# make time period summary tables for normalization
+```{r}
+# make season and year sample slough totals
+inv_szn_samp <- inv %>% filter(site_type == "slough") %>% group_by(season) %>%
+  dplyr::summarize(season_samples = n())
+
+inv_yr_samp <- inv %>% filter(site_type == "slough") %>% group_by(year) %>%
+  dplyr::summarize(year_samples = n())
+
+inv_site_samp <- inv %>% filter(site_type == "slough") %>% group_by(site, sample_type) %>%
+  dplyr::summarize(site_samples = n())
 
 # join sample totals to table
 inv <- inv %>% left_join(inv_szn_samp, by = "season") %>% 
   left_join(inv_yr_samp, by = "year") %>% 
   left_join(inv_site_samp, by = c("site", "sample_type")) %>%
-  select(date, year, season, site, site_type, sample_type, year_samples, season_samples, site_samples, everything())
-  
+  select(date, year, season, site, site_type, sample_type, season_samples, year_samples, site_samples, everything())
 
-# get list of columns with no IDs
-inv[, 10:length(inv)] %>% select_if(colSums(., na.rm = T) != 0) %>% colnames() %>% 
-  setdiff(colnames(inv[, 10:length(inv)]), .)
-
-inv %>% write.csv("cleaned tables/all_invert_data.csv")
+inv %>% write.csv("cleaned_data/invert_sampling_tables/all_invert_data.csv")
 
 rm(inv2018csv, inv2019csv, inv2021_22csv, inv2018f, inv2019f, inv2021f)
 ```
 
-# summarise and manipulate data
-## make totals table
+# Summarise and manipulate data
+## Make totals table
 ```{r}
 
 # very roughly ordered from tolerant to sensitive
 invTotal <- inv %>% 
   rowwise() %>%
-  mutate(flies = sum(c_across(dipteran_sp:diptera_syrphidae), na.rm = T),
+  dplyr::mutate(flies = sum(c_across(dipteran_sp:diptera_syrphidae), na.rm = T),
          boaters = sum(c_across(hemiptera_corixidae_boatman:hemiptera_mesoveliidae), na.rm = T),
          mites = sum(c_across(arachnida_acari:hydrachnidia), na.rm = T),
          crustaceans = sum(c_across(ostracod:clam_shrimp), na.rm = T),
@@ -180,43 +188,45 @@ invTotal <- inv %>%
          larvae = sum(c_across(c(tipulidae_larva, larvae)), na.rm = T),
          ept = sum(c_across(ephemeroptera:trichoptera_sp), na.rm = T),
          total = sum(c_across(ostracod:terrestrials), na.rm = T)) %>%
-  select(date:site_samples, flies, boaters, mites, crustaceans, worms, mollusks, 
+  dplyr::select(date:site_samples, flies, boaters, mites, crustaceans, worms, mollusks, 
          beetles, springtail, dragonfly, larvae, ept, total)
 
-invTotal %>% write.csv("cleaned tables/all_invert_data_totals.csv")
+invTotal %>% write.csv("cleaned_data/invert_sampling_tables/all_invert_data_totals.csv")
 ```
 
-## make long tables
+## Make long tables
 ```{r}
 invLong <- inv %>% pivot_longer(10:length(inv), 
                                 names_to = "taxa", 
                                 values_to = "organisms_L") %>%
-  mutate(taxa = as.factor(taxa)) %>% na.omit()
+  dplyr::mutate(taxa = as.factor(taxa)) %>% na.omit()
 
-invLong %>% write.csv("cleaned tables/all_invert_data_long.csv")
+invLong %>% write.csv("cleaned_data/invert_sampling_tables/all_invert_data_long.csv")
 
 
 invTotalLong <- invTotal %>% select(-total) %>% pivot_longer(10:(length(invTotal)-1), 
                                                             names_to = "group", 
                                                             values_to = "organisms_L") %>%
-  mutate(group = fct_relevel(as.factor(group), c('flies', 'boaters', 'mites', 'crustaceans', 'worms', 
+  dplyr::mutate(group = fct_relevel(as.factor(group), c('flies', 'boaters', 'mites', 'crustaceans', 'worms', 
                                                  'mollusks', 'beetles', 'springtail', 'dragonfly', 
                                                  'larvae', 'ept'))) %>% na.omit()
 
-invTotalLong %>% write.csv("cleaned tables/all_invert_data_totals_long.csv")
+invTotalLong %>% write.csv("cleaned_data/invert_sampling_tables/all_invert_data_totals_long.csv")
 ```
 
-# visualisation
-## visualise data coverages
+# Visualisation
+## Visualise data coverages
 ```{r}
-ggplot(invLong, aes(fill = site_type, y = organisms_L/season_samples, x = season)) + geom_bar(stat = "identity") +
-  ggtitle("Average organisms per sample collected by season") + ylab("organisms/L per sample") + labs(fill = "site location")
+invTotalLong %>% filter(site_type == "slough") %>% ggplot(aes(y = organisms_L/season_samples, x = season, fill = season)) + geom_bar(stat = "identity") + ggtitle("Average organisms per sample collected by season, slough sites") + ylab("organisms/L per sample") + labs(fill = "taxa group") + theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + guides(fill="none")
 
-ggplot(inv, aes(fill = site_type, x = season)) + geom_bar(stat = "count") +
+invTotalLong %>% filter(site_type == "slough", group != "crustaceans") %>% ggplot(aes(y = organisms_L/season_samples, x = season, fill = group)) + geom_bar(stat = "identity") + ggtitle("Average organisms per sample collected by season, slough sites") + ylab("organisms/L per sample") + labs(fill = "taxa group")
+
+inv %>% ggplot(aes(x = season, fill = site_type)) + geom_bar(stat = "count") +
   ggtitle("Samples collected by season") + ylab("sample count") + labs(fill = "site location")
 
-ggplot(invLong, aes(fill = sample_type, y = organisms_L/year_samples, x = year(date))) + geom_bar(stat = "identity") +
-  ggtitle("Average organisms per sample collected by year") + ylab("organisms/L per sample") + labs(fill = "sample type")
+invLong %>% filter(site_type == "slough") %>% ggplot(aes(fill = sample_type, y = organisms_L/year_samples, x = year(date))) + 
+  geom_bar(stat = "identity") + ggtitle("Average organisms per sample collected by year") + 
+  ylab("organisms/L per sample") + labs(fill = "sample type")
 
 ggplot(inv, aes(fill = sample_type, x = year(date))) + geom_bar(stat = "count") +
   ggtitle("Samples collected by year") + ylab("sample count") + labs(fill = "sample type")
@@ -225,14 +235,19 @@ ggplot(inv, aes(x = date, y = site, color = sample_type)) + geom_point(shape = 1
   ggtitle("Samples by site and date") + labs(color = "sample type")
 ```
 
-## visualise organisms
+## Visualise organisms
 ```{r}
-# visualize filter beaker taxa groups from slough
+
+# Visualize yearly difference
+ggplot(invLong) 
+
+
+# Visualize filter beaker taxa groups from slough
 invTotalLong %>% filter(sample_type == "FB250", site_type == "slough") %>%
   ggplot(aes(x = site, y = organisms_L/site_samples, fill = group)) + geom_bar(stat = "identity") +
   ggtitle("Taxa group by slough site, filter beaker method") + ylab("organisms/L") + labs(fill = "taxa group")
 
-#### visualize filter beaker organisms from slough
+#### Visualize filter beaker organisms from slough
 invLong %>% filter(sample_type == "FB250", site_type == "slough") %>%
   ggplot(aes(x = site, y = organisms_L/site_samples, fill = taxa)) + geom_bar(stat = "identity") +
   ggtitle("Taxa group by slough site, filter beaker method") + ylab("organisms/L") + labs(fill = "taxa group")
@@ -271,7 +286,7 @@ invTotalLong %>% filter(sample_type == "CORE", site_type == "slough", !(group %i
   ggtitle("Taxa group by slough site, sediment core method \nNo crustaceans or boaters") + 
   ylab("organisms/L") + labs(fill = "taxa group")
 
-# visualize filter beaker organisms from vernal pools
+# visualize filter beaker organisms from vernal pools ### NOT CORRECT BELOW
 invTotalLong %>% filter(sample_type == "FB250", site_type == "pool") %>%
   ggplot(aes(x = site, y = organisms_L/site_samples, fill = group)) + geom_bar(stat = "identity") +
   ggtitle("Taxa group by vernal pool, filter beaker method") + ylab("organisms/L") + labs(fill = "taxa group")
@@ -291,14 +306,361 @@ invTotalLong %>% filter(sample_type == "CORE", site_type == "pool", !(group %in%
 ```
 
 ```{r}
-invTotalLong %>% filter(sample_type == "FB250") %>% 
+invTotalLong %>% filter(sample_type == "FB250", site_type == "slough") %>% 
   ggplot(aes(x = group, y = organisms_L/season_samples, fill = season)) +
   geom_bar(stat = "identity", position = "dodge")
 
-invTotalLong %>% filter(sample_type == "FB250", !group %in% c("crustaceans", "boaters", "worms")) %>% 
+invTotalLong %>% filter(sample_type == "FB250", site_type == "slough", !group %in% c("crustaceans")) %>% 
   ggplot(aes(x = group, y = organisms_L/season_samples, fill = season)) +
-  geom_bar(stat = "identity", position = "dodge")
+  geom_bar(stat = "identity", position = "dodge") + facet_wrap(~site)
+```
 
+# Water quality graphs
+```{r}
+inv2019f2 <- inv2019csv %>% clean_names() %>% 
+  # get relevant columns, including species and WQ
+  select(1:42, -4, -total_number, 49:56) %>% 
+  # keep only the rows with dates
+  filter(!is.na(date_1), !is.na(site_2)) %>%
+  # make species numeric
+  dplyr::mutate(across(ostracod:clam_shrimp, ~as.numeric(.))) %>%
+         # replace species NAs with zeroes
+  dplyr::mutate(across(ostracod:clam_shrimp, ~replace_na(.,0))) %>%
+         # format date
+  dplyr::mutate(date_1 = dmy(date_1))
+
+inv2019f2 %>% filter(sample_type_3 == "FB250")
+
+names2019 <- names(inv2019f2[,4:40])
+
+salPlot <- list()
+wqTable <- inv2019f2 %>% filter(sample_type_3 == "FB250")
+for (i in 1:length(names2019)) {
+  salPlot[[i]] <- ggplot(wqTable) + geom_point(aes_string(x = salinity_ppt, y = names2019[[i]])) +
+    ggtitle(names2019[[i]])
+  
+  print(salPlot[[i]])
+}
+
+wqTable <- inv2019f2 %>% filter(sample_type_3 == "FB250") %>% mutate(across(ostracod:p_h, as.numeric))
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(ostracod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("ostracod") + theme_bw()
+
+library(mgcv)
+gam_sal_ost <- gam(log(ostracod+1) ~ s(salinity_ppt, bs = "cs"), data = wqTable)
+summary(gam_sal_ost)
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(ostracod+1))) + geom_point() +
+    geom_smooth(method = "lm") + ggtitle("ostracod") + theme_bw()
+
+lm_sal_ost <- lm(log(ostracod+1) ~ salinity_ppt, data = wqTable)
+summary(lm_sal_ost)
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(copepod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("copepod")
+
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(hemiptera_corixidae_boatman+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("hemiptera_corixidae_boatman")
+
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(cladocera+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("cladocera")
+
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(diptera_chironomid+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("diptera_chironomid")
+
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(diptera_culicidae+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("diptera_culicidae")
+
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(amphipod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("amphipod")
+
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(hemiptera_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("hemiptera_total")
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(annelida_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("annelida_total")
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(odonate+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("odonate")
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(coleoptera_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("coleoptera_total")
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(arachnida_acari_mite+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("arachnida_acari_mite")
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(collembola_springtail+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("collembola_springtail")
+
+ggplot(wqTable, aes(x = salinity_ppt, y = log(gastropod_snail+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("gastropod_snail")
+
+inv %>% count(site)
+```
+
+```{r}
+ggplot(wqTable, aes(x = p_h, y = log(ostracod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("ostracod") + theme_bw()
+
+library(mgcv)
+gam_ph_ost <- gam(log(ostracod+1) ~ s(p_h, bs = "cs"), data = wqTable)
+summary(gam_ph_ost)
+
+
+ggplot(wqTable, aes(x = p_h, y = log(copepod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("copepod")
+
+
+ggplot(wqTable, aes(x = p_h, y = log(hemiptera_corixidae_boatman+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("hemiptera_corixidae_boatman")
+
+
+ggplot(wqTable, aes(x = p_h, y = log(cladocera+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("cladocera")
+
+
+ggplot(wqTable, aes(x = p_h, y = log(diptera_chironomid+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("diptera_chironomid")
+
+
+ggplot(wqTable, aes(x = p_h, y = log(diptera_culicidae+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("diptera_culicidae")
+
+
+ggplot(wqTable, aes(x = p_h, y = log(amphipod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("amphipod")
+
+
+ggplot(wqTable, aes(x = p_h, y = log(hemiptera_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("hemiptera_total")
+
+ggplot(wqTable, aes(x = p_h, y = log(annelida_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("annelida_total")
+
+ggplot(wqTable, aes(x = p_h, y = log(odonate+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("odonate")
+
+ggplot(wqTable, aes(x = p_h, y = log(coleoptera_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("coleoptera_total")
+
+ggplot(wqTable, aes(x = p_h, y = log(arachnida_acari_mite+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("arachnida_acari_mite")
+
+ggplot(wqTable, aes(x = p_h, y = log(collembola_springtail+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("collembola_springtail")
+
+ggplot(wqTable, aes(x = p_h, y = log(gastropod_snail+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("gastropod_snail")
+```
+
+```{r}
+ggplot(wqTable, aes(x = p_h, y = log(ostracod+1))) + geom_point() +
+    geom_smooth(method = "glm") + ggtitle("ostracod")
+
+
+ggplot(wqTable, aes(x = p_h, y = log(copepod+1))) + geom_point() +
+    geom_smooth(method = "glm") + ggtitle("copepod")
+
+
+ggplot(wqTable, aes(x = p_h, y = log(hemiptera_corixidae_boatman+1))) + geom_point() +
+    geom_smooth(method = "glm") + ggtitle("hemiptera_corixidae_boatman")
+
+
+ggplot(wqTable, aes(x = p_h, y = log(cladocera+1))) + geom_point() +
+    geom_smooth(method = "glm") + ggtitle("cladocera")
+
+
+ggplot(wqTable, aes(x = p_h, y = log(diptera_chironomid+1))) + geom_point() +
+    geom_smooth(method = "glm") + ggtitle("diptera_chironomid")
+
+
+ggplot(wqTable, aes(x = p_h, y = log(diptera_culicidae+1))) + geom_point() +
+    geom_smooth(method = "glm") + ggtitle("diptera_culicidae")
+
+
+ggplot(wqTable, aes(x = p_h, y = log(amphipod+1))) + geom_point() +
+    geom_smooth(method = "glm") + ggtitle("amphipod")
+
+
+ggplot(wqTable, aes(x = p_h, y = log(hemiptera_total+1))) + geom_point() +
+    geom_smooth(method = "glm") + ggtitle("hemiptera_total")
+
+ggplot(wqTable, aes(x = p_h, y = log(annelida_total+1))) + geom_point() +
+    geom_smooth(method = "glm") + ggtitle("annelida_total")
+
+ggplot(wqTable, aes(x = p_h, y = log(odonate+1))) + geom_point() +
+    geom_smooth(method = "glm") + ggtitle("odonate")
+
+ggplot(wqTable, aes(x = p_h, y = log(coleoptera_total+1))) + geom_point() +
+    geom_smooth(method = "glm") + ggtitle("coleoptera_total")
+
+ggplot(wqTable, aes(x = p_h, y = log(arachnida_acari_mite+1))) + geom_point() +
+    geom_smooth(method = "glm") + ggtitle("arachnida_acari_mite")
+
+ggplot(wqTable, aes(x = p_h, y = log(collembola_springtail+1))) + geom_point() +
+    geom_smooth(method = "glm") + ggtitle("collembola_springtail")
+
+ggplot(wqTable, aes(x = p_h, y = log(gastropod_snail+1))) + geom_point() +
+    geom_smooth(method = "glm") + ggtitle("gastropod_snail")
+```
+
+```{r}
+ggplot(wqTable, aes(x = temperature_c, y = log(ostracod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("ostracod")
+
+
+ggplot(wqTable, aes(x = temperature_c, y = log(copepod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("copepod")
+
+
+ggplot(wqTable, aes(x = temperature_c, y = log(hemiptera_corixidae_boatman+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("hemiptera_corixidae_boatman")
+
+
+ggplot(wqTable, aes(x = temperature_c, y = log(cladocera+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("cladocera")
+
+
+ggplot(wqTable, aes(x = temperature_c, y = log(diptera_chironomid+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("diptera_chironomid")
+
+
+ggplot(wqTable, aes(x = temperature_c, y = log(diptera_culicidae+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("diptera_culicidae")
+
+
+ggplot(wqTable, aes(x = temperature_c, y = log(amphipod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("amphipod")
+
+
+ggplot(wqTable, aes(x = temperature_c, y = log(hemiptera_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("hemiptera_total")
+
+ggplot(wqTable, aes(x = temperature_c, y = log(annelida_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("annelida_total")
+
+ggplot(wqTable, aes(x = temperature_c, y = log(odonate+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("odonate")
+
+ggplot(wqTable, aes(x = temperature_c, y = log(coleoptera_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("coleoptera_total")
+
+ggplot(wqTable, aes(x = temperature_c, y = log(arachnida_acari_mite+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("arachnida_acari_mite")
+
+ggplot(wqTable, aes(x = temperature_c, y = log(collembola_springtail+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("collembola_springtail")
+
+ggplot(wqTable, aes(x = temperature_c, y = log(gastropod_snail+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("gastropod_snail")
+```
+```{r}
+ggplot(wqTable, aes(x = conductivity_specific_m_s_cm, y = log(ostracod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("ostracod")
+
+
+ggplot(wqTable, aes(x = conductivity_specific_m_s_cm, y = log(copepod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("copepod")
+
+
+ggplot(wqTable, aes(x = conductivity_specific_m_s_cm, y = log(hemiptera_corixidae_boatman+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("hemiptera_corixidae_boatman")
+
+
+ggplot(wqTable, aes(x = conductivity_specific_m_s_cm, y = log(cladocera+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("cladocera")
+
+
+ggplot(wqTable, aes(x = conductivity_specific_m_s_cm, y = log(diptera_chironomid+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("diptera_chironomid")
+
+
+ggplot(wqTable, aes(x = conductivity_specific_m_s_cm, y = log(diptera_culicidae+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("diptera_culicidae")
+
+
+ggplot(wqTable, aes(x = conductivity_specific_m_s_cm, y = log(amphipod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("amphipod")
+
+
+ggplot(wqTable, aes(x = conductivity_specific_m_s_cm, y = log(hemiptera_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("hemiptera_total")
+
+ggplot(wqTable, aes(x = conductivity_specific_m_s_cm, y = log(annelida_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("annelida_total")
+
+ggplot(wqTable, aes(x = conductivity_specific_m_s_cm, y = log(odonate+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("odonate")
+
+ggplot(wqTable, aes(x = conductivity_specific_m_s_cm, y = log(coleoptera_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("coleoptera_total")
+
+ggplot(wqTable, aes(x = conductivity_specific_m_s_cm, y = log(arachnida_acari_mite+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("arachnida_acari_mite")
+
+ggplot(wqTable, aes(x = conductivity_specific_m_s_cm, y = log(collembola_springtail+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("collembola_springtail")
+
+ggplot(wqTable, aes(x = conductivity_specific_m_s_cm, y = log(gastropod_snail+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("gastropod_snail")
+```
+
+```{r}
+ggplot(wqTable, aes(x = atmosph_pressure_mm_hg, y = log(ostracod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("ostracod")
+
+
+ggplot(wqTable, aes(x = atmosph_pressure_mm_hg, y = log(copepod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("copepod")
+
+
+ggplot(wqTable, aes(x = atmosph_pressure_mm_hg, y = log(hemiptera_corixidae_boatman+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("hemiptera_corixidae_boatman")
+
+
+ggplot(wqTable, aes(x = atmosph_pressure_mm_hg, y = log(cladocera+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("cladocera")
+
+
+ggplot(wqTable, aes(x = atmosph_pressure_mm_hg, y = log(diptera_chironomid+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("diptera_chironomid")
+
+
+ggplot(wqTable, aes(x = atmosph_pressure_mm_hg, y = log(diptera_culicidae+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("diptera_culicidae")
+
+
+ggplot(wqTable, aes(x = atmosph_pressure_mm_hg, y = log(amphipod+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("amphipod")
+
+
+ggplot(wqTable, aes(x = atmosph_pressure_mm_hg, y = log(hemiptera_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("hemiptera_total")
+
+ggplot(wqTable, aes(x = atmosph_pressure_mm_hg, y = log(annelida_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("annelida_total")
+
+ggplot(wqTable, aes(x = atmosph_pressure_mm_hg, y = log(odonate+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("odonate")
+
+ggplot(wqTable, aes(x = atmosph_pressure_mm_hg, y = log(coleoptera_total+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("coleoptera_total")
+
+ggplot(wqTable, aes(x = atmosph_pressure_mm_hg, y = log(arachnida_acari_mite+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("arachnida_acari_mite")
+
+ggplot(wqTable, aes(x = atmosph_pressure_mm_hg, y = log(collembola_springtail+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("collembola_springtail")
+
+ggplot(wqTable, aes(x = atmosph_pressure_mm_hg, y = log(gastropod_snail+1))) + geom_point() +
+    geom_smooth(method = "gam") + ggtitle("gastropod_snail")
 ```
 
 

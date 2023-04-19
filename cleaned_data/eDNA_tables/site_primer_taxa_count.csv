@@ -1,28 +1,20 @@
-site,TestId,taxa_count
-MO1,18,8
-MO1,ArthCOI,105
-MO1,UniCOI,2
-PIER,ArthCOI,96
-PIER,UniCOI,2
-CUL1,18,8
-CUL1,ArthCOI,103
-CUL1,UniCOI,2
-NVBR,18,8
-NVBR,ArthCOI,105
-NVBR,UniCOI,2
-NMC,ArthCOI,33
-NEC,ArthCOI,96
-NPB,ArthCOI,94
-NPB,UniCOI,2
-NPB1,ArthCOI,96
-NPB2,18,8
-NPB2,ArthCOI,42
-NPB2,UniCOI,2
-NWP,ArthCOI,94
-NDC,ArthCOI,96
-VP1,ArthCOI,64
-NVP2,ArthCOI,64
-NVP4,ArthCOI,64
-NA,18,8
-NA,ArthCOI,44
-NA,UniCOI,2
+site,primer,taxa_count
+MO1,ArthCOI,18
+PIER,ArthCOI,11
+CUL1,ArthCOI,13
+NVBR,ArthCOI,19
+NMC,ArthCOI,1
+NEC,ArthCOI,11
+NPB,ArthCOI,12
+NPB1,ArthCOI,13
+NPB2,ArthCOI,23
+NWP,ArthCOI,7
+NDC,ArthCOI,15
+VP1,ArthCOI,4
+NVP2,ArthCOI,6
+NVP4,ArthCOI,8
+bird dropping,18,8
+bird dropping,ArthCOI,2
+owl pellet,18,3
+owl pellet,ArthCOI,1
+owl pellet,UniCOI,2
