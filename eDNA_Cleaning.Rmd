@@ -1,0 +1,331 @@
+---
+title: "eDNA"
+author: "Chris Kracha"
+date: "06/30/2022"
+output: html
+---
+
+This document contains cleaning scripts for eDNA collected in 2021-2022 through JonahVentures. Tables from JV are reformatted to fit our needs, factors are reordered and relabeled, additional metadata is created, and all rounds of sampling are combined. Products of this document include long and wide tables, as well as summary tables that make the data more accessible.
+
+Note that raw_data/eDNA_sample_ids.csv needs to be manually updated with future additions of data.
+
+```{r setup}
+library(taxa) # special taxa data class
+library(rentrez) # data base connections for common names
+library(metacoder) # taxonomy data parsing
+library(janitor)
+library(lubridate)
+library(tidyverse)
+library(plyr)
+```
+
+# Aquatic Invertebrates Pre-Summer 2022
+
+## Load in data
+```{r clean batch eDNA}
+# The first three samples were stored in alcohol and did the DNA was degraded. 
+# Metadata for these samples was added manually and dates are approximate.
+
+# Function cleans and combines all eDNA files from a folder
+eDNA_clean <- function(folder) {
+  
+  cleaned <- folder %>%
+    
+    # Create list of all files in target folder
+    list.files(., full.names = TRUE)  %>%
+    
+    # Read CSV files and bind rows together
+    ldply(read_csv) %>% 
+    
+    # Clean names
+    dplyr::rename(percent_match = "% match",
+           number_species = "# species") %>%
+    
+    # Combine taxa into one column
+    unite("kpcofgs", Kingdom:Species, 
+          sep = ", ", na.rm = TRUE, 
+          remove = FALSE) %>%
+    
+    select(1:number_species, kpcofgs, everything()) %>%
+    
+    # Switch to long format, where vials are rows not columns
+    pivot_longer(cols = 14:ncol(.), 
+                 names_to = "sample_id", 
+                 values_to = "sample_count") %>%
+    
+    # remove sample replicate numbers
+    mutate(sample_id = str_replace(sample_id, "\\.[0-9]+$", ""))
+  
+    # One can remove all rows with no identifications using the following code, 
+    # however having the rows with no IDs is useful for determining and visualizing species presence,
+    # so this code was left unused:
+    # filter(sample_count != 0)
+  
+  return(cleaned)
+}
+```
+
+## Fix metadata per upload
+```{r message=FALSE}
+# Some original downloads were edited due to errors in copying 1s/Is and Os/0s
+
+# Metadata file should be manually updated with each batch
+AQsampleIDs <- read_csv("C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_sample_ids.csv") %>% clean_names()
+
+# Each batch folder should contain only the read tables from JonahVentures. ESV tables should not be included.
+folder1470_AL <- "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_downloads/JVB1470_AL"
+JVB1470_AL <- eDNA_clean(folder1470_AL)
+
+folder1470_AN <- "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_downloads/JVB1470_AN"
+JVB1470_AN <- eDNA_clean(folder1470_AN)
+
+folder1470_AR <- "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_downloads/JVB1470_AR"
+JVB1470_AR <- eDNA_clean(folder1470_AR)
+
+folder1554 <- "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_downloads/JVB1554"
+JVB1554 <- eDNA_clean(folder1554)
+
+# Unknown parsing issues below. Seven files in total over three folders are affected.
+folder1703_july <- "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_downloads/JVB1703_july"
+JVB1703_july <- eDNA_clean(folder1703_july)
+
+folder1703_nov <- "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_downloads/JVB1703_nov"
+JVB1703_nov <- eDNA_clean(folder1703_nov)
+
+folder2116 <- "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_downloads/JVB2116"
+JVB2116 <- eDNA_clean(folder2116)
+```
+
+# Bind eDNA batches and get invert eDNA
+```{r}
+# Combine all eDNA
+All_eDNA <- bind_rows(JVB1470_AL, JVB1470_AN, JVB1470_AR, JVB1554, JVB1703_july, JVB1703_nov, JVB2116) %>%
+  filter(percent_match > 80) %>% # This cutoff is arbitrary and can be altered
+  left_join(AQsampleIDs, by = c("sample_id" = "barcode")) %>%
+  distinct(ESVId, site, date, .keep_all = TRUE) %>%
+  mutate(date = mdy(date),
+         # Contiguous slough sites are ordered first in order of their distance (with barriers) from the ocean.
+         # Vernal pool sites and then miscellaneous samples are at the end of the site list.
+         site = factor(site, levels = c("MO1", "PIER", "CUL1", "NVBR", "NMC", "NEC", 
+                                        "NPB", "NPB1", "NPB2", "NWP", "NDC",
+                                        "VP1", "NVP2", "NVP4", 
+                                        "bird dropping", "owl pellet", "pollen", "soil amendment"))) %>%
+  filter(kpcofgs != "")
+
+# Subset eDNA to only include aquatic invert eDNA
+AqInv_eDNA <- All_eDNA %>%
+  filter(!site %in% c("pollen", "soil amendment"), # remove irrelevant samples
+         Phylum %in% c("Arthropoda", "Mollusca", "Annelida", "Nematozoa", "Platyhelminthes"),
+         percent_match > 80) %>% # This cutoff is arbitrary and can be altered
+  mutate(site = factor(site, levels = c("MO1", "PIER", "CUL1", "NVBR", "NMC", "NEC", 
+                                        "NPB", "NPB1", "NPB2", "NWP", "NDC",
+                                        "VP1", "NVP2", "NVP4")))
+# write clean table with AqInv eDNA
+write_csv(AqInv_eDNA, "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/cleaned_data/eDNA_tables/AqInv_edna.csv")
+
+# write clean table with AqInv eDNA from only vernal pools
+AqInv_eDNA %>% filter(site %in% c("VP1", "NVP2", "NVP4")) %>% write.csv("cleaned_data/eDNA_tables/VernalPool_eDNA.csv")
+
+#rm(JVB1470_AL, JVB1470_AN, JVB1470_AR, JVB1554, JVB1703_july, JVB1703_nov, JVB2116, folder1470_AL, folder1470_AN, folder1470_AR, folder1554, folder1703_july, folder1703_nov, folder2116)
+```
+
+## get aquatic invertebrate species list
+```{r}
+AqSpeciesList <- AqInv_eDNA %>% distinct(kpcofgs, .keep_all = T) %>% 
+  select(kpcofgs:percent_match) %>% 
+  filter(Phylum %in% c("Arthropoda", "Mollusca", "Annelida", "Nematozoa", "Platyhelminthes"))
+```
+
+## summarize taxa by site and primer
+```{r}
+# get counts of taxa identified for each primer and site
+site_primer_taxa_count <- AqInv_eDNA %>% distinct(site, ESVId, .keep_all = T) %>% 
+  group_by(site, TestId) %>%
+  dplyr::summarize(taxa_count = n()) %>% write_csv("cleaned_data/eDNA_tables/site_primer_taxa_count.csv")
+```
+
+## list findings by primer
+```{r}
+# This chunk takes awhile to run!
+set_entrez_key('b368c15b5cae247eccf0efb48e9cdb260f09')
+
+sci2comm_concat <- function(x){
+  temp <- sci2comm(x, db = "ncbi")
+  if(length(temp) == 0) NA else paste0(temp[[1]], collapse = ", ")
+}
+
+# summarize MiFishU primer findings
+fish <- AqInv_eDNA %>% filter(TestId == "MiFishU") %>%
+  group_by(site, kpcofgs) %>% 
+  dplyr::summarize(samples_sent = n(),
+            matches = sum(sample_count),
+            percent_match = mean(percent_match),
+            common_name = sci2comm_concat(kpcofgs)) %>%
+  write_csv("cleaned_data/eDNA_tables/fish_eDNA.csv")
+
+# summarize ArthCOI primer findings
+inverts <- AqInv_eDNA %>% filter(TestId == "ArthCOI") %>% 
+  group_by(site, kpcofgs) %>% 
+  dplyr::summarize(samples_sent = n(),
+            matches = sum(sample_count),
+            percent_match = mean(percent_match),
+            common_name = sci2comm_concat(kpcofgs)) %>%
+  write_csv("cleaned_data/eDNA_tables/inverts_eDNA.csv")
+
+# summarize 23S primer findings
+microbes <- AqInv_eDNA %>% filter(TestId == "23") %>% 
+  group_by(site, kpcofgs) %>% 
+  dplyr::summarize(samples_sent = n(),
+            matches = sum(sample_count),
+            percent_match = mean(percent_match),
+            common_name = sci2comm_concat(kpcofgs)) %>%
+  write_csv("cleaned_data/eDNA_tables/microbes_eDNA.csv")
+```
+
+## Vizualize data
+```{r automatic chart of taxa count}
+ggplot(site_primer_taxa_count) + geom_bar(aes(x = site, y = taxa_count, fill = TestId), stat = "identity") +
+  ggtitle("eDNA Identified Taxa by Site and Primer") + ylab("taxa count") + scale_fill_discrete(name = "Primer")
+```
+
+```{r manual chart of aquatic taxa count}
+
+taxa_comparison <- AqInv_eDNA %>% group_by(site) %>% 
+  dplyr::summarize(Phylum = n_distinct(Phylum), Class = n_distinct(Class),
+                   Order = n_distinct(Order), Family = n_distinct(Family),
+                   Species = n_distinct(Species)) %>%
+  pivot_longer(2:6, names_to = "taxa", values_to = "count") %>%
+  mutate(site = factor(site, levels = c("MO1", "PIER", "CUL1", "NVBR", "NMC", "NEC", "NPB", "NWP", "NDC", "NPB1", "NPB2", "VP1", "NVP2", "NVP4", "bird dropping", "owl pellet", "pollen", "soil amendment")),
+         taxa = factor(taxa, levels = c("Phylum", "Class", "Order", "Family", "Species")))
+
+ggplot(AqInv_eDNA, aes(x = site)) + geom_bar(stat = "count") + ggtitle("Unique DNA Barcode Observations by Site")
+
+ggplot(AqInv_eDNA, aes(x = ncos_or_copr)) + geom_bar(stat = "count") + ggtitle("Unique DNA Barcode Observations by Reserve")
+
+taxaColors <- c("#6B4026", "#6B4026", "#B64E38", "#1F1F1F")
+
+taxa_comparison %>% ggplot(aes(x = taxa, y = count, fill = site)) + 
+  geom_bar(stat = "identity") +
+  ggtitle("Distinct Taxa Counts by Site and Source") +
+  scale_fill_manual(values = c(scales::hue_pal()(14), taxaColors))
+
+taxa_comparison %>% filter(!(site %in% c("bird dropping", "owl pellet", 
+                                         "pollen", "soil amendment"))) %>%
+  ggplot(aes(x = taxa, y = count, fill = site)) + 
+  geom_bar(stat = "identity") +
+  ggtitle("Distinct Taxa Counts by Aquatic Site")
+```
+
+```{r seasonal eDNA replication counts}
+AqInv_summary <- AqInv_eDNA %>%
+  group_by(date, site) %>%
+  dplyr::summarize(sum_sequence_replications = sum(sample_count),
+            identified_taxa_count = n())
+
+ggplot(AqInv_summary) +
+  geom_line(aes(x = date, 
+                y = identified_taxa_count, 
+                color = site)) +
+  ylab("identified taxa") +
+  ggtitle("Count of Identified Taxa")
+
+ggplot(AqInv_summary) +
+  geom_line(aes(x = date, 
+                y = sum_sequence_replications, 
+                color = site)) +
+  ylab("DNA barcode replications") +
+  ggtitle("Sum of DNA Barcode Replica Count")
+
+```
+
+```{r aquatic species tree diagrams, fig.height=10, fig.width=14, warning=FALSE}
+
+heatTree <- function(input, title) {
+  input %>% parse_tax_data(class_cols = 5:11) %>%
+  filter_taxa(taxon_names != "") %>%
+  heat_tree(node_label = taxon_names,
+            node_color = n_obs,
+            node_size = n_obs,
+            overlap_avoidance = 20,
+            node_label_size_range = c(0.021, 0.026),
+            repel_force = 10,
+            node_legend_title = "Taxon",
+            node_color_axis_label = "# DNA matches",
+            node_color_digits = 1,
+            title = title,
+            title_size = 0.03,
+            aspect_ratio = 1.5,
+            margin_size = c(0.003, 0.003, 0.003, 0.003),
+            layout = "da")
+}
+
+# All samples
+
+AqInv_eDNA %>% heatTree(" Invert Species found by eDNA in the Devereux Slough, All Dates")
+
+AqInv_eDNA %>% filter(site == "NWP") %>% 
+  heatTree(" Species detected at NCOS West Pond, All Dates")
+
+AqInv_eDNA %>% filter(site == "VP1") %>% 
+  heatTree(" Species detected at Vernal Pool 1, All Dates")
+
+AqInv_eDNA %>% filter(site == "MO1") %>% 
+  heatTree(" Species detected at Mouth of Devereux Slough, All Dates")
+
+AqInv_eDNA %>% filter(site == "NVBR") %>% 
+  heatTree(" Species detected at Venoco Bridge, All Dates")
+
+AqInv_eDNA %>% filter(site == "NPB") %>% 
+  heatTree(" Species detected at North Phelps Bridge, All Dates")
+
+AqInv_eDNA %>% filter(site == "NPB1") %>% 
+  heatTree(" Species detected at North Phelps Bridge 1, All Dates")
+
+AqInv_eDNA %>% filter(site == "NPB2") %>% 
+  heatTree(" Species detected at North Phelps Bridge 2, All Dates")
+
+AqInv_eDNA %>% filter(site == "PIER") %>% 
+  heatTree(" Species detected at COPR Pier, All Dates")
+
+AqInv_eDNA %>% filter(site == "NEC") %>% 
+  heatTree(" Species detected at Northeast Channel, All Dates")
+
+AqInv_eDNA %>% filter(site == "CUL1") %>% 
+  heatTree(" Species detected at Culvert, All Dates")
+```
+
+```{r nmds}
+library(vegan)
+library(ggrepel)
+
+presence_AqInv_eDNA <- AqInv_eDNA %>%
+  mutate(presence = 1) %>%
+  pivot_wider(id_cols = site, 
+              names_from  = kpcofgs, 
+              values_from = presence,
+              values_fn = mean) %>%
+  replace(is.na(.), 0)
+
+NMDS_AqInv_eDNA <- presence_AqInv_eDNA %>%
+  select(-1) %>%
+  metaMDS(dist = "bray")
+
+NCOScopr <- AQsampleIDs %>% 
+  select(site, ncos_or_copr) %>%
+  unique()
+
+NMDS_AqInv_eDNA.scores <- as.data.frame(scores(NMDS_AqInv_eDNA)$sites) %>%
+  mutate(site = presence_AqInv_eDNA$site) %>%
+  left_join(NCOScopr, by = "site")
+
+ggplot(NMDS_AqInv_eDNA.scores, aes(NMDS1, NMDS2, label = site, color = ncos_or_copr)) +
+  geom_point() + geom_text_repel()
+
+```
+
+
+
+
+
+
+

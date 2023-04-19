@@ -1,0 +1,1129 @@
+"","esv_id","kpcofgs","site_name","total_sample_number","total_percent_match","total_number_species"
+"1","ESV_000007","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Naviculaceae, Navicula, ","NPB1",21,100,2
+"2","ESV_000019","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","CUL1",837,100,3
+"3","ESV_000019","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","MO1",500,100,3
+"4","ESV_000019","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NDC",407,100,3
+"5","ESV_000019","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NEC",1286,100,3
+"6","ESV_000019","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB",1067,100,3
+"7","ESV_000019","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",370,100,3
+"8","ESV_000019","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVBR",1099,100,3
+"9","ESV_000019","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","PIER",191,100,3
+"10","ESV_000025","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, , , ","NPB1",161,99.1,14
+"11","ESV_000028","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira pseudonana","NWP (NCOS West Pond)",810,100,1
+"12","ESV_000035","Eukaryota, Streptophyta, Magnoliopsida, Malpighiales, Salicaceae, , ","NPB1",88,100,66
+"13","ESV_000045","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVP4",13,99.1,6
+"14","ESV_000045","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NWP (NCOS West Pond)",71,99.1,6
+"15","ESV_000061","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","CUL1",20,100,2
+"16","ESV_000061","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","MO1",16,100,2
+"17","ESV_000061","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","NPB",55,100,2
+"18","ESV_000066","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",42,98.8,6
+"19","ESV_000096","Eukaryota, Bacillariophyta, Bacillariophyceae, , , , ","NWP (NCOS West Pond)",138,100,2
+"20","ESV_000105","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",263,97.9,6
+"21","ESV_000105","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVP4",16,97.9,6
+"22","ESV_000110","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Naviculaceae, , ","NDC",444,99.7,9
+"23","ESV_000110","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Naviculaceae, , ","NPB1",24,99.7,9
+"24","ESV_000119","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, , , ","NPB1",20,98.8,14
+"25","ESV_000200","Eukaryota, Bacillariophyta, Coscinodiscophyceae, , , , ","NWP (NCOS West Pond)",109,99.7,4
+"26","ESV_000288","Eukaryota, Chlorophyta, Trebouxiophyceae, unk_order, unk_family, Choricystis, Choricystis parasitica","NWP (NCOS West Pond)",15,97.3,1
+"27","ESV_000291","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NDC",12,99.7,6
+"28","ESV_000344","Eukaryota, Chlorophyta, Trebouxiophyceae, unk_order, unk_family, Choricystis, Choricystis parasitica","NPB1",153,98.5,1
+"29","ESV_000484","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, , ","NVBR",11,97.3,2
+"30","ESV_000484","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, , ","PIER",12,97.3,2
+"31","ESV_000507","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Sellaphoraceae, Sellaphora, ","NDC",331,99.1,8
+"32","ESV_000800","Eukaryota, Bacillariophyta, Coscinodiscophyceae, , , , ","NWP (NCOS West Pond)",18,99.4,4
+"33","ESV_001135","Eukaryota, Chlorophyta, Trebouxiophyceae, Chlorellales, Chlorellaceae, , ","NVP2",50,95.8,20
+"34","ESV_001152","Eukaryota, unk_phylum, Cryptophyceae, Cryptomonadales, Cryptomonadaceae, Cryptomonas, ","NWP (NCOS West Pond)",58,99.7,4
+"35","ESV_001200","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","Coprvp1",44,99.1,1
+"36","ESV_001200","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","NVP2",19,99.1,1
+"37","ESV_001200","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","NVP4",11,99.1,1
+"38","ESV_001200","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","NWP (NCOS West Pond)",10,99.1,1
+"39","ESV_001318","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NWP (NCOS West Pond)",10,99.4,9
+"40","ESV_001375","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NWP (NCOS West Pond)",14,98.5,22
+"41","ESV_001496","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NWP (NCOS West Pond)",10,99.7,17
+"42","ESV_001992","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",51,98.2,6
+"43","ESV_002084","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",18,99.7,6
+"44","ESV_002271","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NWP (NCOS West Pond)",162,99.1,20
+"45","ESV_002295","Eukaryota, Bacillariophyta, Coscinodiscophyceae, , , , ","NWP (NCOS West Pond)",13,99.4,4
+"46","ESV_002827",", , , , , , ","NDC",115,NA,NA
+"47","ESV_002958","Eukaryota, Euglenozoa, Euglenida, Euglenales, unk_family, Colacium, ","NWP (NCOS West Pond)",13,96.4,2
+"48","ESV_003581","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","Coprvp1",13,99.1,19
+"49","ESV_003581","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NVP4",9,99.1,19
+"50","ESV_003642","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, , , ","NVP4",33,98.5,3
+"51","ESV_003642","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, , , ","NWP (NCOS West Pond)",20,98.5,3
+"52","ESV_004065","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, , , ","NVP4",43,99.1,11
+"53","ESV_005024","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","PIER",16,99.1,6
+"54","ESV_005392","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, Cylindrotheca, Cylindrotheca closterium","NDC",41,100,1
+"55","ESV_006699","Eukaryota, Chlorophyta, Mamiellophyceae, Mamiellales, Mamiellaceae, Micromonas, ","PIER",8,100,2
+"56","ESV_009472","Eukaryota, Haptista, Haptophyta, Prymnesiales, Chrysochromulinaceae, Chrysochromulina, ","PIER",10,98.5,2
+"57","ESV_014101","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Naviculaceae, , ","NPB1",9,99.4,9
+"58","ESV_031129","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NPB1",14,97.3,9
+"59","ESV_031150","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, , , ","NDC",153,98.8,7
+"60","ESV_031177","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","CUL1",357,100,4
+"61","ESV_031177","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",378,100,4
+"62","ESV_031177","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NDC",137,100,4
+"63","ESV_031177","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NEC",100,100,4
+"64","ESV_031177","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NPB",58,100,4
+"65","ESV_031177","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NVBR",153,100,4
+"66","ESV_031177","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","PIER",195,100,4
+"67","ESV_031181","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Naviculaceae, , ","NPB1",41,99.4,9
+"68","ESV_031183","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",23,96.4,6
+"69","ESV_031411","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, , , ","MO1",14,99.4,14
+"70","ESV_031411","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, , , ","NDC",67,99.4,14
+"71","ESV_031411","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, , , ","NEC",27,99.4,14
+"72","ESV_031411","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, , , ","NVBR",10,99.4,14
+"73","ESV_031411","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, , , ","PIER",36,99.4,14
+"74","ESV_031540","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","CUL1",26,100,2
+"75","ESV_031540","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",36,100,2
+"76","ESV_031863","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NWP (NCOS West Pond)",137,99.4,6
+"77","ESV_031959","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, , , ","NWP (NCOS West Pond)",8,98.2,3
+"78","ESV_032534","Eukaryota, Euglenozoa, Euglenida, Euglenales, Euglenaceae, Euglena, ","Coprvp1",15,99.4,2
+"79","ESV_032614","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Sellaphoraceae, Sellaphora, ","NWP (NCOS West Pond)",14,98.2,8
+"80","ESV_032692","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NWP (NCOS West Pond)",37,98.8,20
+"81","ESV_032823","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NWP (NCOS West Pond)",34,97.3,21
+"82","ESV_033171","Eukaryota, Bacillariophyta, Bacillariophyceae, , , , ","NWP (NCOS West Pond)",22,98.2,29
+"83","ESV_033242","Eukaryota, Chlorophyta, Chlorophyceae, Sphaeropleales, Selenastraceae, , ","NWP (NCOS West Pond)",11,96.7,2
+"84","ESV_033329","Eukaryota, Euglenozoa, Euglenida, Euglenales, Euglenaceae, Euglena, Euglena sp. Jilnal030207I","NPB1",69,100,1
+"85","ESV_033388","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NWP (NCOS West Pond)",12,98.5,20
+"86","ESV_033588","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NPB1",29,99.4,16
+"87","ESV_033867","Eukaryota, Bacillariophyta, Coscinodiscophyceae, , , , ","NWP (NCOS West Pond)",13,99.7,4
+"88","ESV_036326","Eukaryota, Bacillariophyta, Coscinodiscophyceae, , , , ","NWP (NCOS West Pond)",19,98.5,8
+"89","ESV_036526","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, ","NPB1",94,99.4,4
+"90","ESV_036526","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, ","NVP2",36,99.4,4
+"91","ESV_036526","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, ","NWP (NCOS West Pond)",47,99.4,4
+"92","ESV_036532","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",9,98.5,6
+"93","ESV_036787","Eukaryota, Chlorophyta, Chlorophyceae, Chlamydomonadales, , , ","NVP4",8,99.7,9
+"94","ESV_036887","Eukaryota, unk_phylum, Cryptophyceae, Cryptomonadales, Cryptomonadaceae, Cryptomonas, Cryptomonas obovoidea","NPB1",548,100,1
+"95","ESV_037287","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVP2",15,98.5,6
+"96","ESV_059512","Bacteria, Cyanobacteria, unk_class, Nostocales, Nostocaceae, Nostoc, ","Coprvp1",12,100,9
+"97","ESV_059512","Bacteria, Cyanobacteria, unk_class, Nostocales, Nostocaceae, Nostoc, ","NVP4",12,100,9
+"98","ESV_059629","Eukaryota, Streptophyta, Zygnemophyceae, Desmidiales, Closteriaceae, Closterium, Closterium baillyanum","NVP4",24,100,1
+"99","ESV_059641","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",12,96.4,6
+"100","ESV_060364","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, Tribonema affine","NDC",47,100,1
+"101","ESV_060364","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, Tribonema affine","NPB1",11,100,1
+"102","ESV_060465","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","Coprvp1",11,97,6
+"103","ESV_061092","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","NWP (NCOS West Pond)",19,96.7,1
+"104","ESV_061117","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, ","NPB1",294,99.4,4
+"105","ESV_061120","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","NVP2",18,98.5,1
+"106","ESV_061124","Eukaryota, Chlorophyta, Chlorophyceae, Chlamydomonadales, , , ","NVP4",13,98.5,3
+"107","ESV_061145","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NVP2",3036,96.4,13
+"108","ESV_061145","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NWP (NCOS West Pond)",482,96.4,13
+"109","ESV_061175","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","Coprvp1",16,99.4,1
+"110","ESV_061250","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NVP2",29,96.4,9
+"111","ESV_061250","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NWP (NCOS West Pond)",18,96.4,9
+"112","ESV_061435","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NWP (NCOS West Pond)",10,93.7,6
+"113","ESV_061436","Eukaryota, unk_phylum, Cryptophyceae, Cryptomonadales, Cryptomonadaceae, Cryptomonas, ","NWP (NCOS West Pond)",15,98.5,4
+"114","ESV_061446","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NVP2",42,97,10
+"115","ESV_061446","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NWP (NCOS West Pond)",178,97,10
+"116","ESV_061454","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NWP (NCOS West Pond)",66,96.7,5
+"117","ESV_061739","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NDC",31,96.7,6
+"118","ESV_061843","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NWP (NCOS West Pond)",13,91.6,22
+"119","ESV_061844","Eukaryota, unk_phylum, Cryptophyceae, , , , ","Coprvp1",35,98.5,2
+"120","ESV_062027","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","CUL1",52,100,2
+"121","ESV_062027","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",105,100,2
+"122","ESV_062027","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NEC",35,100,2
+"123","ESV_062027","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NPB",12,100,2
+"124","ESV_062027","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NVBR",31,100,2
+"125","ESV_062027","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","PIER",24,100,2
+"126","ESV_062079","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVP2",32,98.8,6
+"127","ESV_062079","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVP4",15,98.8,6
+"128","ESV_062161","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, , , ","NDC",14,99.1,14
+"129","ESV_062387","Eukaryota, Bacillariophyta, , , , , ","CUL1",110,95.8,23
+"130","ESV_062387","Eukaryota, Bacillariophyta, , , , , ","MO1",23,95.8,23
+"131","ESV_062387","Eukaryota, Bacillariophyta, , , , , ","NVBR",10,95.8,23
+"132","ESV_062387","Eukaryota, Bacillariophyta, , , , , ","PIER",35,95.8,23
+"133","ESV_062429","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVP4",16,98.5,6
+"134","ESV_062451","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","PIER",26,98.8,16
+"135","ESV_062762","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","CUL1",29,99.7,5
+"136","ESV_062762","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",64,99.7,5
+"137","ESV_062762","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NEC",17,99.7,5
+"138","ESV_062762","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NVBR",13,99.7,5
+"139","ESV_063106","Eukaryota, Bacillariophyta, Coscinodiscophyceae, , , , ","NWP (NCOS West Pond)",29,98.8,4
+"140","ESV_063122","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","PIER",17,99.4,16
+"141","ESV_063297","Eukaryota, unk_phylum, Cryptophyceae, , , , ","Coprvp1",10,98.2,11
+"142","ESV_063351","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","CUL1",116,99.7,16
+"143","ESV_063351","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",204,99.7,16
+"144","ESV_063351","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NEC",229,99.7,16
+"145","ESV_063351","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NPB",98,99.7,16
+"146","ESV_063351","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NVBR",192,99.7,16
+"147","ESV_063351","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","PIER",37,99.7,16
+"148","ESV_064115","Eukaryota, Euglenozoa, Euglenida, Euglenales, Euglenaceae, Euglena, ","Coprvp1",8,93.1,3
+"149","ESV_064303","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","CUL1",9,99.4,18
+"150","ESV_064303","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",17,99.4,18
+"151","ESV_064303","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NVBR",8,99.4,18
+"152","ESV_064569","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",8,99.4,18
+"153","ESV_064722","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",11,99.7,16
+"154","ESV_064722","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NVBR",9,99.7,16
+"155","ESV_066110","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","Coprvp1",21,90.8,3
+"156","ESV_066299","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, , , ","CUL1",9,99.4,10
+"157","ESV_069687","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","Coprvp1",321,90.4,3
+"158","ESV_069837","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","NVP2",10,91.1,3
+"159","ESV_070041","Eukaryota, Streptophyta, Zygnemophyceae, , , , ","Coprvp1",8,100,3
+"160","ESV_070135","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, ","NPB1",9,99.1,4
+"161","ESV_070442","Bacteria, Cyanobacteria, unk_class, Nostocales, , , ","NVP4",9,98.8,9
+"162","ESV_070457","Eukaryota, unk_phylum, Phaeophyceae, , , , ","Coprvp1",12,93.4,13
+"163","ESV_071219","Eukaryota, unk_phylum, Cryptophyceae, Cryptomonadales, Cryptomonadaceae, Cryptomonas, Cryptomonas obovoidea","NPB1",17,99.7,1
+"164","ESV_071264","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","Coprvp1",18,90.7,3
+"165","ESV_071439","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","NVP4",39,99.7,3
+"166","ESV_071630","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","Coprvp1",8,98.5,1
+"167","ESV_072806","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Amphipleuraceae, Halamphora, ","NVP4",154,98.8,2
+"168","ESV_074990","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NWP (NCOS West Pond)",10,96.1,13
+"169","ESV_081953","Eukaryota, Chlorophyta, Trebouxiophyceae, , , , ","NDC",16,94,25
+"170","ESV_092819","Bacteria, Cyanobacteria, unk_class, Chroococcales, Aphanothecaceae, Gloeothece, ","NPB1",8,93.4,2
+"171","ESV_092819","Bacteria, Cyanobacteria, unk_class, Chroococcales, Aphanothecaceae, Gloeothece, ","NVP4",283,93.4,2
+"172","ESV_095706","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NWP (NCOS West Pond)",9,98.5,23
+"173","ESV_100020","Eukaryota, unk_phylum, Cryptophyceae, , , , ","Coprvp1",175,97.6,15
+"174","ESV_100455","Eukaryota, Bacillariophyta, , , , , ","CUL1",8,98.5,2
+"175","ESV_100455","Eukaryota, Bacillariophyta, , , , , ","NVBR",25,98.5,2
+"176","ESV_100455","Eukaryota, Bacillariophyta, , , , , ","PIER",669,98.5,2
+"177","ESV_100823","Eukaryota, Chlorophyta, Chlorophyceae, Chlamydomonadales, , , ","NVP4",14,98.8,3
+"178","ESV_100877","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, , , ","NVP4",334,97,11
+"179","ESV_101402","Bacteria, Cyanobacteria, , , , , ","NDC",24,84.5,2
+"180","ESV_104853","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","CUL1",868,99.7,6
+"181","ESV_104853","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","MO1",537,99.7,6
+"182","ESV_104853","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NDC",509,99.7,6
+"183","ESV_104853","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NEC",1223,99.7,6
+"184","ESV_104853","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB",1425,99.7,6
+"185","ESV_104853","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",230,99.7,6
+"186","ESV_104853","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVBR",1151,99.7,6
+"187","ESV_104853","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","PIER",282,99.7,6
+"188","ESV_105052","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, Nitzschia, ","NWP (NCOS West Pond)",9,99.7,8
+"189","ESV_105861","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","NVP2",46,93.4,3
+"190","ESV_106822","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVP2",20,93.7,6
+"191","ESV_109710","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Sellaphoraceae, Sellaphora, ","NPB1",9,97.9,8
+"192","ESV_111780","Eukaryota, Euglenozoa, Euglenida, Euglenales, unk_family, Colacium, ","NWP (NCOS West Pond)",16,99.1,2
+"193","ESV_111802","Eukaryota, Bacillariophyta, Bacillariophyceae, , , , ","NPB1",11,93.7,24
+"194","ESV_115937","Eukaryota, Euglenozoa, Euglenida, Euglenales, unk_family, Colacium, ","NWP (NCOS West Pond)",11,96.7,2
+"195","ESV_116037","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NVP4",97,99.4,17
+"196","ESV_127092","Eukaryota, Chlorophyta, Mamiellophyceae, Mamiellales, Mamiellaceae, Mamiella, Mamiella gilva","PIER",10,100,1
+"197","ESV_127259","Eukaryota, Chlorophyta, Trebouxiophyceae, Chlorellales, Chlorellaceae, Nannochloris, Nannochloris normandinae","NDC",86,98.5,1
+"198","ESV_127319","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Chaetocerotales, Chaetocerotaceae, Chaetoceros, ","PIER",32,97.9,2
+"199","ESV_127691","Eukaryota, unk_phylum, Phaeophyceae, , , , ","Coprvp1",54,93.1,13
+"200","ESV_127734","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NVP2",12,91.3,20
+"201","ESV_127734","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NWP (NCOS West Pond)",13,91.3,20
+"202","ESV_129590","Eukaryota, unk_phylum, Dictyochophyceae, Dictyochales, unk_family, Dictyocha, Dictyocha speculum","PIER",12,96.4,1
+"203","ESV_130344","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",10,99.7,16
+"204","ESV_130579","Eukaryota, Bacillariophyta, , , , , ","PIER",21,98.2,8
+"205","ESV_131625","Eukaryota, Bacillariophyta, Coscinodiscophyceae, , , , ","NWP (NCOS West Pond)",11,99.1,4
+"206","ESV_132232","Eukaryota, Bacillariophyta, Coscinodiscophyceae, , , , ","NWP (NCOS West Pond)",8,98.8,4
+"207","ESV_133858","Eukaryota, Haptista, Haptophyta, Isochrysidales, , , ","NVBR",11,90.4,3
+"208","ESV_134159","Eukaryota, unk_phylum, Phaeophyceae, , , , ","Coprvp1",8,93.1,15
+"209","ESV_134522","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",24,95.2,6
+"210","ESV_139096","Eukaryota, Bacillariophyta, , , , , ","PIER",9,97.3,12
+"211","ESV_139755","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","CUL1",41,99.4,22
+"212","ESV_139755","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",41,99.4,22
+"213","ESV_139755","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NEC",19,99.4,22
+"214","ESV_139755","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NPB",16,99.4,22
+"215","ESV_139755","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NVBR",25,99.4,22
+"216","ESV_139755","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","PIER",12,99.4,22
+"217","ESV_139757","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",9,99.7,16
+"218","ESV_139783","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",9,99.4,16
+"219","ESV_139970","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, , , ","PIER",13,99.1,14
+"220","ESV_139976","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, , , ","PIER",15,99.1,12
+"221","ESV_140095","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","Coprvp1",9,89.9,3
+"222","ESV_142430","Eukaryota, Chlorophyta, Chlorophyceae, Chlamydomonadales, , , ","Coprvp1",11,97.9,3
+"223","ESV_142806","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, , , ","NWP (NCOS West Pond)",15,98.8,12
+"224","ESV_143144","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NVP2",31,96.7,9
+"225","ESV_143177","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","CUL1",9,99.4,6
+"226","ESV_143287","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","CUL1",9,93.1,6
+"227","ESV_143287","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","MO1",24,93.1,6
+"228","ESV_143287","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NEC",14,93.1,6
+"229","ESV_143287","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVBR",12,93.1,6
+"230","ESV_143292","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","CUL1",248,99.7,5
+"231","ESV_143292","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","MO1",272,99.7,5
+"232","ESV_143292","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NDC",497,99.7,5
+"233","ESV_143292","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NEC",193,99.7,5
+"234","ESV_143292","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB",741,99.7,5
+"235","ESV_143292","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",143,99.7,5
+"236","ESV_143292","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVBR",128,99.7,5
+"237","ESV_143292","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","PIER",80,99.7,5
+"238","ESV_143296","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","CUL1",32,93.1,7
+"239","ESV_143296","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",24,93.1,7
+"240","ESV_143296","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NEC",26,93.1,7
+"241","ESV_143296","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NPB",18,93.1,7
+"242","ESV_143296","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NVBR",14,93.1,7
+"243","ESV_164320","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",17,99.1,6
+"244","ESV_164501","Bacteria, Cyanobacteria, , , , , ","CUL1",24,97.9,2
+"245","ESV_164516","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NPB1",18,98.5,18
+"246","ESV_165193","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","CUL1",55,93.4,14
+"247","ESV_165193","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",50,93.4,14
+"248","ESV_165193","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NEC",125,93.4,14
+"249","ESV_165193","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NPB",68,93.4,14
+"250","ESV_165193","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NVBR",88,93.4,14
+"251","ESV_165194","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","CUL1",174,93.7,14
+"252","ESV_165194","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",93,93.7,14
+"253","ESV_165194","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NDC",11,93.7,14
+"254","ESV_165194","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NEC",49,93.7,14
+"255","ESV_165194","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NPB",59,93.7,14
+"256","ESV_165194","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NVBR",83,93.7,14
+"257","ESV_165194","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","PIER",35,93.7,14
+"258","ESV_165195","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","CUL1",16,99.7,6
+"259","ESV_165195","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","MO1",13,99.7,6
+"260","ESV_165195","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB",44,99.7,6
+"261","ESV_165196","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","CUL1",76,93.1,6
+"262","ESV_165196","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","MO1",65,93.1,6
+"263","ESV_165196","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NEC",71,93.1,6
+"264","ESV_165196","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB",29,93.1,6
+"265","ESV_165196","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVBR",67,93.1,6
+"266","ESV_165196","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","PIER",18,93.1,6
+"267","ESV_165197","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB",24,99.7,5
+"268","ESV_165198","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","CUL1",57,93.4,6
+"269","ESV_165198","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","MO1",59,93.4,6
+"270","ESV_165198","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NEC",61,93.4,6
+"271","ESV_165198","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB",20,93.4,6
+"272","ESV_165198","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVBR",51,93.4,6
+"273","ESV_165198","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","PIER",13,93.4,6
+"274","ESV_165199","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","CUL1",15,93.1,20
+"275","ESV_165199","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",10,93.1,20
+"276","ESV_165199","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NPB",14,93.1,20
+"277","ESV_165199","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NVBR",14,93.1,20
+"278","ESV_165200","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NEC",9,93.7,16
+"279","ESV_165200","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NPB",8,93.7,16
+"280","ESV_165201","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NPB",8,93.4,16
+"281","ESV_165202","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, Tribonema affine","NPB1",409,99.7,1
+"282","ESV_165203","Bacteria, Cyanobacteria, , , , , ","NPB1",56,92.2,2
+"283","ESV_165203","Bacteria, Cyanobacteria, , , , , ","NVP4",48,92.2,2
+"284","ESV_165204","Eukaryota, unk_phylum, Cryptophyceae, Cryptomonadales, Cryptomonadaceae, Cryptomonas, Cryptomonas obovoidea","NPB1",49,93.4,1
+"285","ESV_165205","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, ","NPB1",46,97.3,4
+"286","ESV_165206","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",27,93.4,6
+"287","ESV_165207","Bacteria, Cyanobacteria, , , , , ","NPB1",25,92.2,17
+"288","ESV_165208","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, , ","NPB1",24,98.5,23
+"289","ESV_165209","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",18,94.9,6
+"290","ESV_165210","Eukaryota, Chlorophyta, Trebouxiophyceae, Trebouxiales, Trebouxiaceae, Trebouxia, ","NPB1",17,98.8,8
+"291","ESV_165211","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, , , ","NPB1",16,99.4,10
+"292","ESV_165212","Eukaryota, Bacillariophyta, Bacillariophyceae, , , , ","NPB1",14,98.8,10
+"293","ESV_165213","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, Tribonema affine","NPB1",13,92.8,1
+"294","ESV_165214","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, ","NPB1",12,99.1,4
+"295","ESV_165215","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, Tribonema affine","NPB1",12,99.4,1
+"296","ESV_165216","Eukaryota, unk_phylum, Cryptophyceae, Cryptomonadales, Cryptomonadaceae, Cryptomonas, Cryptomonas obovoidea","NPB1",11,99.7,1
+"297","ESV_165217","Eukaryota, unk_phylum, Cryptophyceae, Cryptomonadales, Cryptomonadaceae, Cryptomonas, Cryptomonas obovoidea","NPB1",10,99.7,1
+"298","ESV_165218","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, Tribonema affine","NPB1",9,97.9,1
+"299","ESV_165219","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, ","NPB1",9,97.6,4
+"300","ESV_165220","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NPB1",9,94.9,5
+"301","ESV_165221","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NEC",11,99.1,16
+"302","ESV_165222","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, , , ","NEC",11,94,14
+"303","ESV_165223","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","CUL1",10,92.8,6
+"304","ESV_165223","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","MO1",14,92.8,6
+"305","ESV_165223","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NEC",8,92.8,6
+"306","ESV_165223","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVBR",10,92.8,6
+"307","ESV_165224","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","NVP2",205,91.4,2
+"308","ESV_165225","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","NVP2",81,87.8,2
+"309","ESV_165226","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NVP2",60,94,11
+"310","ESV_165227","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","NVP2",35,90.8,2
+"311","ESV_165228","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","NVP2",34,90.8,2
+"312","ESV_165229","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NVP2",29,95.8,13
+"313","ESV_165230","Eukaryota, unk_phylum, Xanthophyceae, Tribonematales, Tribonemataceae, Tribonema, ","NVP2",22,93.4,4
+"314","ESV_165231","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","NVP2",20,91.7,2
+"315","ESV_165232","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NVP2",19,95.2,13
+"316","ESV_165233","Eukaryota, Chlorophyta, Trebouxiophyceae, Chlorellales, Chlorellaceae, , ","NVP2",17,91.9,21
+"317","ESV_165234","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","NVP2",16,93.1,1
+"318","ESV_165235","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","NVP2",14,88.7,2
+"319","ESV_165236","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NVP2",12,94.9,11
+"320","ESV_165237","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","NVP2",11,90.8,3
+"321","ESV_165238","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","NVP2",11,88.1,2
+"322","ESV_165239","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","NVP2",11,94,1
+"323","ESV_165240","Eukaryota, Chlorophyta, Trebouxiophyceae, Chlorellales, Chlorellaceae, , ","NVP2",9,91.6,21
+"324","ESV_165241","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","NVP2",9,92.2,3
+"325","ESV_165242","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NVP2",8,94,11
+"326","ESV_165243","Bacteria, Cyanobacteria, unk_class, Nostocales, Nostocaceae, Nostoc, Nostoc linckia","CUL1",115,87.4,1
+"327","ESV_165243","Bacteria, Cyanobacteria, unk_class, Nostocales, Nostocaceae, Nostoc, Nostoc linckia","MO1",48,87.4,1
+"328","ESV_165244","Bacteria, Cyanobacteria, unk_class, Nostocales, Nostocaceae, Nostoc, Nostoc linckia","CUL1",111,87.4,1
+"329","ESV_165244","Bacteria, Cyanobacteria, unk_class, Nostocales, Nostocaceae, Nostoc, Nostoc linckia","MO1",67,87.4,1
+"330","ESV_165245","Bacteria, Cyanobacteria, unk_class, Nostocales, Nostocaceae, Nostoc, Nostoc linckia","CUL1",77,86.8,1
+"331","ESV_165245","Bacteria, Cyanobacteria, unk_class, Nostocales, Nostocaceae, Nostoc, Nostoc linckia","MO1",32,86.8,1
+"332","ESV_165246","Eukaryota, Bacillariophyta, , , , , ","CUL1",17,91.6,30
+"333","ESV_165247","Bacteria, Cyanobacteria, unk_class, Nostocales, Nostocaceae, Nostoc, Nostoc linckia","CUL1",16,87.1,1
+"334","ESV_165248","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","CUL1",14,99.4,16
+"335","ESV_165248","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","MO1",15,99.4,16
+"336","ESV_165249","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","CUL1",12,99.1,6
+"337","ESV_165249","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","MO1",9,99.1,6
+"338","ESV_165250","Bacteria, Cyanobacteria, unk_class, Nostocales, Nostocaceae, Nostoc, Nostoc linckia","CUL1",10,87.1,1
+"339","ESV_165251","Eukaryota, Bacillariophyta, , , , , ","CUL1",9,91.6,14
+"340","ESV_165252","Eukaryota, Bacillariophyta, , , , , ","CUL1",9,92.2,28
+"341","ESV_165253","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","Coprvp1",328,98.2,1
+"342","ESV_165254","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","Coprvp1",80,89.9,3
+"343","ESV_165255","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","Coprvp1",24,86,3
+"344","ESV_165256","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","Coprvp1",23,91.6,1
+"345","ESV_165257","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","Coprvp1",21,94.6,1
+"346","ESV_165258","Eukaryota, Chlorophyta, Chlorophyceae, Chlamydomonadales, Chlamydomonadaceae, , ","Coprvp1",21,97.6,2
+"347","ESV_165259","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, ","Coprvp1",19,89.6,3
+"348","ESV_165260","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","Coprvp1",17,97.9,1
+"349","ESV_165261","Eukaryota, unk_phylum, Synurophyceae, Synurales, Mallomonadaceae, Mallomonas, ","Coprvp1",13,98.5,3
+"350","ESV_165262","Eukaryota, unk_phylum, Cryptophyceae, Cryptomonadales, Cryptomonadaceae, Cryptomonas, Cryptomonas sp. CNUCRY 75","Coprvp1",13,98.8,1
+"351","ESV_165263","Eukaryota, unk_phylum, Cryptophyceae, , , , ","Coprvp1",12,93.1,13
+"352","ESV_165264","Eukaryota, Chlorophyta, Chlorophyceae, Chaetophorales, Chaetophoraceae, Coccobotrys, Coccobotrys verrucariae","Coprvp1",12,99.4,1
+"353","ESV_165265","Eukaryota, unk_phylum, Cryptophyceae, , , , ","Coprvp1",11,93.1,17
+"354","ESV_165266","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","Coprvp1",11,96.7,6
+"355","ESV_165267","Eukaryota, , , , , , ","Coprvp1",10,85,6
+"356","ESV_165268","Eukaryota, Chlorophyta, Trebouxiophyceae, Chlorellales, Chlorellaceae, , ","Coprvp1",9,96.4,21
+"357","ESV_165269","Eukaryota, unk_phylum, Synurophyceae, Synurales, Mallomonadaceae, , ","Coprvp1",9,89.2,9
+"358","ESV_165270","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","Coprvp1",9,97,1
+"359","ESV_165271","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","Coprvp1",8,91.3,1
+"360","ESV_165272","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","Coprvp1",8,97.9,1
+"361","ESV_165273","Bacteria, Cyanobacteria, unk_class, Nostocales, Nostocaceae, , ","NVP4",354,98.5,4
+"362","ESV_165274","Bacteria, Cyanobacteria, unk_class, Nostocales, Nostocaceae, , ","NVP4",334,98.5,4
+"363","ESV_165275","Bacteria, Cyanobacteria, unk_class, Nostocales, Nostocaceae, , ","NVP4",60,98.5,8
+"364","ESV_165276","Bacteria, Cyanobacteria, , , , , ","NVP4",53,90.7,2
+"365","ESV_165277","Bacteria, Cyanobacteria, unk_class, Nostocales, , , ","NVP4",48,94.3,28
+"366","ESV_165278","Bacteria, Cyanobacteria, , , , , ","NVP4",46,90.7,2
+"367","ESV_165279","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, , , ","NVP4",36,97.9,14
+"368","ESV_165280","Eukaryota, Chlorophyta, Chlorophyceae, Chlamydomonadales, , , ","NVP4",31,97.9,11
+"369","ESV_165281","Eukaryota, Chlorophyta, Chlorophyceae, , , , ","NVP4",21,97.3,6
+"370","ESV_165282","Eukaryota, Euglenozoa, Euglenida, Euglenales, unk_family, Colacium, ","NVP4",16,99.7,2
+"371","ESV_165283","Bacteria, Cyanobacteria, , , , , ","NVP4",12,92.2,3
+"372","ESV_165284","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, , , ","NVP4",11,96.7,14
+"373","ESV_165285","Bacteria, Cyanobacteria, , , , , ","NVP4",10,92.5,2
+"374","ESV_165286","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, , , ","NVP4",10,96.7,12
+"375","ESV_165287","Bacteria, Cyanobacteria, unk_class, Nostocales, , , ","NVP4",10,94.3,12
+"376","ESV_165288","Bacteria, Cyanobacteria, unk_class, Chroococcales, Aphanothecaceae, Gloeothece, Gloeothece verrucosa","NVP4",9,93.4,1
+"377","ESV_165289","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, , , ","NVP4",9,97.9,11
+"378","ESV_165290","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, , , ","NVP4",8,98.5,10
+"379","ESV_165291","Bacteria, Cyanobacteria, , , , , ","NVP4",8,89.6,17
+"380","ESV_165292","Bacteria, Cyanobacteria, unk_class, Chroococcales, Aphanothecaceae, Gloeothece, ","NVP4",8,93.1,2
+"381","ESV_165293","Bacteria, Cyanobacteria, , , , , ","NVP4",8,94.6,3
+"382","ESV_165294","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","MO1",37,93.1,5
+"383","ESV_165295","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, , , ","NWP (NCOS West Pond)",32,92.5,14
+"384","ESV_165296","Eukaryota, Bacillariophyta, Coscinodiscophyceae, , , , ","NWP (NCOS West Pond)",18,99.1,4
+"385","ESV_165297","Eukaryota, , , , , , ","NWP (NCOS West Pond)",15,90.7,53
+"386","ESV_165298","Eukaryota, Bacillariophyta, Coscinodiscophyceae, , , , ","NWP (NCOS West Pond)",14,98.8,11
+"387","ESV_165299","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NWP (NCOS West Pond)",11,94.9,13
+"388","ESV_165300","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NWP (NCOS West Pond)",11,94.3,6
+"389","ESV_165301","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NWP (NCOS West Pond)",10,94,6
+"390","ESV_165302","Eukaryota, Bacillariophyta, Bacillariophyceae, , , , ","NWP (NCOS West Pond)",9,97.9,34
+"391","ESV_165303","Eukaryota, unk_phylum, Cryptophyceae, , , , ","NWP (NCOS West Pond)",8,96.1,13
+"392","ESV_165304","Eukaryota, Bacillariophyta, Coscinodiscophyceae, , , , ","NWP (NCOS West Pond)",8,98.8,8
+"393","ESV_165305","Eukaryota, Bacillariophyta, Coscinodiscophyceae, , , , ","PIER",191,97.9,3
+"394","ESV_165306","Eukaryota, Bacillariophyta, Coscinodiscophyceae, , , , ","PIER",44,97.9,3
+"395","ESV_165307","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Chaetocerotales, Chaetocerotaceae, Chaetoceros, ","PIER",41,98.2,2
+"396","ESV_165308","Eukaryota, Bacillariophyta, , , , , ","PIER",33,98.2,4
+"397","ESV_165309","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Chaetocerotales, Chaetocerotaceae, Chaetoceros, Chaetoceros sp. 19 LG-2014","PIER",32,98.5,1
+"398","ESV_165310","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NVBR",8,98.8,6
+"399","ESV_165310","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","PIER",25,98.8,6
+"400","ESV_165311","Eukaryota, Bacillariophyta, , , , , ","PIER",22,92.8,20
+"401","ESV_165312","Eukaryota, Bacillariophyta, , , , , ","PIER",16,97.3,2
+"402","ESV_165313","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Chaetocerotales, Chaetocerotaceae, Chaetoceros, ","PIER",11,98.2,2
+"403","ESV_165314","Eukaryota, Bacillariophyta, , , , , ","PIER",11,97.9,12
+"404","ESV_165315","Eukaryota, Bacillariophyta, , , , , ","PIER",10,98.2,3
+"405","ESV_165316","Eukaryota, Bacillariophyta, Coscinodiscophyceae, , , , ","PIER",10,97.6,3
+"406","ESV_165317","Bacteria, Cyanobacteria, , , , , ","NDC",61,92.2,13
+"407","ESV_165318","Eukaryota, Euglenozoa, Euglenida, Euglenales, Phacaceae, Lepocinclis, Lepocinclis spirogyroides","NDC",24,96.7,1
+"408","ESV_165319","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Sellaphoraceae, Sellaphora, ","NDC",23,98.8,8
+"409","ESV_165320","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NDC",22,99.4,6
+"410","ESV_165321","Eukaryota, Euglenozoa, Euglenida, Euglenales, Phacaceae, Lepocinclis, Lepocinclis spirogyroides","NDC",12,96.4,1
+"411","ESV_165322","Bacteria, Cyanobacteria, unk_class, Synechococcales, Synechococcaceae, Synechococcus, ","NDC",12,99.7,16
+"412","ESV_165323","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NDC",12,99.4,5
+"413","ESV_165324","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NDC",11,99.4,5
+"414","ESV_165325","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NDC",10,99.4,5
+"415","ESV_165326","Bacteria, Cyanobacteria, unk_class, Chroococcales, Cyanobacteriaceae, Cyanobacterium, Cyanobacterium aponinum","NDC",8,86.3,1
+"416","ESV_165327","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, , ","NDC",8,99.4,5
+"417","ESV_000067","Eukaryota, Chordata, Aves, Anseriformes, Anatidae, , ","NVP4",575,100,4
+"418","ESV_000067","Eukaryota, Chordata, Aves, Anseriformes, Anatidae, , ","NWP (NCOS West Pond)",322,100,4
+"419","ESV_001228","Eukaryota, Chordata, Actinopteri, Stomiiformes, Gonostomatidae, Cyclothone, Cyclothone pallida","CUL1",220,100,1
+"420","ESV_001228","Eukaryota, Chordata, Actinopteri, Stomiiformes, Gonostomatidae, Cyclothone, Cyclothone pallida","NEC",1918,100,1
+"421","ESV_007680","Eukaryota, Chordata, Aves, Anseriformes, Anatidae, , ","NVP4",25,99.5,4
+"422","ESV_008311","Eukaryota, Chordata, Actinopteri, Clupeiformes, Clupeidae, Clupea, Clupea pallasii","NVBR",176,100,1
+"423","ESV_009594","Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Poeciliidae, Gambusia, Gambusia affinis","NPB",36,100,1
+"424","ESV_009711","Eukaryota, Chordata, Aves, Anseriformes, Anatidae, Mareca, ","NVP4",57,100,3
+"425","ESV_010047","Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis","CUL1",942,99.4,1
+"426","ESV_010047","Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis","NPB",1861,99.4,1
+"427","ESV_010047","Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis","NVBR",814,99.4,1
+"428","ESV_010047","Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis","PIER",247,99.4,1
+"429","ESV_011169","Eukaryota, Chordata, Aves, Anseriformes, Anatidae, Branta, Branta canadensis","NVP2",64,100,1
+"430","ESV_012291","Eukaryota, Chordata, Actinopteri, Stomiiformes, Gonostomatidae, Cyclothone, Cyclothone obscura","NVBR",154,100,1
+"431","ESV_018632","Eukaryota, Chordata, Actinopteri, Clupeiformes, Clupeidae, , ","NVBR",15,99.4,3
+"432","ESV_027131","Eukaryota, Chordata, Actinopteri, unk_order, Sciaenidae, , ","PIER",22,92.3,3
+"433","ESV_028290","Eukaryota, Chordata, Chondrichthyes, unk_order, Pristiophoridae, Pristiophorus, Pristiophorus nudipinnis","NDC",2234,95,1
+"434","ESV_028339","Eukaryota, Chordata, Chondrichthyes, unk_order, Pristiophoridae, Pristiophorus, Pristiophorus nudipinnis","NDC",72,94.5,1
+"435","ESV_033268","Eukaryota, Chordata, Actinopteri, Argentiniformes, Bathylagidae, , ","NEC",391,89.9,3
+"436","ESV_033299","Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Fundulidae, , ","CUL1",443,86.9,2
+"437","ESV_033299","Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Fundulidae, , ","NVBR",72,86.9,2
+"438","ESV_033299","Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Fundulidae, , ","PIER",351,86.9,2
+"439","ESV_033551","Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Poeciliidae, Gambusia, ","NPB",177,99.4,2
+"440","ESV_033552","Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis","NPB",37,98.8,1
+"441","ESV_033553","Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis","NPB",35,98.8,1
+"442","ESV_033554","Eukaryota, Chordata, Actinopteri, Argentiniformes, Bathylagidae, , ","NEC",158,89.3,3
+"443","ESV_033555","Eukaryota, Chordata, Actinopteri, Stomiiformes, Gonostomatidae, Cyclothone, Cyclothone pallida","NEC",43,99.4,1
+"444","ESV_033556","Eukaryota, Chordata, Actinopteri, Stomiiformes, Gonostomatidae, Cyclothone, Cyclothone pallida","NEC",32,99.4,1
+"445","ESV_033557","Eukaryota, Chordata, Actinopteri, Argentiniformes, Bathylagidae, , ","NEC",11,89.9,2
+"446","ESV_033558","Eukaryota, Chordata, Actinopteri, Stomiiformes, Gonostomatidae, Cyclothone, Cyclothone pallida","CUL1",165,99.4,1
+"447","ESV_033559","Eukaryota, Chordata, Actinopteri, Stomiiformes, Gonostomatidae, Cyclothone, Cyclothone pallida","CUL1",26,99.4,1
+"448","ESV_033560","Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Fundulidae, , ","CUL1",26,86.3,2
+"449","ESV_033561","Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis","CUL1",24,98.8,1
+"450","ESV_033562",", , , , , , ","Coprvp1",17,NA,NA
+"451","ESV_033563","Eukaryota, Chordata, Aves, Anseriformes, Anatidae, , ","NVP4",630,99.5,4
+"452","ESV_033564","Eukaryota, Chordata, Aves, Anseriformes, Anatidae, , ","NVP4",21,98.9,4
+"453","ESV_033565","Eukaryota, Chordata, Aves, Anseriformes, Anatidae, , ","NVP4",18,98.9,4
+"454","ESV_033566",", , , , , , ","NVP4",15,NA,NA
+"455","ESV_033567","Eukaryota, Chordata, Mammalia, Primates, Hominidae, Homo, Homo sapiens","NVP4",12,100,1
+"456","ESV_033568","Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis","NVBR",41,98.8,1
+"457","ESV_000027","Eukaryota, Mollusca, Bivalvia, Galeommatida, Montacutidae, Kurtiella, Kurtiella bidentata","NEC",9,84,1
+"458","ESV_000027","Eukaryota, Mollusca, Bivalvia, Galeommatida, Montacutidae, Kurtiella, Kurtiella bidentata","NPB1",4570,84,1
+"459","ESV_000027","Eukaryota, Mollusca, Bivalvia, Galeommatida, Montacutidae, Kurtiella, Kurtiella bidentata","NVBR",18,84,1
+"460","ESV_000027","Eukaryota, Mollusca, Bivalvia, Galeommatida, Montacutidae, Kurtiella, Kurtiella bidentata","NWP (NCOS West Pond)",14,84,1
+"461","ESV_000058","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira pseudonana","NPB1",364,89.6,1
+"462","ESV_000139","Eukaryota, , , , , , ","NVP4",13,77.3,5
+"463","ESV_000193","Eukaryota, Tubulinea, Elardia, Arcellinida, Hyalospheniidae, Planocarina, Planocarina carinata","NVP4",138,81,1
+"464","ESV_000372","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira pseudonana","CUL1",85,100,1
+"465","ESV_000372","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira pseudonana","MO1",274,100,1
+"466","ESV_000372","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira pseudonana","NEC",67,100,1
+"467","ESV_000372","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira pseudonana","NVBR",55,100,1
+"468","ESV_000372","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira pseudonana","NWP (NCOS West Pond)",2307,100,1
+"469","ESV_000372","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira pseudonana","PIER",514,100,1
+"470","ESV_000401","Eukaryota, Oomycota, , , , , ","NVP4",23,79.1,11
+"471","ESV_000465","Eukaryota, , , , , , ","NPB1",322,74.2,15
+"472","ESV_000475","Eukaryota, , , , , , ","NVBR",11,81.6,2
+"473","ESV_000498","Eukaryota, Oomycota, unk_class, Peronosporales, Peronosporaceae, Phytophthora, ","CUL1",8,73,13
+"474","ESV_000650","Eukaryota, Arthropoda, Insecta, Odonata, Libellulidae, Sympetrum, Sympetrum corruptum","NVP2",14,100,1
+"475","ESV_000968","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, Globisporangium, Globisporangium canariense","NVP4",8,82.2,1
+"476","ESV_003294","Eukaryota, Evosea, unk_class, unk_order, unk_family, Squamamoeba, Squamamoeba japonica","NWP (NCOS West Pond)",12,84.7,1
+"477","ESV_003425","Eukaryota, , , , , , ","NVP4",16,80.4,4
+"478","ESV_003567","Eukaryota, Oomycota, , , , , ","NPB1",365,87.1,2
+"479","ESV_003780","Eukaryota, Tubulinea, Elardia, Euamoebida, unk_family, Copromyxa, Copromyxa protea","NVP4",19,90.2,1
+"480","ESV_004361","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, Nitzschia, Nitzschia cf. recta RT-2009","NEC",36,81,1
+"481","ESV_004361","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, Nitzschia, Nitzschia cf. recta RT-2009","NVBR",35,81,1
+"482","ESV_004415","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Naviculaceae, Navicula, ","NVBR",9,86.5,2
+"483","ESV_004500","Eukaryota, Rhodophyta, Florideophyceae, , , , ","CUL1",9,81,3
+"484","ESV_004500","Eukaryota, Rhodophyta, Florideophyceae, , , , ","MO1",164,81,3
+"485","ESV_004500","Eukaryota, Rhodophyta, Florideophyceae, , , , ","NEC",83,81,3
+"486","ESV_004500","Eukaryota, Rhodophyta, Florideophyceae, , , , ","NPB",159,81,3
+"487","ESV_004500","Eukaryota, Rhodophyta, Florideophyceae, , , , ","NVBR",108,81,3
+"488","ESV_004500","Eukaryota, Rhodophyta, Florideophyceae, , , , ","PIER",58,81,3
+"489","ESV_004520","Eukaryota, Rhodophyta, Florideophyceae, Gracilariales, Gracilariaceae, Gracilaria, Gracilaria salicornia","NEC",10,77.3,1
+"490","ESV_004660","Eukaryota, Arthropoda, Branchiopoda, Diplostraca, Daphniidae, Ceriodaphnia, ","NWP (NCOS West Pond)",13049,100,3
+"491","ESV_004717","Eukaryota, , , , , , ","CUL1",22,86.5,4
+"492","ESV_004717","Eukaryota, , , , , , ","MO1",10,86.5,4
+"493","ESV_004717","Eukaryota, , , , , , ","NEC",176,86.5,4
+"494","ESV_004717","Eukaryota, , , , , , ","NVBR",23,86.5,4
+"495","ESV_004825","Eukaryota, Oomycota, unk_class, Pythiales, , , ","CUL1",13,77.9,2
+"496","ESV_004825","Eukaryota, Oomycota, unk_class, Pythiales, , , ","NEC",493,77.9,2
+"497","ESV_004825","Eukaryota, Oomycota, unk_class, Pythiales, , , ","NVBR",106,77.9,2
+"498","ESV_005275","Eukaryota, , , , , , ","NVP4",14,77.9,4
+"499","ESV_006674","Eukaryota, Mollusca, Bivalvia, Galeommatida, Montacutidae, Kurtiella, Kurtiella bidentata","NPB1",14,84,1
+"500","ESV_006738","Eukaryota, unk_phylum, Dictyochophyceae, Pedinellales, unk_family, Pseudopedinella, Pseudopedinella elastica","NVP2",78,85.3,1
+"501","ESV_006738","Eukaryota, unk_phylum, Dictyochophyceae, Pedinellales, unk_family, Pseudopedinella, Pseudopedinella elastica","NVP4",162,85.3,1
+"502","ESV_007295","Eukaryota, Oomycota, unk_class, Myzocytiopsidales, Myzocytiopsidaceae, Myzocytiopsis, Myzocytiopsis osiris","NVP4",26,92.6,1
+"503","ESV_008879","Eukaryota, Rhodophyta, Florideophyceae, , , , ","NVP4",325,81.6,25
+"504","ESV_008879","Eukaryota, Rhodophyta, Florideophyceae, , , , ","NWP (NCOS West Pond)",8,81.6,25
+"505","ESV_009092","Eukaryota, unk_phylum, Dictyochophyceae, Pedinellales, unk_family, Pseudopedinella, Pseudopedinella elastica","NVP2",41,84,1
+"506","ESV_009568","Eukaryota, unk_phylum, Chrysophyceae, unk_order, unk_family, Segregatospumella, Segregatospumella sp.","Coprvp1",27,86.5,1
+"507","ESV_009946","Eukaryota, , , , , , ","NPB1",34,84.7,5
+"508","ESV_010159","Eukaryota, Evosea, unk_class, unk_order, unk_family, Squamamoeba, Squamamoeba japonica","NVP4",35,84,1
+"509","ESV_010471","Eukaryota, Oomycota, unk_class, Albuginales, Albuginaceae, Albugo, Albugo sp. YJC-2014","NVP4",38,82.8,1
+"510","ESV_011712","Eukaryota, unk_phylum, Phaeophyceae, Sphacelariales, Discosporangiaceae, Discosporangium, Discosporangium mesarthrocarpum","NVP4",102,83.4,1
+"511","ESV_011770","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira pseudonana","NWP (NCOS West Pond)",55,99.4,1
+"512","ESV_011770","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira pseudonana","PIER",11,99.4,1
+"513","ESV_011847","Eukaryota, Oomycota, , , , , ","NPB1",4725,83.4,7
+"514","ESV_011869","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Naviculaceae, Navicula, Navicula cryptocephala","NPB1",97,90.2,1
+"515","ESV_011869","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Naviculaceae, Navicula, Navicula cryptocephala","PIER",9,90.2,1
+"516","ESV_011901","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, Achlya, Achlya papillosa","NPB1",9,82.8,1
+"517","ESV_012738","Eukaryota, , , , , , ","NVP4",19,73.6,2
+"518","ESV_012748","Eukaryota, , , , , , ","NVP2",9,80.4,5
+"519","ESV_013079","Eukaryota, unk_phylum, Xanthophyceae, , , , ","NWP (NCOS West Pond)",47,84.7,2
+"520","ESV_014876","Eukaryota, Bacillariophyta, , , , , ","MO1",22,84,2
+"521","ESV_014876","Eukaryota, Bacillariophyta, , , , , ","NVBR",86,84,2
+"522","ESV_014876","Eukaryota, Bacillariophyta, , , , , ","PIER",504,84,2
+"523","ESV_014883","Eukaryota, Bacillariophyta, Mediophyceae, Cymatosirales, Cymatosiraceae, Minutocellus, Minutocellus polymorphus","MO1",76,85.3,1
+"524","ESV_014883","Eukaryota, Bacillariophyta, Mediophyceae, Cymatosirales, Cymatosiraceae, Minutocellus, Minutocellus polymorphus","NVBR",36,85.3,1
+"525","ESV_014883","Eukaryota, Bacillariophyta, Mediophyceae, Cymatosirales, Cymatosiraceae, Minutocellus, Minutocellus polymorphus","PIER",1097,85.3,1
+"526","ESV_014885","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Skeletonemataceae, Skeletonema, Skeletonema japonicum","PIER",14,98.2,1
+"527","ESV_014947","Eukaryota, unk_phylum, Dictyochophyceae, Pedinellales, unk_family, Pseudopedinella, Pseudopedinella elastica","NVBR",15,85.9,1
+"528","ESV_014950","Eukaryota, Oomycota, , , , , ","NVBR",17,84.7,3
+"529","ESV_014950","Eukaryota, Oomycota, , , , , ","PIER",65,84.7,3
+"530","ESV_014958","Eukaryota, Bacillariophyta, Mediophyceae, Hemiaulales, Hemiaulaceae, Eucampia, Eucampia zodiacus","NVBR",51,85.9,1
+"531","ESV_014958","Eukaryota, Bacillariophyta, Mediophyceae, Hemiaulales, Hemiaulaceae, Eucampia, Eucampia zodiacus","PIER",580,85.9,1
+"532","ESV_014994","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",58,84.5,1
+"533","ESV_014994","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","PIER",51,84.5,1
+"534","ESV_015015","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Chaetocerotales, Chaetocerotaceae, Chaetoceros, Chaetoceros protuberans","PIER",11,92,1
+"535","ESV_015033","Eukaryota, , , , , , ","NEC",23,82.2,2
+"536","ESV_015033","Eukaryota, , , , , , ","NVBR",76,82.2,2
+"537","ESV_015043","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Naviculaceae, Navicula, Navicula cryptocephala","CUL1",39,92.6,1
+"538","ESV_015043","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Naviculaceae, Navicula, Navicula cryptocephala","PIER",12,92.6,1
+"539","ESV_015058","Eukaryota, Oomycota, , , , , ","PIER",58,81.6,11
+"540","ESV_015069","Eukaryota, Oomycota, , , , , ","NVBR",76,77.9,13
+"541","ESV_015069","Eukaryota, Oomycota, , , , , ","PIER",512,77.9,13
+"542","ESV_015120","Eukaryota, unk_phylum, Dictyochophyceae, Pedinellales, unk_family, Pseudopedinella, Pseudopedinella elastica","NVBR",23,85.3,1
+"543","ESV_015120","Eukaryota, unk_phylum, Dictyochophyceae, Pedinellales, unk_family, Pseudopedinella, Pseudopedinella elastica","PIER",22,85.3,1
+"544","ESV_015124","Eukaryota, Oomycota, , , , , ","Coprvp1",12,82.8,2
+"545","ESV_015124","Eukaryota, Oomycota, , , , , ","CUL1",39,82.8,2
+"546","ESV_015124","Eukaryota, Oomycota, , , , , ","NEC",2176,82.8,2
+"547","ESV_015124","Eukaryota, Oomycota, , , , , ","NVBR",14820,82.8,2
+"548","ESV_015124","Eukaryota, Oomycota, , , , , ","PIER",2918,82.8,2
+"549","ESV_015332","Eukaryota, Oomycota, , , , , ","NPB",1490,79.8,15
+"550","ESV_015332","Eukaryota, Oomycota, , , , , ","PIER",15,79.8,15
+"551","ESV_015350","Eukaryota, , , , , , ","NVBR",8,80.4,7
+"552","ESV_015350","Eukaryota, , , , , , ","PIER",39,80.4,7
+"553","ESV_015355","Eukaryota, Streptophyta, Coleochaetophyceae, Coleochaetales, Chaetosphaeridiaceae, Chaetosphaeridium, Chaetosphaeridium globosum","MO1",37,85.3,1
+"554","ESV_015355","Eukaryota, Streptophyta, Coleochaetophyceae, Coleochaetales, Chaetosphaeridiaceae, Chaetosphaeridium, Chaetosphaeridium globosum","PIER",30,85.3,1
+"555","ESV_015859","Eukaryota, Tubulinea, Elardia, Arcellinida, Hyalospheniidae, , ","NVP4",14,82.2,3
+"556","ESV_017342","Eukaryota, Arthropoda, Insecta, , , , ","NVP2",15,71.8,60
+"557","ESV_019574","Eukaryota, Haptista, Haptophyta, Phaeocystales, Phaeocystaceae, Phaeocystis, Phaeocystis pouchetii","MO1",43,74.8,1
+"558","ESV_019574","Eukaryota, Haptista, Haptophyta, Phaeocystales, Phaeocystaceae, Phaeocystis, Phaeocystis pouchetii","NEC",13,74.8,1
+"559","ESV_019574","Eukaryota, Haptista, Haptophyta, Phaeocystales, Phaeocystaceae, Phaeocystis, Phaeocystis pouchetii","NVBR",141,74.8,1
+"560","ESV_019574","Eukaryota, Haptista, Haptophyta, Phaeocystales, Phaeocystaceae, Phaeocystis, Phaeocystis pouchetii","PIER",187,74.8,1
+"561","ESV_019579","Eukaryota, , , , , , ","Coprvp1",149,74.8,7
+"562","ESV_019634","Eukaryota, Oomycota, , , , , ","NPB1",64,99.4,3
+"563","ESV_020733","Eukaryota, unk_phylum, Dictyochophyceae, Pedinellales, unk_family, Pseudopedinella, Pseudopedinella elastica","NEC",11,88.3,1
+"564","ESV_020733","Eukaryota, unk_phylum, Dictyochophyceae, Pedinellales, unk_family, Pseudopedinella, Pseudopedinella elastica","PIER",24,88.3,1
+"565","ESV_020734","Eukaryota, , , , , , ","PIER",88,77.9,4
+"566","ESV_020737","Eukaryota, Rhodophyta, Bangiophyceae, Bangiales, Bangiaceae, Neoporphyra, Neoporphyra haitanensis","MO1",8,90.2,1
+"567","ESV_020750","Eukaryota, Rhodophyta, Bangiophyceae, Bangiales, Bangiaceae, Neoporphyra, Neoporphyra haitanensis","NEC",12,89.6,1
+"568","ESV_020750","Eukaryota, Rhodophyta, Bangiophyceae, Bangiales, Bangiaceae, Neoporphyra, Neoporphyra haitanensis","NVBR",47,89.6,1
+"569","ESV_020801","Eukaryota, Arthropoda, Ostracoda, Podocopida, , , ","NVP2",45,94.9,2
+"570","ESV_020801","Eukaryota, Arthropoda, Ostracoda, Podocopida, , , ","NVP4",10,94.9,2
+"571","ESV_022012","Eukaryota, unk_phylum, Xanthophyceae, , , , ","Coprvp1",11,82.8,2
+"572","ESV_022037","Eukaryota, Oomycota, , , , , ","Coprvp1",12,84,11
+"573","ESV_022058","Eukaryota, , , , , , ","Coprvp1",34,73.6,4
+"574","ESV_022356","Eukaryota, Oomycota, , , , , ","NPB1",10,86.5,3
+"575","ESV_022493","Eukaryota, , , , , , ","NWP (NCOS West Pond)",9,74.8,2
+"576","ESV_022628","Eukaryota, Oomycota, , , , , ","NWP (NCOS West Pond)",14,79.8,2
+"577","ESV_024600","Eukaryota, , , , , , ","NVP2",10,78.5,2
+"578","ESV_024780","Eukaryota, , , , , , ","NDC",213,76.1,5
+"579","ESV_025160","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","Coprvp1",26,86.5,2
+"580","ESV_025160","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","CUL1",114,86.5,2
+"581","ESV_025160","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","MO1",4914,86.5,2
+"582","ESV_025160","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","NEC",769,86.5,2
+"583","ESV_025160","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","NPB",17417,86.5,2
+"584","ESV_025160","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","NPB1",20,86.5,2
+"585","ESV_025160","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","NVBR",2962,86.5,2
+"586","ESV_025160","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","PIER",1616,86.5,2
+"587","ESV_025161","Eukaryota, , , , , , ","CUL1",36,87.1,4
+"588","ESV_025161","Eukaryota, , , , , , ","MO1",444,87.1,4
+"589","ESV_025161","Eukaryota, , , , , , ","NEC",116,87.1,4
+"590","ESV_025161","Eukaryota, , , , , , ","NPB",1925,87.1,4
+"591","ESV_025161","Eukaryota, , , , , , ","NVBR",353,87.1,4
+"592","ESV_025161","Eukaryota, , , , , , ","PIER",181,87.1,4
+"593","ESV_025164","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, , ","CUL1",219,84,9
+"594","ESV_025164","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, , ","MO1",66,84,9
+"595","ESV_025164","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, , ","NEC",619,84,9
+"596","ESV_025164","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, , ","NVBR",70,84,9
+"597","ESV_025166","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","MO1",82,85.9,2
+"598","ESV_025166","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","NPB",288,85.9,2
+"599","ESV_025168","Eukaryota, , , , , , ","MO1",12,86.5,4
+"600","ESV_027010","Eukaryota, Oomycota, , , , , ","NWP (NCOS West Pond)",10,82.8,5
+"601","ESV_027012","Eukaryota, unk_phylum, Xanthophyceae, , , , ","NPB1",2906,83.4,2
+"602","ESV_027029","Eukaryota, , , , , , ","NPB1",25,78.5,12
+"603","ESV_027341","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","MO1",38,87.7,2
+"604","ESV_027341","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","NPB",283,87.7,2
+"605","ESV_027342","Eukaryota, , , , , , ","MO1",44,85.9,4
+"606","ESV_027342","Eukaryota, , , , , , ","NPB",179,85.9,4
+"607","ESV_027343","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","MO1",29,87.7,2
+"608","ESV_027343","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","NPB",150,87.7,2
+"609","ESV_027345","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, , ","MO1",170,82.2,13
+"610","ESV_027345","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, , ","NEC",421,82.2,13
+"611","ESV_027345","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, , ","NPB",348,82.2,13
+"612","ESV_027345","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, , ","NVBR",224,82.2,13
+"613","ESV_027345","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, , ","PIER",43,82.2,13
+"614","ESV_027346","Eukaryota, Rotifera, Eurotatoria, Ploima, Brachionidae, Brachionus, ","NPB",142,96.8,9
+"615","ESV_027347","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","NPB",24,86.5,2
+"616","ESV_027348","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, Saprolegnia, Saprolegnia eccentrica","CUL1",35,87.1,1
+"617","ESV_027348","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, Saprolegnia, Saprolegnia eccentrica","NEC",62,87.1,1
+"618","ESV_027348","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, Saprolegnia, Saprolegnia eccentrica","NPB",26,87.1,1
+"619","ESV_027348","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, Saprolegnia, Saprolegnia eccentrica","NVBR",19,87.1,1
+"620","ESV_027349","Eukaryota, Rhodophyta, Bangiophyceae, Bangiales, Bangiaceae, Neoporphyra, Neoporphyra haitanensis","CUL1",69,87.1,1
+"621","ESV_027349","Eukaryota, Rhodophyta, Bangiophyceae, Bangiales, Bangiaceae, Neoporphyra, Neoporphyra haitanensis","NVBR",8,87.1,1
+"622","ESV_027352","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, Saprolegnia, Saprolegnia eccentrica","CUL1",32,86.5,1
+"623","ESV_027352","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, Saprolegnia, Saprolegnia eccentrica","NVBR",14,86.5,1
+"624","ESV_027355","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, Saprolegnia, Saprolegnia eccentrica","CUL1",17,87.7,1
+"625","ESV_027362","Eukaryota, Rotifera, Eurotatoria, unk_order, unk_family, Rotaria, Rotaria rotatoria","NPB1",110,98.7,1
+"626","ESV_027404","Eukaryota, Chlorophyta, Chlorodendrophyceae, Chlorodendrales, Chlorodendraceae, Tetraselmis, Tetraselmis subcordiformis","NVP2",518,83.4,1
+"627","ESV_027503","Eukaryota, Oomycota, , , , , ","NPB",420,81.6,24
+"628","ESV_027503","Eukaryota, Oomycota, , , , , ","NVBR",8,81.6,24
+"629","ESV_027504","Eukaryota, Oomycota, , , , , ","NPB",347,79.1,12
+"630","ESV_027505","Eukaryota, , , , , , ","MO1",29,80.4,16
+"631","ESV_027505","Eukaryota, , , , , , ","NEC",32,80.4,16
+"632","ESV_027505","Eukaryota, , , , , , ","NPB",213,80.4,16
+"633","ESV_027505","Eukaryota, , , , , , ","NVBR",1879,80.4,16
+"634","ESV_027505","Eukaryota, , , , , , ","PIER",645,80.4,16
+"635","ESV_027506","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","CUL1",58,83.9,1
+"636","ESV_027506","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",628,83.9,1
+"637","ESV_027506","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NDC",218,83.9,1
+"638","ESV_027506","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NEC",58,83.9,1
+"639","ESV_027506","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NPB",76,83.9,1
+"640","ESV_027506","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVBR",113,83.9,1
+"641","ESV_027506","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","PIER",609,83.9,1
+"642","ESV_027507","Eukaryota, unk_phylum, Phaeophyceae, , , , ","NPB",67,78.5,7
+"643","ESV_027507","Eukaryota, unk_phylum, Phaeophyceae, , , , ","NVP4",1010,78.5,7
+"644","ESV_027508","Eukaryota, Oomycota, , , , , ","NPB",51,79.8,15
+"645","ESV_027509","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NPB",50,85.2,1
+"646","ESV_027510","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","CUL1",390,79.8,1
+"647","ESV_027510","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","MO1",92,79.8,1
+"648","ESV_027510","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","NEC",34,79.8,1
+"649","ESV_027510","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","NPB",49,79.8,1
+"650","ESV_027510","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","NVBR",484,79.8,1
+"651","ESV_027510","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","PIER",536,79.8,1
+"652","ESV_027511","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","CUL1",130,84.5,1
+"653","ESV_027511","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",502,84.5,1
+"654","ESV_027511","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NEC",31,84.5,1
+"655","ESV_027511","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NPB",30,84.5,1
+"656","ESV_027511","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVBR",293,84.5,1
+"657","ESV_027511","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","PIER",584,84.5,1
+"658","ESV_027512","Eukaryota, Oomycota, , , , , ","NPB",29,81.6,4
+"659","ESV_027513","Eukaryota, , , , , , ","NPB",27,86.5,4
+"660","ESV_027514","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, Haptoglossa sp. DM2 4/12","CUL1",185,79.8,1
+"661","ESV_027514","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, Haptoglossa sp. DM2 4/12","MO1",1061,79.8,1
+"662","ESV_027514","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, Haptoglossa sp. DM2 4/12","NDC",78,79.8,1
+"663","ESV_027514","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, Haptoglossa sp. DM2 4/12","NEC",47,79.8,1
+"664","ESV_027514","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, Haptoglossa sp. DM2 4/12","NPB",23,79.8,1
+"665","ESV_027514","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, Haptoglossa sp. DM2 4/12","NVBR",591,79.8,1
+"666","ESV_027514","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, Haptoglossa sp. DM2 4/12","PIER",4658,79.8,1
+"667","ESV_027515","Eukaryota, Oomycota, , , , , ","NPB",22,79.8,15
+"668","ESV_027516","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NPB",19,85.8,1
+"669","ESV_027517","Eukaryota, , , , , , ","NPB",19,79.1,22
+"670","ESV_027518","Eukaryota, Oomycota, , , , , ","NPB",17,79.1,20
+"671","ESV_027519","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","NPB",12,85.3,2
+"672","ESV_027520","Eukaryota, Oomycota, , , , , ","NPB",11,81,25
+"673","ESV_027521","Eukaryota, Oomycota, , , , , ","NPB",10,79.1,12
+"674","ESV_027522","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, Nannochloropsis oceanica","NPB",9,87.7,1
+"675","ESV_027523","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, Pythium, ","NEC",9,82.2,11
+"676","ESV_027523","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, Pythium, ","NPB",9,82.2,11
+"677","ESV_027524","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NPB",8,83.2,1
+"678","ESV_027525","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira nordenskioeldii","MO1",197,85.9,1
+"679","ESV_027525","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira nordenskioeldii","NEC",21,85.9,1
+"680","ESV_027525","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira nordenskioeldii","NPB",8,85.9,1
+"681","ESV_027525","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira nordenskioeldii","NVBR",108,85.9,1
+"682","ESV_027525","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira nordenskioeldii","PIER",285,85.9,1
+"683","ESV_027526","Eukaryota, Oomycota, , , , , ","NPB1",342,82.8,7
+"684","ESV_027527","Eukaryota, Rotifera, Eurotatoria, Ploima, Lecanidae, Lecane, Lecane sp. bulla5","NPB1",293,86,1
+"685","ESV_027528","Eukaryota, Mollusca, Bivalvia, Galeommatida, Montacutidae, Kurtiella, Kurtiella bidentata","NPB1",200,83.4,1
+"686","ESV_027529","Eukaryota, unk_phylum, Chrysophyceae, Chromulinales, Chromulinaceae, Spumella, Spumella vulgaris","NPB1",187,79.3,1
+"687","ESV_027530","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, , ","NPB1",171,92.6,5
+"688","ESV_027531","Eukaryota, unk_phylum, Xanthophyceae, Mischococcales, Botryidiopsidaceae, Botrydiopsis, Botrydiopsis alpina","NPB1",149,86.5,1
+"689","ESV_027532","Eukaryota, unk_phylum, Xanthophyceae, , , , ","NPB1",113,82.8,2
+"690","ESV_027533","Eukaryota, unk_phylum, Xanthophyceae, Mischococcales, Botryidiopsidaceae, Botrydiopsis, Botrydiopsis alpina","NPB1",104,87.7,1
+"691","ESV_027534","Eukaryota, Mollusca, Bivalvia, Galeommatida, Montacutidae, Kurtiella, Kurtiella bidentata","NPB1",95,83.4,1
+"692","ESV_027535","Eukaryota, , , , , , ","NPB1",95,82.8,9
+"693","ESV_027536","Eukaryota, unk_phylum, Xanthophyceae, , , , ","NPB1",74,85.9,2
+"694","ESV_027537","Eukaryota, unk_phylum, Xanthophyceae, , , , ","NPB1",46,82.8,2
+"695","ESV_027538","Eukaryota, Arthropoda, Arachnida, , , , ","NPB1",41,82.2,1
+"696","ESV_027539","Eukaryota, unk_phylum, Xanthophyceae, Mischococcales, Botryidiopsidaceae, Botrydiopsis, Botrydiopsis alpina","NPB1",40,87.1,1
+"697","ESV_027540","Eukaryota, , , , , , ","NPB1",37,77.9,10
+"698","ESV_027541","Eukaryota, Arthropoda, Insecta, Lepidoptera, Noctuidae, Homoglaea, Homoglaea dives","NPB1",36,100,1
+"699","ESV_027542","Eukaryota, , , , , , ","NPB1",29,73.6,16
+"700","ESV_027543","Eukaryota, , , , , , ","NPB1",28,81.6,10
+"701","ESV_027544","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","CUL1",980,85.2,1
+"702","ESV_027544","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",6837,85.2,1
+"703","ESV_027544","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NDC",1425,85.2,1
+"704","ESV_027544","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NEC",320,85.2,1
+"705","ESV_027544","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NPB1",26,85.2,1
+"706","ESV_027544","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVBR",3714,85.2,1
+"707","ESV_027544","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVP2",20,85.2,1
+"708","ESV_027544","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","PIER",7789,85.2,1
+"709","ESV_027545","Eukaryota, Oomycota, , , , , ","NPB1",26,75.5,11
+"710","ESV_027546","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, , ","NPB1",17,92,5
+"711","ESV_027547","Eukaryota, , , , , , ","NPB1",17,73.6,12
+"712","ESV_027548","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, Nitzschia, ","NPB1",16,80.4,3
+"713","ESV_027549","Eukaryota, unk_phylum, Chrysophyceae, Chromulinales, Chromulinaceae, Spumella, Spumella vulgaris","NPB1",15,78.7,1
+"714","ESV_027550",", , , , , , ","NPB1",13,NA,NA
+"715","ESV_027551","Eukaryota, unk_phylum, Chrysophyceae, Chromulinales, Chromulinaceae, Spumella, Spumella vulgaris","NPB1",12,78.7,1
+"716","ESV_027552","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, Nitzschia, Nitzschia sp. BOLD:AAO7110","NPB1",11,88.3,1
+"717","ESV_027553","Eukaryota, unk_phylum, Xanthophyceae, Mischococcales, Botryidiopsidaceae, Botrydiopsis, Botrydiopsis alpina","NPB1",11,87.1,1
+"718","ESV_027554","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, , ","NPB1",10,92,5
+"719","ESV_027555","Eukaryota, , , , , , ","NPB1",10,86.5,4
+"720","ESV_027556","Eukaryota, , , , , , ","NPB1",9,73.6,16
+"721","ESV_027557","Eukaryota, Oomycota, , , , , ","NPB1",9,83.4,3
+"722","ESV_027558","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","CUL1",63,85.2,1
+"723","ESV_027558","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",602,85.2,1
+"724","ESV_027558","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NEC",16,85.2,1
+"725","ESV_027558","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NPB1",8,85.2,1
+"726","ESV_027558","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVBR",562,85.2,1
+"727","ESV_027558","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","PIER",392,85.2,1
+"728","ESV_027559","Eukaryota, Arthropoda, Branchiopoda, Diplostraca, Moinidae, Moina, ","NPB1",8,97.5,7
+"729","ESV_027559","Eukaryota, Arthropoda, Branchiopoda, Diplostraca, Moinidae, Moina, ","NWP (NCOS West Pond)",2734,97.5,7
+"730","ESV_027560","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, , ","NEC",1009,79.8,7
+"731","ESV_027560","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, , ","NVBR",10,79.8,7
+"732","ESV_027561","Eukaryota, , , , , , ","CUL1",11,86.5,7
+"733","ESV_027561","Eukaryota, , , , , , ","MO1",19,86.5,7
+"734","ESV_027561","Eukaryota, , , , , , ","NEC",172,86.5,7
+"735","ESV_027561","Eukaryota, , , , , , ","NVBR",12,86.5,7
+"736","ESV_027562","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, , ","CUL1",17,84.7,9
+"737","ESV_027562","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, , ","NEC",50,84.7,9
+"738","ESV_027563","Eukaryota, Oomycota, , , , , ","NEC",49,87.1,2
+"739","ESV_027564","Eukaryota, , , , , , ","NEC",48,78.5,4
+"740","ESV_027564","Eukaryota, , , , , , ","NVBR",23,78.5,4
+"741","ESV_027565","Eukaryota, Tubulinea, Elardia, Arcellinida, Hyalospheniidae, , ","NEC",44,79.8,7
+"742","ESV_027566","Eukaryota, Oomycota, , , , , ","NEC",42,86.5,2
+"743","ESV_027567","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","MO1",10,79.8,1
+"744","ESV_027567","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","NEC",42,79.8,1
+"745","ESV_027567","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","NVBR",255,79.8,1
+"746","ESV_027567","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","PIER",221,79.8,1
+"747","ESV_027568","Eukaryota, Oomycota, unk_class, Albuginales, Albuginaceae, Albugo, Albugo sp. YJC-2014","NEC",41,82.8,1
+"748","ESV_027568","Eukaryota, Oomycota, unk_class, Albuginales, Albuginaceae, Albugo, Albugo sp. YJC-2014","NVBR",192,82.8,1
+"749","ESV_027568","Eukaryota, Oomycota, unk_class, Albuginales, Albuginaceae, Albugo, Albugo sp. YJC-2014","PIER",30,82.8,1
+"750","ESV_027569","Eukaryota, Bacillariophyta, , , , , ","Coprvp1",29,84,2
+"751","ESV_027569","Eukaryota, Bacillariophyta, , , , , ","CUL1",45,84,2
+"752","ESV_027569","Eukaryota, Bacillariophyta, , , , , ","MO1",272,84,2
+"753","ESV_027569","Eukaryota, Bacillariophyta, , , , , ","NEC",35,84,2
+"754","ESV_027569","Eukaryota, Bacillariophyta, , , , , ","NVBR",495,84,2
+"755","ESV_027569","Eukaryota, Bacillariophyta, , , , , ","PIER",3242,84,2
+"756","ESV_027570","Eukaryota, , , , , , ","NEC",33,84.7,4
+"757","ESV_027571","Eukaryota, , , , , , ","NEC",30,76.7,4
+"758","ESV_027571","Eukaryota, , , , , , ","NVBR",11,76.7,4
+"759","ESV_027572","Eukaryota, , , , , , ","MO1",24,74.2,4
+"760","ESV_027572","Eukaryota, , , , , , ","NEC",25,74.2,4
+"761","ESV_027572","Eukaryota, , , , , , ","NVBR",160,74.2,4
+"762","ESV_027572","Eukaryota, , , , , , ","PIER",483,74.2,4
+"763","ESV_027573","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, , ","NEC",24,79.1,7
+"764","ESV_027574","Eukaryota, , , , , , ","NEC",22,75.5,2
+"765","ESV_027574","Eukaryota, , , , , , ","NVBR",50,75.5,2
+"766","ESV_027575","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NEC",21,85.8,1
+"767","ESV_027576","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","CUL1",102,84.5,1
+"768","ESV_027576","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",658,84.5,1
+"769","ESV_027576","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NEC",21,84.5,1
+"770","ESV_027576","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVBR",717,84.5,1
+"771","ESV_027576","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","PIER",883,84.5,1
+"772","ESV_027577","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Naviculaceae, Navicula, Navicula sp. BOLD:AAO6951","NEC",20,92,1
+"773","ESV_027578","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NEC",20,85.8,1
+"774","ESV_027579","Eukaryota, Bacillariophyta, , , , , ","NEC",17,84.7,2
+"775","ESV_027579","Eukaryota, Bacillariophyta, , , , , ","NVBR",251,84.7,2
+"776","ESV_027579","Eukaryota, Bacillariophyta, , , , , ","PIER",3421,84.7,2
+"777","ESV_027580","Eukaryota, , , , , , ","NEC",15,81.6,2
+"778","ESV_027580","Eukaryota, , , , , , ","NVBR",46,81.6,2
+"779","ESV_027581","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Skeletonemataceae, Skeletonema, Skeletonema menzelii","NEC",12,98.2,1
+"780","ESV_027581","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Skeletonemataceae, Skeletonema, Skeletonema menzelii","NVBR",41,98.2,1
+"781","ESV_027581","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Skeletonemataceae, Skeletonema, Skeletonema menzelii","PIER",115,98.2,1
+"782","ESV_027582","Eukaryota, Rhodophyta, Bangiophyceae, Bangiales, Bangiaceae, Neoporphyra, Neoporphyra haitanensis","CUL1",9,85.9,1
+"783","ESV_027582","Eukaryota, Rhodophyta, Bangiophyceae, Bangiales, Bangiaceae, Neoporphyra, Neoporphyra haitanensis","NEC",11,85.9,1
+"784","ESV_027583","Eukaryota, Oomycota, , , , , ","NEC",11,85.9,2
+"785","ESV_027584","Eukaryota, Oomycota, , , , , ","NEC",11,79.8,5
+"786","ESV_027584","Eukaryota, Oomycota, , , , , ","NVP4",23,79.8,5
+"787","ESV_027585","Eukaryota, Oomycota, , , , , ","NEC",10,81.6,23
+"788","ESV_027586","Eukaryota, Oomycota, unk_class, Myzocytiopsidales, Myzocytiopsidaceae, Chlamydomyzium, Chlamydomyzium dictyuchoides","NEC",10,85.9,1
+"789","ESV_027587","Eukaryota, Oomycota, unk_class, Myzocytiopsidales, Myzocytiopsidaceae, Chlamydomyzium, Chlamydomyzium dictyuchoides","NEC",9,86.5,1
+"790","ESV_027588","Eukaryota, Oomycota, , , , , ","NEC",9,82.2,13
+"791","ESV_027589","Eukaryota, Tubulinea, Elardia, Arcellinida, Hyalospheniidae, Gibbocarina, Gibbocarina galeata","NEC",9,79.8,1
+"792","ESV_027590","Eukaryota, Haptista, Haptophyta, Prymnesiales, Chrysochromulinaceae, Chrysochromulina, ","NEC",9,79.8,2
+"793","ESV_027590","Eukaryota, Haptista, Haptophyta, Prymnesiales, Chrysochromulinaceae, Chrysochromulina, ","NVBR",28,79.8,2
+"794","ESV_027590","Eukaryota, Haptista, Haptophyta, Prymnesiales, Chrysochromulinaceae, Chrysochromulina, ","PIER",16,79.8,2
+"795","ESV_027591","Eukaryota, Haptista, Haptophyta, Prymnesiales, Chrysochromulinaceae, Chrysochromulina, ","NEC",8,79.1,2
+"796","ESV_027592","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NEC",8,83.9,1
+"797","ESV_027593","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NEC",8,84.5,1
+"798","ESV_027594","Eukaryota, Oomycota, , , , , ","NEC",8,85.9,4
+"799","ESV_027595","Eukaryota, Chlorophyta, , , , , ","NVP2",1595,83.4,2
+"800","ESV_027596","Eukaryota, unk_phylum, Xanthophyceae, Mischococcales, Botryidiopsidaceae, Botrydiopsis, Botrydiopsis alpina","NVP2",1031,84.7,1
+"801","ESV_027597","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","NVP2",827,83.4,1
+"802","ESV_027597","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","NVP4",84,83.4,1
+"803","ESV_027598","Eukaryota, , , , , , ","NVP2",681,84,4
+"804","ESV_027599","Eukaryota, , , , , , ","NVP2",341,84,3
+"805","ESV_027600","Eukaryota, , , , , , ","NVP2",330,81.6,5
+"806","ESV_027601","Eukaryota, , , , , , ","NVP2",60,80.4,4
+"807","ESV_027602","Eukaryota, , , , , , ","NVP2",60,83.4,4
+"808","ESV_027603","Eukaryota, Chlorophyta, Chlorodendrophyceae, Chlorodendrales, Chlorodendraceae, Tetraselmis, Tetraselmis subcordiformis","NVP2",52,83.4,1
+"809","ESV_027604","Eukaryota, , , , , , ","NVP2",50,81,7
+"810","ESV_027604","Eukaryota, , , , , , ","NWP (NCOS West Pond)",47,81,7
+"811","ESV_027605","Eukaryota, Chlorophyta, , , , , ","NVP2",42,82.8,2
+"812","ESV_027606","Eukaryota, Chlorophyta, , , , , ","NVP2",42,83.4,2
+"813","ESV_027607","Eukaryota, Chlorophyta, , , , , ","NVP2",41,82.8,2
+"814","ESV_027608","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","NVP2",40,83.4,1
+"815","ESV_027608","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","NVP4",17,83.4,1
+"816","ESV_027609","Eukaryota, , , , , , ","NVP2",35,81.6,7
+"817","ESV_027610","Eukaryota, Arthropoda, Arachnida, , , , ","NVP2",30,76.1,1
+"818","ESV_027611","Eukaryota, Chlorophyta, , , , , ","NVP2",24,82.8,2
+"819","ESV_027612","Eukaryota, unk_phylum, Xanthophyceae, Mischococcales, Botryidiopsidaceae, Botrydiopsis, Botrydiopsis alpina","NVP2",23,84,1
+"820","ESV_027613","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","NVP2",21,83.4,1
+"821","ESV_027614","Eukaryota, , , , , , ","NVP2",21,77.3,4
+"822","ESV_027615","Eukaryota, Streptophyta, Coleochaetophyceae, Coleochaetales, Chaetosphaeridiaceae, Chaetosphaeridium, Chaetosphaeridium globosum","NVP2",20,81.6,1
+"823","ESV_027616","Eukaryota, Chlorophyta, Chlorodendrophyceae, Chlorodendrales, Chlorodendraceae, Tetraselmis, Tetraselmis subcordiformis","NVP2",15,82.8,1
+"824","ESV_027617","Eukaryota, Chlorophyta, Chloropicophyceae, Chloropicales, Chloropicaceae, Chloropicon, ","NVP2",15,82.8,2
+"825","ESV_027618","Eukaryota, unk_phylum, Xanthophyceae, Mischococcales, Botryidiopsidaceae, Botrydiopsis, Botrydiopsis alpina","NVP2",14,85.3,1
+"826","ESV_027618","Eukaryota, unk_phylum, Xanthophyceae, Mischococcales, Botryidiopsidaceae, Botrydiopsis, Botrydiopsis alpina","NVP4",14,85.3,1
+"827","ESV_027619","Eukaryota, Chlorophyta, Chlorodendrophyceae, Chlorodendrales, Chlorodendraceae, Tetraselmis, Tetraselmis subcordiformis","NVP2",13,84,1
+"828","ESV_027620","Eukaryota, , , , , , ","NVP2",13,84,3
+"829","ESV_027621","Eukaryota, , , , , , ","NVP2",12,83.4,5
+"830","ESV_027622","Eukaryota, Chlorophyta, Chlorodendrophyceae, Chlorodendrales, Chlorodendraceae, Tetraselmis, Tetraselmis subcordiformis","NVP2",12,82.8,1
+"831","ESV_027623","Eukaryota, Chlorophyta, Mamiellophyceae, Dolichomastigales, Dolichomastigaceae, Dolichomastix, Dolichomastix tenuilepis","NVP2",12,84.7,1
+"832","ESV_027623","Eukaryota, Chlorophyta, Mamiellophyceae, Dolichomastigales, Dolichomastigaceae, Dolichomastix, Dolichomastix tenuilepis","NVP4",33,84.7,1
+"833","ESV_027624","Eukaryota, Rotifera, Eurotatoria, Ploima, Brachionidae, Brachionus, Brachionus quadridentatus","NVP2",11,73,1
+"834","ESV_027625","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, Monomastix minuta","NVP2",11,89,1
+"835","ESV_027626","Eukaryota, Arthropoda, Insecta, Odonata, Libellulidae, Sympetrum, Sympetrum corruptum","NVP2",11,99.4,1
+"836","ESV_027627","Eukaryota, Chlorophyta, , , , , ","NVP2",11,82.2,2
+"837","ESV_027628","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","NVP2",10,86.5,1
+"838","ESV_027629","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, ","NVP2",8,84.7,2
+"839","ESV_027630","Eukaryota, Haptista, Haptophyta, , , , ","CUL1",173,77.9,2
+"840","ESV_027630","Eukaryota, Haptista, Haptophyta, , , , ","NVBR",24,77.9,2
+"841","ESV_027631","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","CUL1",84,85.8,1
+"842","ESV_027631","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",257,85.8,1
+"843","ESV_027631","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVBR",206,85.8,1
+"844","ESV_027632","Eukaryota, Discosea, unk_class, Longamoebia, Acanthamoebidae, Acanthamoeba, ","CUL1",67,93.3,3
+"845","ESV_027632","Eukaryota, Discosea, unk_class, Longamoebia, Acanthamoebidae, Acanthamoeba, ","NVBR",101,93.3,3
+"846","ESV_027633","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, , ","CUL1",66,77.3,7
+"847","ESV_027634","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","CUL1",21,85.2,1
+"848","ESV_027635","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, , ","CUL1",21,84.7,30
+"849","ESV_027636","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","CUL1",15,84.5,1
+"850","ESV_027636","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NDC",24,84.5,1
+"851","ESV_027637","Eukaryota, Mollusca, Bivalvia, Galeommatida, Montacutidae, Kurtiella, Kurtiella bidentata","CUL1",12,83.4,1
+"852","ESV_027638","Eukaryota, , , , , , ","CUL1",11,73,20
+"853","ESV_027639","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","CUL1",10,83.9,1
+"854","ESV_027640","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","CUL1",9,83.2,1
+"855","ESV_027640","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","PIER",83,83.2,1
+"856","ESV_027641","Eukaryota, Arthropoda, Collembola, Entomobryomorpha, Isotomidae, , ","CUL1",9,89.8,2
+"857","ESV_027642","Eukaryota, Chlorophyta, Mamiellophyceae, Dolichomastigales, Dolichomastigaceae, Dolichomastix, Dolichomastix tenuilepis","Coprvp1",3218,84,1
+"858","ESV_027643","Eukaryota, , , , , , ","Coprvp1",2737,82.8,4
+"859","ESV_027644","Eukaryota, Oomycota, , , , , ","Coprvp1",1396,81,15
+"860","ESV_027645","Eukaryota, Arthropoda, Arachnida, , , , ","Coprvp1",1330,73.6,2
+"861","ESV_027646","Eukaryota, Arthropoda, Arachnida, Trombidiformes, Eriophyidae, Acalitus, Acalitus vaccinii","Coprvp1",624,73.6,1
+"862","ESV_027647","Eukaryota, Oomycota, , , , , ","Coprvp1",525,81,8
+"863","ESV_027648","Eukaryota, Oomycota, , , , , ","Coprvp1",490,85.3,5
+"864","ESV_027649","Eukaryota, , , , , , ","Coprvp1",438,73,3
+"865","ESV_027650","Eukaryota, , , , , , ","Coprvp1",270,75.5,8
+"866","ESV_027651","Eukaryota, , , , , , ","Coprvp1",166,73,6
+"867","ESV_027652","Eukaryota, Rotifera, Eurotatoria, Ploima, , , ","Coprvp1",156,85.4,3
+"868","ESV_027653","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, , ","Coprvp1",124,93.9,3
+"869","ESV_027654","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, Nitzschia, Nitzschia palea","Coprvp1",113,82.2,1
+"870","ESV_027655","Eukaryota, Oomycota, , , , , ","Coprvp1",112,81,15
+"871","ESV_027656","Eukaryota, Oomycota, , , , , ","Coprvp1",98,78.5,9
+"872","ESV_027657","Eukaryota, , , , , , ","Coprvp1",90,73,4
+"873","ESV_027658","Eukaryota, Oomycota, unk_class, Myzocytiopsidales, Myzocytiopsidaceae, Chlamydomyzium, Chlamydomyzium dictyuchoides","Coprvp1",85,85.9,1
+"874","ESV_027659","Eukaryota, , , , , , ","Coprvp1",83,74.8,15
+"875","ESV_027660","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","Coprvp1",82,82.8,1
+"876","ESV_027661","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Monodopsis, Monodopsis sp. MarTras21","Coprvp1",81,84.7,1
+"877","ESV_027661","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Monodopsis, Monodopsis sp. MarTras21","NVP4",68,84.7,1
+"878","ESV_027662","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, ","Coprvp1",80,82.8,3
+"879","ESV_027663","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, Haptoglossa sp. DM2 4/12","Coprvp1",71,75.5,1
+"880","ESV_027664","Eukaryota, Oomycota, , , , , ","Coprvp1",69,78.5,5
+"881","ESV_027665","Eukaryota, , , , , , ","Coprvp1",68,84,8
+"882","ESV_027666","Eukaryota, unk_phylum, Phaeophyceae, , , , ","Coprvp1",66,81,5
+"883","ESV_027667","Eukaryota, Chlorophyta, Mamiellophyceae, Dolichomastigales, Dolichomastigaceae, Dolichomastix, Dolichomastix tenuilepis","Coprvp1",62,83.4,1
+"884","ESV_027668","Eukaryota, , , , , , ","Coprvp1",57,74.2,5
+"885","ESV_027669","Eukaryota, Tubulinea, Elardia, Arcellinida, Hyalospheniidae, Nebela, Nebela tincta","Coprvp1",56,69.5,1
+"886","ESV_027670","Eukaryota, , , , , , ","Coprvp1",52,82.2,4
+"887","ESV_027671","Eukaryota, , , , , , ","Coprvp1",44,73.6,6
+"888","ESV_027672","Eukaryota, Tubulinea, Elardia, Arcellinida, Hyalospheniidae, , ","Coprvp1",44,77.3,2
+"889","ESV_027673","Eukaryota, , , , , , ","Coprvp1",42,81.6,2
+"890","ESV_027674","Eukaryota, Oomycota, , , , , ","Coprvp1",41,92,5
+"891","ESV_027675","Eukaryota, Oomycota, , , , , ","Coprvp1",39,81.6,15
+"892","ESV_027676","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","Coprvp1",39,85.9,2
+"893","ESV_027677","Eukaryota, Chlorophyta, Mamiellophyceae, Dolichomastigales, Dolichomastigaceae, Dolichomastix, Dolichomastix tenuilepis","Coprvp1",37,79.8,1
+"894","ESV_027678","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, Achlya, ","Coprvp1",34,90.8,8
+"895","ESV_027679","Eukaryota, Discosea, unk_class, Longamoebia, Acanthamoebidae, Acanthamoeba, Acanthamoeba sp.","Coprvp1",34,75.5,1
+"896","ESV_027680","Eukaryota, Cnidaria, Scyphozoa, Semaeostomeae, Ulmaridae, Aurelia, Aurelia sp. 13 LGD-2017","Coprvp1",33,74.2,1
+"897","ESV_027681","Eukaryota, Arthropoda, Arachnida, Trombidiformes, Eriophyidae, Acalitus, Acalitus vaccinii","Coprvp1",31,73,1
+"898","ESV_027682","Eukaryota, Rhodophyta, Florideophyceae, , , , ","Coprvp1",30,78.5,2
+"899","ESV_027683","Eukaryota, Oomycota, , , , , ","Coprvp1",30,80.4,17
+"900","ESV_027684","Eukaryota, Oomycota, , , , , ","Coprvp1",30,85.3,3
+"901","ESV_027685","Eukaryota, , , , , , ","Coprvp1",27,73.6,7
+"902","ESV_027686","Eukaryota, Oomycota, , , , , ","Coprvp1",27,87.7,7
+"903","ESV_027687","Eukaryota, unk_phylum, Eustigmatophyceae, Goniochloridales, unk_family, Trachydiscus, Trachydiscus minutus","Coprvp1",25,82.8,1
+"904","ESV_027688","Eukaryota, Tubulinea, Elardia, Arcellinida, Hyalospheniidae, Nebela, ","Coprvp1",22,85.3,2
+"905","ESV_027689","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, Pythium, ","Coprvp1",21,92,10
+"906","ESV_027690","Eukaryota, Arthropoda, Arachnida, Trombidiformes, , , ","Coprvp1",21,89.8,1
+"907","ESV_027691","Eukaryota, unk_phylum, Chrysophyceae, Chromulinales, Dinobryaceae, Poteriospumella, Poteriospumella sp.","Coprvp1",20,77.3,1
+"908","ESV_027692","Eukaryota, , , , , , ","Coprvp1",19,73.6,2
+"909","ESV_027693","Eukaryota, Tubulinea, Elardia, Arcellinida, Hyalospheniidae, , ","Coprvp1",18,76.7,2
+"910","ESV_027694","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, , ","Coprvp1",16,84,10
+"911","ESV_027695","Eukaryota, unk_phylum, Chrysophyceae, Chromulinales, Chromulinaceae, Pedospumella, Pedospumella sp.","Coprvp1",14,85.9,1
+"912","ESV_027696","Eukaryota, Tubulinea, Elardia, Arcellinida, Hyalospheniidae, Nebela, Nebela pechorensis","Coprvp1",13,87.1,1
+"913","ESV_027697","Eukaryota, , , , , , ","Coprvp1",13,78.5,11
+"914","ESV_027698","Eukaryota, Oomycota, , , , , ","Coprvp1",13,80.4,12
+"915","ESV_027699","Eukaryota, Oomycota, , , , , ","Coprvp1",13,84.7,5
+"916","ESV_027700","Eukaryota, , , , , , ","Coprvp1",12,76.7,5
+"917","ESV_027701","Eukaryota, , , , , , ","Coprvp1",11,74.8,2
+"918","ESV_027702","Eukaryota, , , , , , ","Coprvp1",9,77.9,2
+"919","ESV_027703","Eukaryota, Oomycota, , , , , ","Coprvp1",9,81.6,5
+"920","ESV_027704","Eukaryota, unk_phylum, Chrysophyceae, Chromulinales, Chromulinaceae, Pedospumella, ","Coprvp1",8,84.7,2
+"921","ESV_027705","Eukaryota, , , , , , ","Coprvp1",8,72.4,3
+"922","ESV_027706","Eukaryota, Oomycota, , , , , ","Coprvp1",8,85.3,4
+"923","ESV_027707","Eukaryota, , , , , , ","Coprvp1",8,72.4,3
+"924","ESV_027708","Eukaryota, unk_phylum, Xanthophyceae, Mischococcales, Mischococcaceae, Mischococcus, Mischococcus sphaerocephalus","Coprvp1",8,87.7,1
+"925","ESV_027709","Eukaryota, , , , , , ","NVP4",794,81,2
+"926","ESV_027710","Eukaryota, , , , , , ","NVP4",746,80.4,3
+"927","ESV_027711","Eukaryota, , , , , , ","NVP4",347,79.8,4
+"928","ESV_027712","Eukaryota, , , , , , ","NVP4",310,81.6,3
+"929","ESV_027713","Eukaryota, , , , , , ","NVP4",229,80.4,2
+"930","ESV_027714","Eukaryota, unk_phylum, Chrysophyceae, Chromulinales, Dinobryaceae, Poteriospumella, Poteriospumella sp.","NVP4",191,78.5,1
+"931","ESV_027715","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, ","NVP4",187,81.6,2
+"932","ESV_027716","Eukaryota, Chlorophyta, Mamiellophyceae, Monomastigales, Monomastigaceae, Monomastix, Monomastix minuta","NVP4",185,86.5,1
+"933","ESV_027717","Eukaryota, Arthropoda, , , , , ","NVP4",158,80.9,17
+"934","ESV_027717","Eukaryota, Arthropoda, , , , , ","PIER",10,80.9,17
+"935","ESV_027718","Eukaryota, Oomycota, , , , , ","NVP4",105,80.4,3
+"936","ESV_027719","Eukaryota, , , , , , ","NVP4",67,74.2,11
+"937","ESV_027719","Eukaryota, , , , , , ","NWP (NCOS West Pond)",18,74.2,11
+"938","ESV_027720","Eukaryota, Oomycota, , , , , ","NVP4",37,77.9,14
+"939","ESV_027721","Eukaryota, Arthropoda, Insecta, Diptera, Chironomidae, Tanytarsus, ","NVP4",36,100,9
+"940","ESV_027722","Eukaryota, , , , , , ","NVP4",36,79.1,4
+"941","ESV_027723","Eukaryota, Oomycota, , , , , ","NVP4",34,89.6,4
+"942","ESV_027724","Eukaryota, Arthropoda, Branchiopoda, Diplostraca, Moinidae, Moina, ","NVP4",33,87.9,10
+"943","ESV_027725","Eukaryota, Oomycota, , , , , ","NVP4",32,80.4,7
+"944","ESV_027726","Eukaryota, unk_phylum, unk_class, unk_order, unk_family, Chrysoparadoxa, Chrysoparadoxa australica","NVP4",31,74.2,1
+"945","ESV_027727","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, Haptoglossa sp. SL32","NVP4",26,85.3,1
+"946","ESV_027728","Eukaryota, Rotifera, Eurotatoria, Ploima, Synchaetidae, Polyarthra, Polyarthra dolichoptera","NVP4",24,87.9,1
+"947","ESV_027729","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, ","NVP4",23,79.1,3
+"948","ESV_027730","Eukaryota, unk_phylum, Phaeophyceae, , , , ","NVP4",19,77.9,11
+"949","ESV_027731","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, , ","NVP4",17,82.2,5
+"950","ESV_027732","Eukaryota, unk_phylum, Dictyochophyceae, Pedinellales, unk_family, Pseudopedinella, Pseudopedinella elastica","NVP4",14,79.8,1
+"951","ESV_027733","Eukaryota, , , , , , ","NVP4",14,79.8,3
+"952","ESV_027734","Eukaryota, Arthropoda, Arachnida, , , , ","NVP4",13,78.5,1
+"953","ESV_027735","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, Haptoglossa sp. SL32","NVP4",13,82.2,1
+"954","ESV_027736","Eukaryota, unk_phylum, Xanthophyceae, Botrydiales, Botrydiaceae, Botrydium, Botrydium granulatum","NVP4",12,81,1
+"955","ESV_027737","Eukaryota, Oomycota, unk_class, Peronosporales, Peronosporaceae, Phytophthora, ","NVP4",12,79.8,9
+"956","ESV_027738","Eukaryota, Arthropoda, Arachnida, Mesostigmata, , , ","NVP4",11,80.4,1
+"957","ESV_027739","Eukaryota, , , , , , ","NVP4",11,79.1,4
+"958","ESV_027740","Eukaryota, Oomycota, unk_class, Peronosporales, Peronosporaceae, Phytophthora, ","NVP4",11,82.8,7
+"959","ESV_027741","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, Saprolegnia, ","NVP4",11,79.8,2
+"960","ESV_027742","Eukaryota, unk_phylum, Phaeophyceae, Sphacelariales, Discosporangiaceae, Discosporangium, Discosporangium mesarthrocarpum","NVP4",11,82.8,1
+"961","ESV_027743","Eukaryota, , , , , , ","NVP4",11,81,3
+"962","ESV_027744","Eukaryota, Oomycota, unk_class, Peronosporales, Pontismataceae, Pontisma, [Olpidiopsis] porphyrae var. scotiae (nom. inval.)","NVP4",10,80.4,1
+"963","ESV_027745","Eukaryota, , , , , , ","NVP4",10,82.2,2
+"964","ESV_027746","Eukaryota, unk_phylum, Bigyra, Thraustochytrida, Thraustochytriaceae, Schizochytrium, Schizochytrium sp. SEK 210","NVP4",10,76.1,1
+"965","ESV_027747","Eukaryota, Arthropoda, Collembola, Entomobryomorpha, Entomobryidae, , ","NVP4",10,89.8,3
+"966","ESV_027748","Eukaryota, unk_phylum, Xanthophyceae, , , , ","NVP4",9,85.9,3
+"967","ESV_027749","Eukaryota, , , , , , ","NVP4",9,79.8,3
+"968","ESV_027750","Eukaryota, Arthropoda, Arachnida, Mesostigmata, , , ","NVP4",8,81,1
+"969","ESV_027751","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, Haptoglossa sp. DM2 4/12","NVP4",8,83.4,1
+"970","ESV_027752","Eukaryota, Oomycota, , , , , ","MO1",172,79.1,3
+"971","ESV_027752","Eukaryota, Oomycota, , , , , ","NVBR",17,79.1,3
+"972","ESV_027752","Eukaryota, Oomycota, , , , , ","PIER",1549,79.1,3
+"973","ESV_027753","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",96,84.5,1
+"974","ESV_027753","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NDC",116,84.5,1
+"975","ESV_027754","Eukaryota, Oomycota, unk_class, Peronosporales, Pontismataceae, Pontisma, [Olpidiopsis] porphyrae var. scotiae (nom. inval.)","MO1",95,88.3,1
+"976","ESV_027755","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",81,84.5,1
+"977","ESV_027756","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Rhizosoleniales, Rhizosoleniaceae, Rhizosolenia, Rhizosolenia setigera","MO1",42,89.6,1
+"978","ESV_027756","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Rhizosoleniales, Rhizosoleniaceae, Rhizosolenia, Rhizosolenia setigera","PIER",148,89.6,1
+"979","ESV_027757","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","MO1",32,83.4,1
+"980","ESV_027757","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","NVBR",23,83.4,1
+"981","ESV_027757","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","PIER",180,83.4,1
+"982","ESV_027758","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",27,85.2,1
+"983","ESV_027759","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",24,85.2,1
+"984","ESV_027759","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","PIER",134,85.2,1
+"985","ESV_027760","Eukaryota, Evosea, unk_class, unk_order, unk_family, Squamamoeba, Squamamoeba japonica","MO1",24,81.6,1
+"986","ESV_027760","Eukaryota, Evosea, unk_class, unk_order, unk_family, Squamamoeba, Squamamoeba japonica","NVBR",84,81.6,1
+"987","ESV_027761","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",24,84.5,1
+"988","ESV_027762","Eukaryota, , , , , , ","MO1",21,79.1,22
+"989","ESV_027762","Eukaryota, , , , , , ","NVBR",321,79.1,22
+"990","ESV_027762","Eukaryota, , , , , , ","PIER",43,79.1,22
+"991","ESV_027763","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, Haptoglossa sp. DM2 4/12","MO1",19,79.1,1
+"992","ESV_027764","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",18,83.9,1
+"993","ESV_027765","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira pseudonana","MO1",12,99.4,1
+"994","ESV_027766","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",12,83.2,1
+"995","ESV_027767","Eukaryota, Evosea, unk_class, unk_order, unk_family, Squamamoeba, Squamamoeba japonica","MO1",12,82.2,1
+"996","ESV_027767","Eukaryota, Evosea, unk_class, unk_order, unk_family, Squamamoeba, Squamamoeba japonica","NVBR",50,82.2,1
+"997","ESV_027767","Eukaryota, Evosea, unk_class, unk_order, unk_family, Squamamoeba, Squamamoeba japonica","PIER",16,82.2,1
+"998","ESV_027768","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",11,85.2,1
+"999","ESV_027769","Eukaryota, Oomycota, , , , , ","MO1",11,76.7,6
+"1000","ESV_027770","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","MO1",11,84.5,1
+"1001","ESV_027771","Eukaryota, Oomycota, , , , , ","MO1",11,81,3
+"1002","ESV_027772","Eukaryota, , , , , , ","MO1",11,85.9,7
+"1003","ESV_027773","Eukaryota, Bacillariophyta, Mediophyceae, Cymatosirales, Cymatosiraceae, Minutocellus, Minutocellus polymorphus","MO1",10,98.2,1
+"1004","ESV_027773","Eukaryota, Bacillariophyta, Mediophyceae, Cymatosirales, Cymatosiraceae, Minutocellus, Minutocellus polymorphus","NVBR",15,98.2,1
+"1005","ESV_027774","Eukaryota, Rhodophyta, Florideophyceae, Ceramiales, Delesseriaceae, Heterodoxia, Heterodoxia sp. 2denticulata","MO1",10,79.1,1
+"1006","ESV_027775","Eukaryota, Oomycota, , , , , ","MO1",9,77.3,6
+"1007","ESV_027776","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Rhizosoleniales, Rhizosoleniaceae, Rhizosolenia, Rhizosolenia setigera","MO1",8,89,1
+"1008","ESV_027776","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Rhizosoleniales, Rhizosoleniaceae, Rhizosolenia, Rhizosolenia setigera","NVBR",11,89,1
+"1009","ESV_027776","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Rhizosoleniales, Rhizosoleniaceae, Rhizosolenia, Rhizosolenia setigera","PIER",344,89,1
+"1010","ESV_027777","Eukaryota, Arthropoda, Branchiopoda, Diplostraca, Moinidae, Moina, ","NWP (NCOS West Pond)",51,96.8,7
+"1011","ESV_027778","Eukaryota, Arthropoda, Branchiopoda, Diplostraca, Daphniidae, Daphnia, Daphnia sp. 1 SA-2003","NDC",187,95.5,1
+"1012","ESV_027778","Eukaryota, Arthropoda, Branchiopoda, Diplostraca, Daphniidae, Daphnia, Daphnia sp. 1 SA-2003","NWP (NCOS West Pond)",39,95.5,1
+"1013","ESV_027779","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, Achlya, Achlya dubia","NWP (NCOS West Pond)",25,93.3,1
+"1014","ESV_027780","Eukaryota, , , , , , ","NWP (NCOS West Pond)",13,81.6,7
+"1015","ESV_027781","Eukaryota, Arthropoda, Branchiopoda, Diplostraca, Moinidae, Moina, ","NWP (NCOS West Pond)",10,96.2,7
+"1016","ESV_027782","Eukaryota, Arthropoda, Arachnida, , , , ","NWP (NCOS West Pond)",9,76.1,1
+"1017","ESV_027783","Eukaryota, Oomycota, , , , , ","PIER",140,82.8,2
+"1018","ESV_027784","Eukaryota, Bacillariophyta, Mediophyceae, Cymatosirales, Cymatosiraceae, Minutocellus, Minutocellus polymorphus","NVBR",31,84.7,1
+"1019","ESV_027784","Eukaryota, Bacillariophyta, Mediophyceae, Cymatosirales, Cymatosiraceae, Minutocellus, Minutocellus polymorphus","PIER",134,84.7,1
+"1020","ESV_027785","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","NVBR",53,80.4,1
+"1021","ESV_027785","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","PIER",74,80.4,1
+"1022","ESV_027786","Eukaryota, Bacillariophyta, , , , , ","PIER",58,84,4
+"1023","ESV_027787","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, ","NVBR",229,79.1,3
+"1024","ESV_027787","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, ","PIER",50,79.1,3
+"1025","ESV_027788","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, ","NVBR",17,81,2
+"1026","ESV_027788","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, ","PIER",50,81,2
+"1027","ESV_027789","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, ","NVBR",422,79.8,3
+"1028","ESV_027789","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, ","PIER",48,79.8,3
+"1029","ESV_027790","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Skeletonemataceae, Skeletonema, ","PIER",48,96.9,3
+"1030","ESV_027791","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, Nitzschia, Nitzschia cf. promare","PIER",45,85.3,1
+"1031","ESV_027792","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Chaetocerotales, Chaetocerotaceae, Chaetoceros, Chaetoceros contortus","PIER",42,90.2,1
+"1032","ESV_027793","Eukaryota, Bacillariophyta, , , , , ","PIER",41,83.4,3
+"1033","ESV_027794","Eukaryota, Bacillariophyta, Mediophyceae, Hemiaulales, Hemiaulaceae, Eucampia, Eucampia zodiacus","PIER",32,89.6,1
+"1034","ESV_027795","Eukaryota, Oomycota, , , , , ","PIER",32,78.5,3
+"1035","ESV_027796","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, Pythium, ","PIER",28,81.6,3
+"1036","ESV_027797","Eukaryota, unk_phylum, Phaeophyceae, Laminariales, Laminariaceae, Macrocystis, ","PIER",28,100,2
+"1037","ESV_027798","Eukaryota, , , , , , ","PIER",26,81,13
+"1038","ESV_027799","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","PIER",25,77.9,1
+"1039","ESV_027800","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","NVBR",9,81,1
+"1040","ESV_027800","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","PIER",21,81,1
+"1041","ESV_027801","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, , ","PIER",20,81.6,3
+"1042","ESV_027802","Eukaryota, Bacillariophyta, Mediophyceae, Cymatosirales, Cymatosiraceae, Minutocellus, Minutocellus polymorphus","PIER",20,84.7,1
+"1043","ESV_027803","Eukaryota, Bacillariophyta, Mediophyceae, Cymatosirales, Cymatosiraceae, Minutocellus, Minutocellus polymorphus","PIER",19,85.3,1
+"1044","ESV_027804","Eukaryota, Streptophyta, , , , , ","PIER",19,84.7,3
+"1045","ESV_027805","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Rhizosoleniales, Rhizosoleniaceae, Rhizosolenia, Rhizosolenia setigera","PIER",19,89,1
+"1046","ESV_027806","Eukaryota, Oomycota, unk_class, unk_order, Lagenaceae, Lagena, Lagena radicicola","NVBR",14,82.2,1
+"1047","ESV_027806","Eukaryota, Oomycota, unk_class, unk_order, Lagenaceae, Lagena, Lagena radicicola","PIER",18,82.2,1
+"1048","ESV_027807","Eukaryota, Bacillariophyta, Mediophyceae, Cymatosirales, Cymatosiraceae, Minutocellus, Minutocellus polymorphus","PIER",18,84.7,1
+"1049","ESV_027808","Eukaryota, Rhodophyta, Florideophyceae, Ceramiales, Rhodomelaceae, Odonthalia, Odonthalia floccosa","PIER",16,80.4,1
+"1050","ESV_027809","Eukaryota, Oomycota, unk_class, Myzocytiopsidales, Myzocytiopsidaceae, Chlamydomyzium, Chlamydomyzium dictyuchoides","PIER",16,84.7,1
+"1051","ESV_027810","Eukaryota, Oomycota, , , , , ","PIER",14,82.8,7
+"1052","ESV_027811","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","PIER",14,85.2,1
+"1053","ESV_027812","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","PIER",14,83.9,1
+"1054","ESV_027813","Eukaryota, Rotifera, Eurotatoria, Ploima, , , ","PIER",14,82.2,3
+"1055","ESV_027814","Eukaryota, unk_phylum, Chrysophyceae, Chromulinales, Chromulinaceae, Pedospumella, ","NVBR",29,87.1,2
+"1056","ESV_027814","Eukaryota, unk_phylum, Chrysophyceae, Chromulinales, Chromulinaceae, Pedospumella, ","PIER",14,87.1,2
+"1057","ESV_027815","Eukaryota, , , , , , ","PIER",13,82.8,10
+"1058","ESV_027816","Eukaryota, , , , , , ","PIER",13,76.1,5
+"1059","ESV_027817","Eukaryota, Oomycota, , , , , ","PIER",13,82.8,2
+"1060","ESV_027818","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, Pythium, ","PIER",12,89.6,14
+"1061","ESV_027819","Eukaryota, Tubulinea, Elardia, Arcellinida, Hyalospheniidae, Gibbocarina, Gibbocarina galeata","PIER",11,75.3,1
+"1062","ESV_027820","Eukaryota, Haptista, Haptophyta, Pavlovales, Pavlovaceae, Diacronema, Diacronema viridis","PIER",11,71.8,1
+"1063","ESV_027821","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, Haptoglossa sp. DM2 4/12","PIER",11,82.2,1
+"1064","ESV_027822","Eukaryota, Oomycota, , , , , ","PIER",11,81.6,7
+"1065","ESV_027823","Eukaryota, , , , , , ","PIER",11,83.4,4
+"1066","ESV_027824","Eukaryota, Haptista, Haptophyta, Prymnesiales, Chrysochromulinaceae, Chrysochromulina, Chrysochromulina tobinii","PIER",11,78.5,1
+"1067","ESV_027825","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, , ","NVBR",314,89,11
+"1068","ESV_027825","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, , ","PIER",11,89,11
+"1069","ESV_027826","Eukaryota, unk_phylum, Dictyochophyceae, Pedinellales, unk_family, Pseudopedinella, Pseudopedinella elastica","PIER",11,86.5,1
+"1070","ESV_027827","Eukaryota, Bacillariophyta, , , , , ","PIER",10,83.4,3
+"1071","ESV_027828","Eukaryota, , , , , , ","PIER",10,74.2,4
+"1072","ESV_027829","Eukaryota, unk_phylum, Phaeophyceae, Ectocarpales, Chordariaceae, Punctaria, Punctaria latifolia","PIER",10,100,1
+"1073","ESV_027830","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Rhizosoleniales, Rhizosoleniaceae, Rhizosolenia, Rhizosolenia setigera","PIER",10,88.3,1
+"1074","ESV_027831","Eukaryota, unk_phylum, Phaeophyceae, Laminariales, Lessoniaceae, Egregia, ","PIER",9,100,2
+"1075","ESV_027832","Eukaryota, , , , , , ","PIER",9,74.8,3
+"1076","ESV_027833","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, Haptoglossa sp. DM2 4/12","PIER",9,78.5,1
+"1077","ESV_027834","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira pseudonana","PIER",9,99.4,1
+"1078","ESV_027835","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, ","PIER",8,88.3,2
+"1079","ESV_027836","Eukaryota, Haptista, Haptophyta, Phaeocystales, Phaeocystaceae, Phaeocystis, Phaeocystis pouchetii","PIER",8,74.2,1
+"1080","ESV_027837","Eukaryota, Bacillariophyta, Coscinodiscophyceae, Thalassiosirales, Thalassiosiraceae, Thalassiosira, Thalassiosira pseudonana","PIER",8,99.4,1
+"1081","ESV_027838","Eukaryota, Haptista, Haptophyta, Isochrysidales, Isochrysidaceae, Isochrysis, Isochrysis galbana","PIER",8,83.4,1
+"1082","ESV_027839","Eukaryota, Oomycota, unk_class, Peronosporales, Pontismataceae, Pontisma, [Olpidiopsis] porphyrae var. scotiae (nom. inval.)","PIER",8,79.8,1
+"1083","ESV_027840","Eukaryota, Oomycota, unk_class, Pythiales, Pythiogetonaceae, Pythiogeton, Pythiogeton zeae","PIER",8,77.3,1
+"1084","ESV_027841","Eukaryota, , , , , , ","NDC",912,80.4,6
+"1085","ESV_027842","Eukaryota, unk_phylum, Bigyra, Thraustochytrida, Thraustochytriaceae, Schizochytrium, Schizochytrium sp. SEK 210","NDC",356,76.1,1
+"1086","ESV_027843","Eukaryota, unk_phylum, Bigyra, Thraustochytrida, Thraustochytriaceae, Schizochytrium, Schizochytrium sp. SEK 210","NDC",217,77.3,1
+"1087","ESV_027844","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NDC",174,84.5,1
+"1088","ESV_027845","Eukaryota, Rhodophyta, Florideophyceae, Ceramiales, Ceramiaceae, Ceramium, Ceramium dumosertum","NDC",52,72.4,1
+"1089","ESV_027846","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NDC",29,84.5,1
+"1090","ESV_027847","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NDC",23,83.2,1
+"1091","ESV_027848","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Monodopsis, Monodopsis sp. MarTras21","NDC",22,81,1
+"1092","ESV_027849","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, , ","NDC",20,77.3,3
+"1093","ESV_027850","Eukaryota, Oomycota, , , , , ","NDC",18,79.8,4
+"1094","ESV_027851","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NDC",13,83.2,1
+"1095","ESV_027852","Eukaryota, , , , , , ","NDC",9,75.5,5
+"1096","ESV_027853","Eukaryota, unk_phylum, Bigyra, Thraustochytrida, Thraustochytriaceae, Schizochytrium, Schizochytrium sp. SEK 210","NDC",9,75.5,1
+"1097","ESV_027854","Eukaryota, Discosea, unk_class, Longamoebia, Acanthamoebidae, Acanthamoeba, Acanthamoeba sp.","NVBR",374,93.3,1
+"1098","ESV_027855","Eukaryota, Oomycota, unk_class, unk_order, unk_family, Haptoglossa, ","NVBR",259,80.4,3
+"1099","ESV_027856","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVBR",238,84.5,1
+"1100","ESV_027857","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVBR",127,85.8,1
+"1101","ESV_027858","Eukaryota, Discosea, unk_class, Longamoebia, Acanthamoebidae, Acanthamoeba, ","NVBR",96,92.6,2
+"1102","ESV_027859","Eukaryota, Oomycota, , , , , ","NVBR",54,81.6,13
+"1103","ESV_027860","Eukaryota, , , , , , ","NVBR",44,75.5,7
+"1104","ESV_027861","Eukaryota, Evosea, unk_class, unk_order, unk_family, Squamamoeba, Squamamoeba japonica","NVBR",40,81.6,1
+"1105","ESV_027862","Eukaryota, Haptista, Haptophyta, Pavlovales, Pavlovaceae, , ","NVBR",23,70.6,2
+"1106","ESV_027863","Eukaryota, , , , , , ","NVBR",22,76.1,6
+"1107","ESV_027864","Eukaryota, Bacillariophyta, Mediophyceae, Cymatosirales, Cymatosiraceae, Minutocellus, Minutocellus polymorphus","NVBR",22,84,1
+"1108","ESV_027865","Eukaryota, Oomycota, , , , , ","NVBR",22,82.8,3
+"1109","ESV_027866","Eukaryota, Oomycota, , , , , ","NVBR",19,82.8,14
+"1110","ESV_027867","Eukaryota, Haptista, Haptophyta, Prymnesiales, Chrysochromulinaceae, Chrysochromulina, Chrysochromulina parva","NVBR",18,80.4,1
+"1111","ESV_027868","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVBR",15,85.2,1
+"1112","ESV_027869","Eukaryota, , , , , , ","NVBR",13,79.1,10
+"1113","ESV_027870","Eukaryota, Evosea, unk_class, unk_order, unk_family, Squamamoeba, Squamamoeba japonica","NVBR",13,81.6,1
+"1114","ESV_027871","Eukaryota, Oomycota, , , , , ","NVBR",13,81.6,12
+"1115","ESV_027872","Eukaryota, Bacillariophyta, Mediophyceae, Hemiaulales, Hemiaulaceae, Eucampia, Eucampia zodiacus","NVBR",13,85.3,1
+"1116","ESV_027873","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVBR",12,83.9,1
+"1117","ESV_027874","Eukaryota, unk_phylum, unk_class, unk_order, Apusomonadidae, Thecamonas, Thecamonas trahens","NVBR",11,95.1,1
+"1118","ESV_027875","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVBR",11,82.6,1
+"1119","ESV_027876","Eukaryota, Oomycota, unk_class, Myzocytiopsidales, Myzocytiopsidaceae, Myzocytiopsis, Myzocytiopsis osiris","NVBR",10,73.6,1
+"1120","ESV_027877","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVBR",10,83.9,1
+"1121","ESV_027878","Eukaryota, Rhodophyta, Florideophyceae, Ceramiales, Delesseriaceae, Phycodrys, Phycodrys isabellae","NVBR",9,82.2,1
+"1122","ESV_027879","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVBR",9,83.9,1
+"1123","ESV_027880","Eukaryota, Oomycota, , , , , ","NVBR",8,80.4,3
+"1124","ESV_027881","Eukaryota, , , , , , ","NVBR",8,78.5,13
+"1125","ESV_027882","Eukaryota, Annelida, Polychaeta, unk_order, Capitellidae, Capitella, Capitella teleta","NVBR",8,84.5,1
+"1126","ESV_027883","Eukaryota, Bacillariophyta, , , , , ","NVBR",8,83.4,2
+"1127","ESV_027884","Eukaryota, , , , , , ","NVBR",8,79.8,40
+"1128","ESV_027885","Eukaryota, Oomycota, unk_class, Pythiales, Pythiaceae, , ","NVBR",8,76.1,7

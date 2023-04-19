@@ -1,0 +1,30 @@
+---
+title: "Invert Sampling Cleaning"
+author: "Chris Kracha"
+date: "2023-01-28"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(vegan)
+library("hydroTSM")
+```
+
+```{r}
+aqinv_edna <- read_csv("C:/Users/Admin/Documents/Lab Work/CCBER/eDNA/output/edna411.csv")
+arthco1_edna <- aqinv_edna %>% filter(TestId == "ArthCOI")
+
+View(arthco1_edna %>% filter(Phylum %in% c("Arthropoda", "Annelida", "Mollusca")))
+
+ggplot(aqinv_edna, aes(x = date, y = site)) + geom_point(shape = 15) +
+  ggtitle("eDNA samples by site and date")
+
+ggplot(aqinv_edna, aes(fill = site, x = time2season(date, out.fmt = "seasons"))) + geom_bar() +
+  ggtitle("Average organisms per sample collected by season") + ylab("organisms/L per sample") + labs(fill = "site location")
+
+arthco1_edna %>% filter(Phylum %in% c("Arthropoda", "Annelida", "Mollusca")) %>%
+  ggplot(aes(x = date, y = Class, color = site)) + geom_point()
+```

@@ -1,0 +1,98 @@
+site,kpcofgs,samples_sent,matches,percent_match,common_name
+CUL1,"Eukaryota, Chordata, Actinopteri, Atheriniformes, Atherinopsidae, Leuresthes, Leuresthes tenuis",2,534,92.6,California grunion
+CUL1,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Fundulidae",2,469,86.6,
+CUL1,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Poeciliidae, Gambusia, Gambusia affinis",1,20,100,western mosquitofish
+CUL1,"Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis",2,966,99.1,long-jawed mudsucker
+CUL1,"Eukaryota, Chordata, Actinopteri, Labriformes, Labridae, Thalassoma, Thalassoma quinquevittatum",1,22,100,
+CUL1,"Eukaryota, Chordata, Actinopteri, Stomiiformes, Gonostomatidae, Cyclothone, Cyclothone pallida",3,411,99.60000000000001,tan bristlemouth
+CUL1,"Eukaryota, Chordata, Aves, Charadriiformes, Scolopacidae, Calidris",1,18,96.6,
+MO1,"Eukaryota, Chordata, Actinopteri, Atheriniformes, Atherinopsidae, Leuresthes, Leuresthes tenuis",3,1678,92.5,California grunion
+MO1,"Eukaryota, Chordata, Actinopteri, Atheriniformes, Atherinopsidae, Menidia, Menidia beryllina",3,906,98.2,inland silverside
+MO1,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Fundulidae",2,96,86.6,topminnows
+MO1,"Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis",2,2841,99.1,long-jawed mudsucker
+MO1,"Eukaryota, Chordata, Actinopteri, Perciformes, Cottidae, Leptocottus, Leptocottus armatus",1,1861,100,Pacific staghorn sculpin
+MO1,"Eukaryota, Chordata, Aves, Anseriformes, Anatidae",1,226,100,waterfowl
+MO1,"Eukaryota, Chordata, Aves, Anseriformes, Anatidae, Mareca",1,29,100,
+MO1,"Eukaryota, Chordata, Mammalia, Artiodactyla, Bovidae, Ovis",1,45,100,
+MO1,"Eukaryota, Chordata, Mammalia, Artiodactyla, Suidae, Sus, Sus scrofa",1,244,100,pig
+NDC,"Eukaryota, Chordata, Actinopteri, Cypriniformes",1,542,100,carps and others
+NDC,"Eukaryota, Chordata, Actinopteri, Cypriniformes, Cyprinidae, Carassius",2,39,99.4,
+NDC,"Eukaryota, Chordata, Actinopteri, Labriformes, Labridae, Semicossyphus, Semicossyphus pulcher",1,1218,100,
+NDC,"Eukaryota, Chordata, Chondrichthyes, unk_order, Pristiophoridae, Pristiophorus, Pristiophorus nudipinnis",2,2306,94.75,
+NEC,"Eukaryota, Chordata, Actinopteri, Argentiniformes, Bathylagidae",3,560,89.7,
+NEC,"Eukaryota, Chordata, Actinopteri, Cypriniformes",1,255,100,carps and others
+NEC,"Eukaryota, Chordata, Actinopteri, Cypriniformes, Cyprinidae, Carassius",1,317,100,
+NEC,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Fundulidae",2,537,86.9,topminnows
+NEC,"Eukaryota, Chordata, Actinopteri, Siluriformes, Ariidae, Ariopsis, Ariopsis seemanni",1,12,96,Tete sea catfish
+NEC,"Eukaryota, Chordata, Actinopteri, Stomiiformes, Gonostomatidae, Cyclothone, Cyclothone pallida",3,1993,99.60000000000001,tan bristlemouth
+NEC,"Eukaryota, Chordata, Aves, Anseriformes, Anatidae",2,537,99.75,waterfowl
+NEC,"Eukaryota, Chordata, Mammalia, Artiodactyla, Bovidae",1,3661,100,
+NEC,"Eukaryota, Chordata, Mammalia, Primates, Hominidae, Homo, Homo sapiens",1,63,100,human
+NMC,"Eukaryota, Chordata, Actinopteri, Cypriniformes",1,8784,100,
+NMC,"Eukaryota, Chordata, Actinopteri, Cypriniformes, Cyprinidae, Carassius",1,5024,100,
+NMC,"Eukaryota, Chordata, Mammalia, Primates, Hominidae, Homo, Homo sapiens",5,3380,99.76,human
+NPB,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Fundulidae",2,132,86.6,topminnows
+NPB,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Poeciliidae, Gambusia",3,3715,99.03333333333333,
+NPB,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Poeciliidae, Gambusia, Gambusia affinis",1,19731,100,western mosquitofish
+NPB,"Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis",5,539,98.92,long-jawed mudsucker
+NPB,"Eukaryota, Chordata, Amphibia, Caudata, Cryptobranchidae, Cryptobranchus, Cryptobranchus alleganiensis",1,24,97,hellbender
+NPB,"Eukaryota, Chordata, Aves, Anseriformes, Anatidae",1,47,100,waterfowl
+NPB1,"Eukaryota, Chordata, Actinopteri, Clupeiformes, Clupeidae, Brevoortia",1,9,100,
+NPB1,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Poeciliidae, Gambusia, Gambusia affinis",1,2637,100,western mosquitofish
+NPB1,"Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys",2,1097,98.5,
+NPB1,"Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis",4,15354,98.8,long-jawed mudsucker
+NPB1,"Eukaryota, Chordata, Aves, Anseriformes, Anatidae",1,71,100,waterfowl
+NPB1,"Eukaryota, Chordata, Aves, Anseriformes, Anatidae, Mareca",3,236,99.66666666666667,
+NPB1,"Eukaryota, Chordata, Aves, Passeriformes, Sturnidae",1,11,97.8,starlings
+NPB1,"Eukaryota, Chordata, Mammalia, Artiodactyla, Bovidae",1,713,100,
+NPB1,"Eukaryota, Chordata, Mammalia, Artiodactyla, Bovidae, Bos",2,38,99.4,"oxen, cattle"
+NPB2,"Eukaryota, Chordata, Actinopteri, Cypriniformes, Danionidae, Danio, Danio rerio",1,2695,100,zebrafish
+NPB2,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Poeciliidae, Gambusia",3,1339,99.4,
+NPB2,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Poeciliidae, Gambusia, Gambusia affinis",1,3032,100,western mosquitofish
+NPB2,"Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis",4,2042,98.65,long-jawed mudsucker
+NPB2,"Eukaryota, Chordata, Mammalia, Artiodactyla, Suidae, Sus, Sus scrofa",1,30,100,pig
+NVBR,"Eukaryota, Chordata, Actinopteri, Atheriniformes, Atherinopsidae, Leuresthes, Leuresthes tenuis",1,6132,92.9,California grunion
+NVBR,"Eukaryota, Chordata, Actinopteri, Atheriniformes, Atherinopsidae, Menidia, Menidia beryllina",2,2679,98.5,
+NVBR,"Eukaryota, Chordata, Actinopteri, Blenniiformes, Blenniidae, Entomacrodus, Entomacrodus caudofasciatus",1,1143,89.9,
+NVBR,"Eukaryota, Chordata, Actinopteri, Clupeiformes, Clupeidae",1,15,99.4,herrings
+NVBR,"Eukaryota, Chordata, Actinopteri, Clupeiformes, Clupeidae, Clupea, Clupea pallasii",1,176,100,Pacific herring
+NVBR,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Fundulidae",1,72,86.9,topminnows
+NVBR,"Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis",4,1016,98.8,long-jawed mudsucker
+NVBR,"Eukaryota, Chordata, Actinopteri, Mugiliformes, Mugilidae, Mugil, Mugil cephalus",1,55,97.7,flathead mullet
+NVBR,"Eukaryota, Chordata, Actinopteri, Stomiiformes, Gonostomatidae, Cyclothone, Cyclothone obscura",1,154,100,
+NVBR,"Eukaryota, Chordata, Aves, Anseriformes, Anatidae",1,62,100,waterfowl
+NVBR,"Eukaryota, Chordata, Mammalia, Artiodactyla, Suidae, Sus, Sus scrofa",1,19,100,pig
+NVBR,"Eukaryota, Chordata, Mammalia, Primates, Hominidae, Homo, Homo sapiens",1,802,100,human
+NVP2,"Eukaryota, Chordata, Aves, Anseriformes, Anatidae, Branta, Branta canadensis",1,64,100,Canada goose
+NVP4,"Eukaryota, Chordata, Aves, Anseriformes, Anatidae",5,1269,99.36,waterfowl
+NVP4,"Eukaryota, Chordata, Aves, Anseriformes, Anatidae, Mareca",1,57,100,
+NVP4,"Eukaryota, Chordata, Mammalia, Primates, Hominidae, Homo, Homo sapiens",1,12,100,human
+NWP,"Eukaryota, Chordata, Actinopteri, Atheriniformes, Atherinopsidae, Leuresthes, Leuresthes tenuis",1,1319,92.9,California grunion
+NWP,"Eukaryota, Chordata, Actinopteri, Atheriniformes, Atherinopsidae, Menidia, Menidia beryllina",1,1701,98.8,inland silverside
+NWP,"Eukaryota, Chordata, Actinopteri, Cypriniformes",1,1386,100,carps and others
+NWP,"Eukaryota, Chordata, Actinopteri, Cypriniformes, Cyprinidae, Carassius",2,1704,99.7,
+NWP,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Fundulidae",1,743,86.9,topminnows
+NWP,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Poeciliidae, Gambusia",1,79,99.4,
+NWP,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Poeciliidae, Gambusia, Gambusia affinis",1,209,100,western mosquitofish
+NWP,"Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis",3,17572,98.8,long-jawed mudsucker
+NWP,"Eukaryota, Chordata, Actinopteri, Perciformes, Cottidae, Leptocottus, Leptocottus armatus",1,15,100,Pacific staghorn sculpin
+NWP,"Eukaryota, Chordata, Actinopteri, Salmoniformes, Salmonidae, Salmo, Salmo salar",1,89,100,Atlantic salmon
+NWP,"Eukaryota, Chordata, Aves, Anseriformes, Anatidae",1,322,100,waterfowl
+PIER,"Eukaryota, Chordata, Actinopteri, Atheriniformes, Atherinopsidae, Leuresthes, Leuresthes tenuis",2,301,92.6,California grunion
+PIER,"Eukaryota, Chordata, Actinopteri, Cypriniformes",1,6277,100,carps and others
+PIER,"Eukaryota, Chordata, Actinopteri, Cypriniformes, Cyprinidae, Carassius",1,3548,100,
+PIER,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Fundulidae",1,351,86.9,topminnows
+PIER,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Fundulidae, Fundulus, Fundulus lima",1,58,95.8,killifish
+PIER,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Poeciliidae, Gambusia, Gambusia affinis",1,3217,100,western mosquitofish
+PIER,"Eukaryota, Chordata, Actinopteri, Gobiiformes, Gobiidae, Gillichthys, Gillichthys mirabilis",1,247,99.4,long-jawed mudsucker
+PIER,"Eukaryota, Chordata, Actinopteri, Syngnathiformes, Syngnathidae, Syngnathus",3,8696,99.4,
+PIER,"Eukaryota, Chordata, Actinopteri, unk_order, Sciaenidae",1,22,92.3,drums
+PIER,"Eukaryota, Chordata, Aves, Anseriformes, Anatidae",1,589,100,waterfowl
+PIER,"Eukaryota, Chordata, Mammalia, Artiodactyla, Bovidae",1,692,100,
+PIER,"Eukaryota, Chordata, Mammalia, Artiodactyla, Bovidae, Bos, Bos taurus",1,64,100,cattle
+PIER,"Eukaryota, Chordata, Mammalia, Artiodactyla, Bovidae, Ovis",1,760,100,
+PIER,"Eukaryota, Chordata, Mammalia, Artiodactyla, Bovidae, Ovis, Ovis aries",1,81,98.8,sheep
+NA,"Eukaryota, Chordata, Actinopteri, Cyprinodontiformes, Fundulidae, Fundulus, Fundulus lima",3,11089,95.6,killifish
+NA,"Eukaryota, Chordata, Aves, Anseriformes, Anatidae",1,935,100,waterfowl
+NA,"Eukaryota, Chordata, Aves, Anseriformes, Anatidae, Mareca",1,92,100,
+NA,"Eukaryota, Chordata, Mammalia, Artiodactyla, Bovidae",1,106,100,

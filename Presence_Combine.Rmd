@@ -1,0 +1,79 @@
+---
+title: "Presence_Combine"
+author: "Chris Kracha"
+date: "2023-04-18"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(janitor)
+library(vegan) # for analysis
+library("hydroTSM") # for time series, made for hydrology applications
+library(lubridate)
+library(tidyverse)
+```
+
+# load in data
+```{r}
+aqinv_eDNA <- read_csv("cleaned_data/eDNA_tables/AqInv_eDNA.csv")
+
+invLongPresence <- read_csv("cleaned_data/invert_sampling_tables/all_invert_data_long.csv") %>%
+  mutate(presence = ifelse(organisms_L > 0, 1, 0)) %>%
+  select(-organisms_L, -year_samples, -season_samples, -site_samples, -"...1")
+```
+
+# change eDNA to match invert data
+```{r}
+aqinv_edna <- AqInv_eDNA %>% 
+  mutate(taxa = case_when(Class == "Ostracoda" ~ "ostracod",
+                          Order == "Amphipoda" ~ "amphipod",
+                          Order == "Isopoda" ~ "isopod",
+                          Order == "Diplostraca" ~ "cladocera",
+                          Order == "Coleoptera" ~ "coleoptera",
+                          Class == "Arachnida" ~ "arachnida_acari",
+                          Class == "Gastropoda" ~ "gastropod_snail",
+                          Class == "Bivalvia" ~ "mollusk",
+                          Phylum == "Nematozoa" ~ "nematode",
+                          Class == "Collembola" ~ "collembola_springtail",
+                          Class %in% c("Hexanauplia", "Maxillopoda") ~ "copepod",
+                          Phylum == "Annelida" ~ "annelida_sp",
+                          Phylum == "platyhelminthes" ~ "flatworm",
+                          Family == "Culicidae" ~ "diptera_culicidae",
+                          Family == "Sphaeroceridae" ~ "sphaeroceridae",
+                          Family == "Anthomyiidae" ~ "diptera_anthomyidae",
+                          Order == "Dermaptera" ~ "dermaptera",
+                          Family == "Chironomidae" ~ "diptera_chironomid",
+                          Order == "Odonata" ~ "odonate",
+                          Order == "Ephemeroptera" ~ "ephemeroptera",
+                          Family == "Tipulidae" ~ "tipulidae_larva",
+                          Family == "Lygaeidae" ~ "hemiptera_lygaeidae",
+                          Family == "Ceratopogonidae" ~ "diptera_ceratopogonidae")) %>%
+  mutate(year = year(date),
+         season = time2season(date, out.fmt = "seasons"), 
+         season = as.factor(case_when(season == "autumm" ~ "fall", # rename factor
+                            TRUE ~ season)),
+         site_type = case_when(site %in% c("CUL1", "MO1", "NDC", "NEC", "NMC", "NPB", 
+                                           "NPB1", "NPB2", "NVBR", "NWP", "PIER", "VBR1") ~ "slough",
+                               site %in% c("NVP2", "NVP4", "VP1") ~ "pool",
+                               ncos_or_copr == "CCBER" ~ "bird"),
+         presence = ifelse(sample_count > 0, 1, 0),
+         sample_type = "eDNA") %>%
+  select(date, year, season, site, site_type, sample_type, taxa, presence)
+         
+aqinv_presence <- rbind(aqinv_edna, invLongPresence) %>% mutate(month = month(date))
+```
+
+```{r}
+presencePlot <- list()
+presenceTable <- list()
+for (i in 1:length(unique(invLong$site))) {
+  presenceTable[[i]] <- aqinv_presence %>% filter(sample_type == "FB250", site == unique(invLong$site)[[i]])
+  presencePlot[[i]] <- ggplot(presenceTable[[i]]) + geom_point(aes(x = month, y = taxa, color = as.factor(presence))) +
+    ggtitle(unique(invLong$site)[[i]])
+  
+  print(presencePlot[[i]])
+}
+
+
+```

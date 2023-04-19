@@ -1,0 +1,550 @@
+"","esv_id","kpcofgs","sample_type","ucsb_id","total_sample_number","total_percent_match","total_number_species"
+"1","ESV_004361","Eukaryota, Bacillariophyta, Bacillariophyceae, Bacillariales, Bacillariaceae, Nitzschia, Nitzschia cf. recta RT-2009","Killdeer fresh dropping","",20,81,1
+"2","ESV_004717","Eukaryota, , , , , , ","Killdeer fresh dropping","",11,86.5,4
+"3","ESV_010043","Eukaryota, Oomycota, unk_class, Peronosporales, Peronosporaceae, Phytophthora, ","Killdeer fresh dropping","",108,73.6,13
+"4","ESV_025160","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","Killdeer fresh dropping","",6860,86.5,2
+"5","ESV_025161","Eukaryota, , , , , , ","Killdeer fresh dropping","",677,87.1,4
+"6","ESV_025162","Eukaryota, Arthropoda, Insecta, Diptera, Culicidae, Culex, Culex tarsalis","Semi palmated plover fresh dropping","",17762,100,1
+"7","ESV_025163","Eukaryota, Arthropoda, Insecta, Diptera, Culicidae, Culex, ","Semi palmated plover fresh dropping","",271,99.4,15
+"8","ESV_025164","Eukaryota, Oomycota, unk_class, Saprolegniales, Saprolegniaceae, , ","Killdeer fresh dropping","",318,84,9
+"9","ESV_025165","Eukaryota, , , , , , ","Killdeer fresh dropping","",187,77.1,3
+"10","ESV_025166","Eukaryota, unk_phylum, Eustigmatophyceae, Eustigmatales, Monodopsidaceae, Nannochloropsis, ","Killdeer fresh dropping","",130,85.9,2
+"11","ESV_025167","Eukaryota, , , , , , ","Killdeer fresh dropping","",38,86.5,4
+"12","ESV_025168","Eukaryota, , , , , , ","Killdeer fresh dropping","",15,86.5,4
+"13","ESV_025169","Eukaryota, Bacillariophyta, Bacillariophyceae, Naviculales, Naviculaceae, Navicula, ","Killdeer fresh dropping","",11,85.9,2
+"14","ESV_025170","Eukaryota, , , , , , ","Killdeer fresh dropping","",8,73.6,18
+"15","ESV_000006","Bacteria, Proteobacteria, Gammaproteobacteria, Enterobacterales, Enterobacteriaceae, , ","Killdeer fresh dropping","",71,100,7
+"16","ESV_000006","Bacteria, Proteobacteria, Gammaproteobacteria, Enterobacterales, Enterobacteriaceae, , ","Least Sandpiper fresh dropping","",292,100,7
+"17","ESV_000006","Bacteria, Proteobacteria, Gammaproteobacteria, Enterobacterales, Enterobacteriaceae, , ","Semi palmated plover fresh dropping","",108,100,7
+"18","ESV_000020","Bacteria, Proteobacteria, Gammaproteobacteria, Pseudomonadales, Pseudomonadaceae, Pseudomonas, ","Killdeer fresh dropping","",11,100,30
+"19","ESV_000020","Bacteria, Proteobacteria, Gammaproteobacteria, Pseudomonadales, Pseudomonadaceae, Pseudomonas, ","Least Sandpiper fresh dropping","",10,100,30
+"20","ESV_000020","Bacteria, Proteobacteria, Gammaproteobacteria, Pseudomonadales, Pseudomonadaceae, Pseudomonas, ","Semi palmated plover fresh dropping","",13,100,30
+"21","ESV_000087","Bacteria, Proteobacteria, Alphaproteobacteria, Sphingomonadales, Sphingomonadaceae, , ","Least Sandpiper fresh dropping","",14,100,14
+"22","ESV_000087","Bacteria, Proteobacteria, Alphaproteobacteria, Sphingomonadales, Sphingomonadaceae, , ","Semi palmated plover fresh dropping","",40,100,14
+"23","ESV_000111","Bacteria, Proteobacteria, Gammaproteobacteria, Enterobacterales, Enterobacteriaceae, , ","Least Sandpiper fresh dropping","",8,99,8
+"24","ESV_000274","Bacteria, Campilobacterota, Campylobacteria, Campylobacterales, Arcobacteraceae, , ","Least Sandpiper fresh dropping","",102,99,6
+"25","ESV_000274","Bacteria, Campilobacterota, Campylobacteria, Campylobacterales, Arcobacteraceae, , ","Semi palmated plover fresh dropping","",22,99,6
+"26","ESV_000754","Bacteria, Proteobacteria, Gammaproteobacteria, Enterobacterales, Enterobacteriaceae, , ","Least Sandpiper fresh dropping","",8,100,2
+"27","ESV_000838","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Semi palmated plover fresh dropping","",8,100,18
+"28","ESV_000881","Eukaryota, Phragmoplastophyta, Embryophyta, Magnoliophyta, Magnoliophyta, Magnoliophyta, ","Semi palmated plover fresh dropping","",8,100,85
+"29","ESV_000983","Bacteria, Proteobacteria, Gammaproteobacteria, Pseudomonadales, Pseudomonadaceae, Pseudomonas, ","Semi palmated plover fresh dropping","",20,100,26
+"30","ESV_001001","Bacteria, Campilobacterota, Campylobacteria, Campylobacterales, , , ","Least Sandpiper fresh dropping","",9,100,7
+"31","ESV_001016","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Least Sandpiper fresh dropping","",80,100,12
+"32","ESV_001016","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Semi palmated plover fresh dropping","",8,100,12
+"33","ESV_001027","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Least Sandpiper fresh dropping","",20,100,20
+"34","ESV_001027","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Semi palmated plover fresh dropping","",27,100,20
+"35","ESV_001060","Bacteria, Planctomycetota, Planctomycetes, Pirellulales, Pirellulaceae, Rhodopirellula, ","Semi palmated plover fresh dropping","",12,100,4
+"36","ESV_001099","Bacteria, Proteobacteria, Alphaproteobacteria, Rhizobiales, , , ","Semi palmated plover fresh dropping","",11,100,23
+"37","ESV_001142","Eukaryota, , , , , , ","Killdeer fresh dropping","",17,100,3
+"38","ESV_001246","Bacteria, Planctomycetota, Planctomycetes, Pirellulales, Pirellulaceae, , ","Least Sandpiper fresh dropping","",9,98.1,6
+"39","ESV_001246","Bacteria, Planctomycetota, Planctomycetes, Pirellulales, Pirellulaceae, , ","Semi palmated plover fresh dropping","",38,98.1,6
+"40","ESV_001401","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Least Sandpiper fresh dropping","",204,100,8
+"41","ESV_001401","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Semi palmated plover fresh dropping","",34,100,8
+"42","ESV_001441","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Euplotia, Euplotes, ","Least Sandpiper fresh dropping","",9,100,7
+"43","ESV_001460","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Killdeer fresh dropping","",12,100,21
+"44","ESV_001460","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Least Sandpiper fresh dropping","",36,100,21
+"45","ESV_001460","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Semi palmated plover fresh dropping","",38,100,21
+"46","ESV_001487","Bacteria, Proteobacteria, Gammaproteobacteria, Pseudomonadales, Moraxellaceae, Acinetobacter, ","Killdeer fresh dropping","",19,100,10
+"47","ESV_001487","Bacteria, Proteobacteria, Gammaproteobacteria, Pseudomonadales, Moraxellaceae, Acinetobacter, ","Semi palmated plover fresh dropping","",25,100,10
+"48","ESV_001495","Bacteria, Proteobacteria, Gammaproteobacteria, Pseudomonadales, Pseudomonadaceae, Pseudomonas, ","Least Sandpiper fresh dropping","",9,100,10
+"49","ESV_001575","Bacteria, Proteobacteria, Gammaproteobacteria, Enterobacterales, Enterobacteriaceae, Escherichia-Shigella, dysenteriae","Least Sandpiper fresh dropping","",11,100,1
+"50","ESV_001575","Bacteria, Proteobacteria, Gammaproteobacteria, Enterobacterales, Enterobacteriaceae, Escherichia-Shigella, dysenteriae","Semi palmated plover fresh dropping","",8,100,1
+"51","ESV_001612","Bacteria, Proteobacteria, Gammaproteobacteria, Oceanospirillales, Halomonadaceae, Halomonas, ","Killdeer fresh dropping","",97,100,10
+"52","ESV_001612","Bacteria, Proteobacteria, Gammaproteobacteria, Oceanospirillales, Halomonadaceae, Halomonas, ","Least Sandpiper fresh dropping","",9,100,10
+"53","ESV_001612","Bacteria, Proteobacteria, Gammaproteobacteria, Oceanospirillales, Halomonadaceae, Halomonas, ","Semi palmated plover fresh dropping","",20,100,10
+"54","ESV_001864","Eukaryota, , , , , , ","Semi palmated plover fresh dropping","",12,100,2
+"55","ESV_002114","Eukaryota, Animalia, Animalia, Animalia, Animalia, Animalia, ","Killdeer fresh dropping","",15,100,1
+"56","ESV_002270","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, Paracoccus, ","Semi palmated plover fresh dropping","",12,100,4
+"57","ESV_002276","Bacteria, Proteobacteria, , , , , ","Least Sandpiper fresh dropping","",8,100,26
+"58","ESV_002276","Bacteria, Proteobacteria, , , , , ","Semi palmated plover fresh dropping","",36,100,26
+"59","ESV_002438","Eukaryota, Ascomycota, Eurotiomycetes, Eurotiales, Aspergillaceae, , ","Killdeer fresh dropping","",13,100,3
+"60","ESV_002499","Eukaryota, Ascomycota, Dothideomycetes, Pleosporales, Pleosporaceae, Alternaria, alternata","Killdeer fresh dropping","",62,100,1
+"61","ESV_002652","Eukaryota, Ascomycota, Eurotiomycetes, Eurotiales, Aspergillaceae, Aspergillus, penicillioides","Killdeer fresh dropping","",90,100,1
+"62","ESV_002676","Eukaryota, Vertebrata, Aves, Aves, Aves, Aves, ","Killdeer fresh dropping","",731,100,3
+"63","ESV_002797","Archaea, Crenarchaeota, Nitrososphaeria, Nitrososphaerales, Nitrososphaeraceae, Nitrososphaera, viennensis","Semi palmated plover fresh dropping","",10,98.9,1
+"64","ESV_002957","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",66,100,1
+"65","ESV_002957","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Least Sandpiper fresh dropping","",139,100,1
+"66","ESV_002957","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Semi palmated plover fresh dropping","",407,100,1
+"67","ESV_002990","Eukaryota, Heterolobosea, Tetramitia, Tetramitia, Tetramitia, Naegleria, ","Least Sandpiper fresh dropping","",8,99.1,4
+"68","ESV_002990","Eukaryota, Heterolobosea, Tetramitia, Tetramitia, Tetramitia, Naegleria, ","Semi palmated plover fresh dropping","",15,99.1,4
+"69","ESV_003334","Bacteria, Proteobacteria, Gammaproteobacteria, Burkholderiales, Rhodocyclaceae, , ","Semi palmated plover fresh dropping","",9,100,20
+"70","ESV_003983","Bacteria, Proteobacteria, Alphaproteobacteria, Sphingomonadales, Sphingomonadaceae, , ","Semi palmated plover fresh dropping","",11,100,6
+"71","ESV_004981","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Least Sandpiper fresh dropping","",13,97.6,15
+"72","ESV_004981","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Semi palmated plover fresh dropping","",8,97.6,15
+"73","ESV_005692","Eukaryota, Centrohelida, Centrohelida, Centrohelida, , , ","Least Sandpiper fresh dropping","",11,92.4,2
+"74","ESV_006721","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Semi palmated plover fresh dropping","",8,100,6
+"75","ESV_010682","Eukaryota, Ascomycota, , , , , ","Killdeer fresh dropping","",28,99.2,33
+"76","ESV_014774","Eukaryota, Basidiomycota, Agaricomycetes, , , , ","Killdeer fresh dropping","",12,100,4
+"77","ESV_015743","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Semi palmated plover fresh dropping","",15,99.2,1
+"78","ESV_017454","Eukaryota, Ascomycota, , , , , ","Killdeer fresh dropping","",156,99.2,52
+"79","ESV_018605","Eukaryota, Amoebozoa, Tubulinea, Euamoebida, Euamoebida, Euamoebida, ","Semi palmated plover fresh dropping","",43,88.1,1
+"80","ESV_020344","Eukaryota, Ochrophyta, Chrysophyceae, , , , ","Semi palmated plover fresh dropping","",8,86,4
+"81","ESV_020662","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Least Sandpiper fresh dropping","",22,99.2,3
+"82","ESV_021669","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Verrucomicrobiales, Rubritaleaceae, Luteolibacter, ","Least Sandpiper fresh dropping","",13,99,6
+"83","ESV_021669","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Verrucomicrobiales, Rubritaleaceae, Luteolibacter, ","Semi palmated plover fresh dropping","",67,99,6
+"84","ESV_023747","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Semi palmated plover fresh dropping","",20,100,10
+"85","ESV_024921","Eukaryota, Chlorophyta, Chlorodendrophyceae, Chlorodendrales, Chlorodendrales, Tetraselmis, subcordiformis","Least Sandpiper fresh dropping","",2798,100,1
+"86","ESV_024921","Eukaryota, Chlorophyta, Chlorodendrophyceae, Chlorodendrales, Chlorodendrales, Tetraselmis, subcordiformis","Semi palmated plover fresh dropping","",8638,100,1
+"87","ESV_024922","Eukaryota, Ochrophyta, Eustigmatophyceae, Eustigmatales, Eustigmatales, Nannochloropsis, salina","Killdeer fresh dropping","",57,100,1
+"88","ESV_024922","Eukaryota, Ochrophyta, Eustigmatophyceae, Eustigmatales, Eustigmatales, Nannochloropsis, salina","Least Sandpiper fresh dropping","",501,100,1
+"89","ESV_024922","Eukaryota, Ochrophyta, Eustigmatophyceae, Eustigmatales, Eustigmatales, Nannochloropsis, salina","Semi palmated plover fresh dropping","",3536,100,1
+"90","ESV_024923","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, , ","Semi palmated plover fresh dropping","",1880,84.9,6
+"91","ESV_024924","Eukaryota, Rotifera, Monogononta, Ploimida, Ploimida, Ploimida, ","Least Sandpiper fresh dropping","",152,97.7,1
+"92","ESV_024924","Eukaryota, Rotifera, Monogononta, Ploimida, Ploimida, Ploimida, ","Semi palmated plover fresh dropping","",1202,97.7,1
+"93","ESV_024925","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Least Sandpiper fresh dropping","",66,99,34
+"94","ESV_024925","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Semi palmated plover fresh dropping","",898,99,34
+"95","ESV_024926",", , , , , , ","Least Sandpiper fresh dropping","",174,NA,NA
+"96","ESV_024926",", , , , , , ","Semi palmated plover fresh dropping","",651,NA,NA
+"97","ESV_024927","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Choreotrichia, Choreotrichia, ","Least Sandpiper fresh dropping","",208,97.5,1
+"98","ESV_024927","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Choreotrichia, Choreotrichia, ","Semi palmated plover fresh dropping","",627,97.5,1
+"99","ESV_024928","Eukaryota, Chlorophyta, Chlorodendrophyceae, , , , ","Least Sandpiper fresh dropping","",70,99.2,4
+"100","ESV_024928","Eukaryota, Chlorophyta, Chlorodendrophyceae, , , , ","Semi palmated plover fresh dropping","",286,99.2,4
+"101","ESV_024929","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",276,85.2,2
+"102","ESV_024930","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, ","Least Sandpiper fresh dropping","",1628,97.6,3
+"103","ESV_024930","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, ","Semi palmated plover fresh dropping","",263,97.6,3
+"104","ESV_024931","Eukaryota, Pavlovophyceae, Pavlovophyceae, Pavlovophyceae, Pavlovophyceae, , ","Least Sandpiper fresh dropping","",26,97.7,3
+"105","ESV_024931","Eukaryota, Pavlovophyceae, Pavlovophyceae, Pavlovophyceae, Pavlovophyceae, , ","Semi palmated plover fresh dropping","",216,97.7,3
+"106","ESV_024932","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, ","Least Sandpiper fresh dropping","",1423,100,1
+"107","ESV_024932","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, ","Semi palmated plover fresh dropping","",213,100,1
+"108","ESV_024933","Eukaryota, Protalveolata, Syndiniales, Syndiniales, , , ","Semi palmated plover fresh dropping","",203,82.3,2
+"109","ESV_024934","Eukaryota, Ochrophyta, Chrysophyceae, Ochromonadales, Ochromonadales, Ochromonas, ","Least Sandpiper fresh dropping","",51,100,1
+"110","ESV_024934","Eukaryota, Ochrophyta, Chrysophyceae, Ochromonadales, Ochromonadales, Ochromonas, ","Semi palmated plover fresh dropping","",201,100,1
+"111","ESV_024935","Eukaryota, Pavlovophyceae, Pavlovophyceae, Pavlovophyceae, Pavlovophyceae, , ","Least Sandpiper fresh dropping","",15,98.5,2
+"112","ESV_024935","Eukaryota, Pavlovophyceae, Pavlovophyceae, Pavlovophyceae, Pavlovophyceae, , ","Semi palmated plover fresh dropping","",192,98.5,2
+"113","ESV_024936","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",152,85.2,1
+"114","ESV_024937","Eukaryota, Cryptomycota, LKM11, LKM11, LKM11, LKM11, ","Least Sandpiper fresh dropping","",165,98.4,2
+"115","ESV_024937","Eukaryota, Cryptomycota, LKM11, LKM11, LKM11, LKM11, ","Semi palmated plover fresh dropping","",151,98.4,2
+"116","ESV_024938","Bacteria, Campilobacterota, Campylobacteria, Campylobacterales, Arcobacteraceae, , ","Least Sandpiper fresh dropping","",37,100,1
+"117","ESV_024938","Bacteria, Campilobacterota, Campylobacteria, Campylobacterales, Arcobacteraceae, , ","Semi palmated plover fresh dropping","",146,100,1
+"118","ESV_024939","Eukaryota, Chlorophyta, Chlorodendrophyceae, , , , ","Least Sandpiper fresh dropping","",129,100,2
+"119","ESV_024939","Eukaryota, Chlorophyta, Chlorodendrophyceae, , , , ","Semi palmated plover fresh dropping","",133,100,2
+"120","ESV_024940","Eukaryota, Chlorophyta, Chlorodendrophyceae, , , , ","Semi palmated plover fresh dropping","",131,99.2,4
+"121","ESV_024941","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, salinicola","Killdeer fresh dropping","",642,100,1
+"122","ESV_024941","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, salinicola","Least Sandpiper fresh dropping","",620,100,1
+"123","ESV_024941","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, salinicola","Semi palmated plover fresh dropping","",120,100,1
+"124","ESV_024942","Eukaryota, Ciliophora, Intramacronucleata, Conthreep, Oligohymenophorea, , ","Least Sandpiper fresh dropping","",382,100,3
+"125","ESV_024942","Eukaryota, Ciliophora, Intramacronucleata, Conthreep, Oligohymenophorea, , ","Semi palmated plover fresh dropping","",112,100,3
+"126","ESV_024943","Eukaryota, Ochrophyta, Eustigmatophyceae, Eustigmatales, Eustigmatales, Nannochloropsis, ","Least Sandpiper fresh dropping","",16,99.2,2
+"127","ESV_024943","Eukaryota, Ochrophyta, Eustigmatophyceae, Eustigmatales, Eustigmatales, Nannochloropsis, ","Semi palmated plover fresh dropping","",109,99.2,2
+"128","ESV_024944","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, , ","Semi palmated plover fresh dropping","",97,84.3,4
+"129","ESV_024945","Eukaryota, Ochrophyta, Eustigmatophyceae, Eustigmatales, Eustigmatales, Nannochloropsis, ","Least Sandpiper fresh dropping","",11,99.2,2
+"130","ESV_024945","Eukaryota, Ochrophyta, Eustigmatophyceae, Eustigmatales, Eustigmatales, Nannochloropsis, ","Semi palmated plover fresh dropping","",97,99.2,2
+"131","ESV_024946",", , , , , , ","Least Sandpiper fresh dropping","",50,NA,NA
+"132","ESV_024946",", , , , , , ","Semi palmated plover fresh dropping","",95,NA,NA
+"133","ESV_024947","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, Haloterrigena, ","Least Sandpiper fresh dropping","",78,100,2
+"134","ESV_024947","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, Haloterrigena, ","Semi palmated plover fresh dropping","",94,100,2
+"135","ESV_024948","Eukaryota, Cercozoa, , , , , ","Semi palmated plover fresh dropping","",92,85.7,1
+"136","ESV_024949","Bacteria, Planctomycetota, Planctomycetes, Pirellulales, Pirellulaceae, Rhodopirellula, ","Least Sandpiper fresh dropping","",13,100,2
+"137","ESV_024949","Bacteria, Planctomycetota, Planctomycetes, Pirellulales, Pirellulaceae, Rhodopirellula, ","Semi palmated plover fresh dropping","",92,100,2
+"138","ESV_024950","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Killdeer fresh dropping","",441,100,20
+"139","ESV_024950","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Least Sandpiper fresh dropping","",100,100,20
+"140","ESV_024950","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Semi palmated plover fresh dropping","",84,100,20
+"141","ESV_024951","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Euplotia, Euplotes, ","Semi palmated plover fresh dropping","",79,98.2,12
+"142","ESV_024952","Eukaryota, Ochrophyta, Eustigmatophyceae, Eustigmatales, Eustigmatales, Nannochloropsis, ","Semi palmated plover fresh dropping","",77,99.2,2
+"143","ESV_024953","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",72,85.2,3
+"144","ESV_024954",", , , , , , ","Least Sandpiper fresh dropping","",20,NA,NA
+"145","ESV_024954",", , , , , , ","Semi palmated plover fresh dropping","",68,NA,NA
+"146","ESV_024955","Eukaryota, Amoebozoa, Tubulinea, Arcellinida, , , ","Semi palmated plover fresh dropping","",68,81.9,5
+"147","ESV_024956","Eukaryota, Amoebozoa, , , , , ","Least Sandpiper fresh dropping","",21,72.6,2
+"148","ESV_024956","Eukaryota, Amoebozoa, , , , , ","Semi palmated plover fresh dropping","",63,72.6,2
+"149","ESV_024957","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",59,85.7,3
+"150","ESV_024958","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",59,84.1,6
+"151","ESV_024959","Eukaryota, Ochrophyta, Chrysophyceae, Chromulinales, Chromulinales, Chrysamoeba, mikrokonta","Least Sandpiper fresh dropping","",13,85.3,1
+"152","ESV_024959","Eukaryota, Ochrophyta, Chrysophyceae, Chromulinales, Chromulinales, Chrysamoeba, mikrokonta","Semi palmated plover fresh dropping","",57,85.3,1
+"153","ESV_024960","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",55,85.2,2
+"154","ESV_024961","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, Halohasta, litorea","Least Sandpiper fresh dropping","",9,100,1
+"155","ESV_024961","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, Halohasta, litorea","Semi palmated plover fresh dropping","",54,100,1
+"156","ESV_024962","Eukaryota, Ciliophora, Intramacronucleata, Conthreep, Nassophorea, Zosterodasys, agamalievi","Least Sandpiper fresh dropping","",113,96.4,1
+"157","ESV_024962","Eukaryota, Ciliophora, Intramacronucleata, Conthreep, Nassophorea, Zosterodasys, agamalievi","Semi palmated plover fresh dropping","",50,96.4,1
+"158","ESV_024963","Eukaryota, Ochrophyta, Chrysophyceae, , , , ","Least Sandpiper fresh dropping","",39,86.8,2
+"159","ESV_024963","Eukaryota, Ochrophyta, Chrysophyceae, , , , ","Semi palmated plover fresh dropping","",49,86.8,2
+"160","ESV_024964","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, , ","Semi palmated plover fresh dropping","",47,85,4
+"161","ESV_024965","Eukaryota, Rotifera, Monogononta, Ploimida, Ploimida, Ploimida, ","Semi palmated plover fresh dropping","",47,96.9,1
+"162","ESV_024966","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",46,84.4,2
+"163","ESV_024967","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Least Sandpiper fresh dropping","",17,100,7
+"164","ESV_024967","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Semi palmated plover fresh dropping","",44,100,7
+"165","ESV_024968","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Semi palmated plover fresh dropping","",43,100,2
+"166","ESV_024969","Bacteria, Proteobacteria, Alphaproteobacteria, Rhizobiales, Beijerinckiaceae, Salinarimonas, ","Semi palmated plover fresh dropping","",41,100,1
+"167","ESV_024970","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",41,84.1,5
+"168","ESV_024971","Eukaryota, Rotifera, Monogononta, Ploimida, Ploimida, Ploimida, ","Semi palmated plover fresh dropping","",41,96.9,1
+"169","ESV_024972","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, ","Least Sandpiper fresh dropping","",56,99.2,1
+"170","ESV_024972","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, ","Semi palmated plover fresh dropping","",40,99.2,1
+"171","ESV_024973","Eukaryota, , , , , , ","Least Sandpiper fresh dropping","",10,78.5,11
+"172","ESV_024973","Eukaryota, , , , , , ","Semi palmated plover fresh dropping","",39,78.5,11
+"173","ESV_024974","Eukaryota, Amoebozoa, Tubulinea, Arcellinida, Arcellinida, Arcellinida, ","Semi palmated plover fresh dropping","",37,78.5,2
+"174","ESV_024975","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Oligotrichia, Strombidium, oculatum","Least Sandpiper fresh dropping","",77,95.8,1
+"175","ESV_024975","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Oligotrichia, Strombidium, oculatum","Semi palmated plover fresh dropping","",37,95.8,1
+"176","ESV_024976","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Least Sandpiper fresh dropping","",23,100,1
+"177","ESV_024976","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Semi palmated plover fresh dropping","",37,100,1
+"178","ESV_024977","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Semi palmated plover fresh dropping","",36,98.1,33
+"179","ESV_024978","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, Halorubrum, kocurii","Semi palmated plover fresh dropping","",35,100,1
+"180","ESV_024979","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Semi palmated plover fresh dropping","",35,98.1,4
+"181","ESV_024980","Eukaryota, Florideophycidae, Rhodymeniophycidae, Rhodymeniophycidae, Rhodymeniophycidae, , ","Semi palmated plover fresh dropping","",34,79.4,3
+"182","ESV_024981","Archaea, Nanoarchaeota, Nanoarchaeia, Woesearchaeales, Woesearchaeales, Woesearchaeales, ","Least Sandpiper fresh dropping","",58,79.3,1
+"183","ESV_024981","Archaea, Nanoarchaeota, Nanoarchaeia, Woesearchaeales, Woesearchaeales, Woesearchaeales, ","Semi palmated plover fresh dropping","",33,79.3,1
+"184","ESV_024982","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Verrucomicrobiales, DEV007, DEV007, ","Semi palmated plover fresh dropping","",32,100,2
+"185","ESV_024983","Eukaryota, , , , , , ","Semi palmated plover fresh dropping","",32,100,3
+"186","ESV_024984","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, , ","Semi palmated plover fresh dropping","",31,85,4
+"187","ESV_024985","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, , ","Semi palmated plover fresh dropping","",30,84.1,6
+"188","ESV_024986","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, , ","Semi palmated plover fresh dropping","",29,84.1,6
+"189","ESV_024987","Eukaryota, Protalveolata, Syndiniales, Syndiniales, , , ","Semi palmated plover fresh dropping","",28,76,7
+"190","ESV_024988","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",27,84.4,3
+"191","ESV_024989","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, , ","Killdeer fresh dropping","",8,100,6
+"192","ESV_024989","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, , ","Semi palmated plover fresh dropping","",26,100,6
+"193","ESV_024990","Eukaryota, Parabasalia, Trichonymphea, Trichonymphea, Trichonymphea, Trichonympha, campanula","Semi palmated plover fresh dropping","",26,73.7,1
+"194","ESV_024991","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Least Sandpiper fresh dropping","",11,100,5
+"195","ESV_024991","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Semi palmated plover fresh dropping","",26,100,5
+"196","ESV_024992","Bacteria, Verrucomicrobiota, Verrucomicrobiae, , , , ","Least Sandpiper fresh dropping","",33,96.1,8
+"197","ESV_024992","Bacteria, Verrucomicrobiota, Verrucomicrobiae, , , , ","Semi palmated plover fresh dropping","",25,96.1,8
+"198","ESV_024993","Eukaryota, Ochrophyta, Chrysophyceae, unk_order, unk_family, Chlamydomyxa, ","Semi palmated plover fresh dropping","",25,90.1,1
+"199","ESV_024994","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Verrucomicrobiales, Rubritaleaceae, Haloferula, ","Semi palmated plover fresh dropping","",25,98.9,1
+"200","ESV_024995","Eukaryota, Ochrophyta, Chrysophyceae, Synurales, Synurales, Mallomonas, insignis","Semi palmated plover fresh dropping","",24,74.1,1
+"201","ESV_024996","Eukaryota, Heterolobosea, Tetramitia, Tetramitia, Tetramitia, Allovahlkampfia, ","Semi palmated plover fresh dropping","",24,71.3,2
+"202","ESV_024997","Archaea, Halobacterota, Halobacteria, Halobacterales, , , ","Semi palmated plover fresh dropping","",24,100,4
+"203","ESV_024998","Bacteria, Verrucomicrobiota, Verrucomicrobiae, , , , ","Semi palmated plover fresh dropping","",23,92.4,5
+"204","ESV_024999","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Choreotrichia, Choreotrichia, ","Semi palmated plover fresh dropping","",23,96.7,1
+"205","ESV_025000","Eukaryota, Dinoflagellata, Dinophyceae, , , , ","Semi palmated plover fresh dropping","",23,95.2,4
+"206","ESV_025001","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Least Sandpiper fresh dropping","",11,100,18
+"207","ESV_025001","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Semi palmated plover fresh dropping","",23,100,18
+"208","ESV_025002","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Opitutales, Puniceicoccaceae, , ","Least Sandpiper fresh dropping","",15,96.1,4
+"209","ESV_025002","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Opitutales, Puniceicoccaceae, , ","Semi palmated plover fresh dropping","",22,96.1,4
+"210","ESV_025003","Bacteria, Campilobacterota, Campylobacteria, Campylobacterales, Campylobacteraceae, Campylobacter, ","Semi palmated plover fresh dropping","",22,100,6
+"211","ESV_025004","Bacteria, Desulfobacterota, , , , , ","Least Sandpiper fresh dropping","",37,96.1,5
+"212","ESV_025004","Bacteria, Desulfobacterota, , , , , ","Semi palmated plover fresh dropping","",22,96.1,5
+"213","ESV_025005","Bacteria, Verrucomicrobiota, Kiritimatiellae, WCHB1-41, WCHB1-41, WCHB1-41, ","Semi palmated plover fresh dropping","",22,96.2,2
+"214","ESV_025006","Bacteria, Proteobacteria, , , , , ","Least Sandpiper fresh dropping","",8,99,4
+"215","ESV_025006","Bacteria, Proteobacteria, , , , , ","Semi palmated plover fresh dropping","",21,99,4
+"216","ESV_025007","Eukaryota, Rotifera, Monogononta, Ploimida, Ploimida, Ploimida, ","Semi palmated plover fresh dropping","",21,96.9,1
+"217","ESV_025008","Eukaryota, Ochrophyta, Chrysophyceae, , , , ","Semi palmated plover fresh dropping","",21,89.9,3
+"218","ESV_025009","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Verrucomicrobiales, Rubritaleaceae, Luteolibacter, ","Semi palmated plover fresh dropping","",21,98.1,6
+"219","ESV_025010","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, , ","Semi palmated plover fresh dropping","",20,83.5,5
+"220","ESV_025011",", , , , , , ","Semi palmated plover fresh dropping","",20,NA,NA
+"221","ESV_025012","Bacteria, , , , , , ","Least Sandpiper fresh dropping","",33,99,2
+"222","ESV_025012","Bacteria, , , , , , ","Semi palmated plover fresh dropping","",20,99,2
+"223","ESV_025013","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Verrucomicrobiales, , , ","Semi palmated plover fresh dropping","",20,96.1,13
+"224","ESV_025014","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, , ","Semi palmated plover fresh dropping","",20,96.6,2
+"225","ESV_025015","Bacteria, Desulfobacterota, , , , , ","Semi palmated plover fresh dropping","",20,96.1,10
+"226","ESV_025016","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, Roseovarius, tolerans","Semi palmated plover fresh dropping","",19,100,1
+"227","ESV_025017","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Semi palmated plover fresh dropping","",19,93.6,11
+"228","ESV_025018","Eukaryota, Peronosporomycetes, Peronosporomycetes, Peronosporomycetes, Peronosporomycetes, , ","Least Sandpiper fresh dropping","",54,100,1
+"229","ESV_025018","Eukaryota, Peronosporomycetes, Peronosporomycetes, Peronosporomycetes, Peronosporomycetes, , ","Semi palmated plover fresh dropping","",19,100,1
+"230","ESV_025019","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, Roseovarius, pacificus","Least Sandpiper fresh dropping","",11,100,1
+"231","ESV_025019","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, Roseovarius, pacificus","Semi palmated plover fresh dropping","",18,100,1
+"232","ESV_025020","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Verrucomicrobiales, Rubritaleaceae, Luteolibacter, ","Semi palmated plover fresh dropping","",18,100,1
+"233","ESV_025021","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",17,100,3
+"234","ESV_025021","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Semi palmated plover fresh dropping","",18,100,3
+"235","ESV_025022","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Choreotrichia, Choreotrichia, ","Semi palmated plover fresh dropping","",17,96.7,1
+"236","ESV_025023","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",17,85.9,2
+"237","ESV_025024","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Verrucomicrobiales, Rubritaleaceae, Luteolibacter, ","Semi palmated plover fresh dropping","",17,100,1
+"238","ESV_025025","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Least Sandpiper fresh dropping","",64,99,4
+"239","ESV_025025","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Semi palmated plover fresh dropping","",17,99,4
+"240","ESV_025026","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Amphora, coffeiformis","Least Sandpiper fresh dropping","",203,98.4,1
+"241","ESV_025026","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Amphora, coffeiformis","Semi palmated plover fresh dropping","",17,98.4,1
+"242","ESV_025027","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Verrucomicrobiales, Rubritaleaceae, Haloferula, ","Semi palmated plover fresh dropping","",17,97.7,2
+"243","ESV_025028","Eukaryota, Aphelidea, Aphelidea, Aphelidea, Aphelidea, , ","Least Sandpiper fresh dropping","",14,89.7,1
+"244","ESV_025028","Eukaryota, Aphelidea, Aphelidea, Aphelidea, Aphelidea, , ","Semi palmated plover fresh dropping","",16,89.7,1
+"245","ESV_025029","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, Haloterrigena, ","Semi palmated plover fresh dropping","",16,98.9,2
+"246","ESV_025030",", , , , , , ","Semi palmated plover fresh dropping","",16,NA,NA
+"247","ESV_025031","Bacteria, Planctomycetota, Planctomycetes, Pirellulales, Pirellulaceae, Rhodopirellula, lusitana","Semi palmated plover fresh dropping","",16,100,1
+"248","ESV_025032","Eukaryota, Ascomycota, Eurotiomycetes, Eurotiales, , , ","Killdeer fresh dropping","",23,98.4,5
+"249","ESV_025032","Eukaryota, Ascomycota, Eurotiomycetes, Eurotiales, , , ","Least Sandpiper fresh dropping","",9,98.4,5
+"250","ESV_025032","Eukaryota, Ascomycota, Eurotiomycetes, Eurotiales, , , ","Semi palmated plover fresh dropping","",16,98.4,5
+"251","ESV_025033","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Verrucomicrobiales, Rubritaleaceae, Luteolibacter, ","Semi palmated plover fresh dropping","",16,98.1,1
+"252","ESV_025034","Eukaryota, , , , , , ","Least Sandpiper fresh dropping","",42,73.7,3
+"253","ESV_025034","Eukaryota, , , , , , ","Semi palmated plover fresh dropping","",16,73.7,3
+"254","ESV_025035","Archaea, Nanoarchaeota, Nanoarchaeia, Woesearchaeales, SCGC_AAA011-D5, SCGC_AAA011-D5, ","Semi palmated plover fresh dropping","",15,90.5,1
+"255","ESV_025036","Eukaryota, Dinoflagellata, Dinophyceae, Peridiniphycidae, Thoracosphaeraceae, Pfiesteria, ","Least Sandpiper fresh dropping","",27,100,2
+"256","ESV_025036","Eukaryota, Dinoflagellata, Dinophyceae, Peridiniphycidae, Thoracosphaeraceae, Pfiesteria, ","Semi palmated plover fresh dropping","",15,100,2
+"257","ESV_025037","Eukaryota, Cercozoa, , , , , ","Least Sandpiper fresh dropping","",13,93,1
+"258","ESV_025037","Eukaryota, Cercozoa, , , , , ","Semi palmated plover fresh dropping","",15,93,1
+"259","ESV_025038","Bacteria, Planctomycetota, OM190, OM190, OM190, OM190, ","Semi palmated plover fresh dropping","",15,99,1
+"260","ESV_025039","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, Haloferax, ","Semi palmated plover fresh dropping","",15,98.9,1
+"261","ESV_025040","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Choreotrichia, Choreotrichia, ","Semi palmated plover fresh dropping","",15,96.7,1
+"262","ESV_025041","Eukaryota, Ochrophyta, Dictyochophyceae, Pedinellales, Pedinellales, Pedinellales, ","Least Sandpiper fresh dropping","",13,100,1
+"263","ESV_025041","Eukaryota, Ochrophyta, Dictyochophyceae, Pedinellales, Pedinellales, Pedinellales, ","Semi palmated plover fresh dropping","",15,100,1
+"264","ESV_025042","Eukaryota, Chlorophyta, Chlorodendrophyceae, , , , ","Semi palmated plover fresh dropping","",15,98.4,4
+"265","ESV_025043","Eukaryota, Cryptomycota, LKM11, LKM11, LKM11, LKM11, ","Semi palmated plover fresh dropping","",15,89.1,1
+"266","ESV_025044","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Semi palmated plover fresh dropping","",15,98.1,34
+"267","ESV_025045","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",14,84.4,2
+"268","ESV_025046","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",14,84.4,2
+"269","ESV_025047","Eukaryota, Ochrophyta, Eustigmatophyceae, Eustigmatales, Eustigmatales, Nannochloropsis, ","Semi palmated plover fresh dropping","",14,98.3,2
+"270","ESV_025048","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",14,84.1,3
+"271","ESV_025049","Bacteria, Planctomycetota, Planctomycetes, Planctomycetales, Rubinisphaeraceae, , ","Semi palmated plover fresh dropping","",14,100,1
+"272","ESV_025050","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, ","Least Sandpiper fresh dropping","",44,96.9,3
+"273","ESV_025050","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, ","Semi palmated plover fresh dropping","",13,96.9,3
+"274","ESV_025051","Eukaryota, Prymnesiophyceae, Prymnesiophyceae, Isochrysidales, Isochrysidales, Isochrysis, galbana","Least Sandpiper fresh dropping","",8,100,1
+"275","ESV_025051","Eukaryota, Prymnesiophyceae, Prymnesiophyceae, Isochrysidales, Isochrysidales, Isochrysis, galbana","Semi palmated plover fresh dropping","",13,100,1
+"276","ESV_025052","Archaea, Halobacterota, Halobacteria, Halobacterales, Halomicrobiaceae, Halobonum, ","Semi palmated plover fresh dropping","",13,100,2
+"277","ESV_025053","Bacteria, Planctomycetota, Planctomycetes, Planctomycetales, Rubinisphaeraceae, , ","Semi palmated plover fresh dropping","",13,100,4
+"278","ESV_025054","Eukaryota, Aphelidea, Aphelidea, Aphelidea, Aphelidea, , ","Semi palmated plover fresh dropping","",13,88.9,1
+"279","ESV_025055","Eukaryota, Amoebozoa, Discosea, Discosea, Discosea, Discosea, ","Least Sandpiper fresh dropping","",13,91.4,1
+"280","ESV_025055","Eukaryota, Amoebozoa, Discosea, Discosea, Discosea, Discosea, ","Semi palmated plover fresh dropping","",13,91.4,1
+"281","ESV_025056","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Cocconeis, ","Semi palmated plover fresh dropping","",13,80.2,2
+"282","ESV_025057","Eukaryota, Aphelidea, Aphelidea, Aphelidea, Aphelidea, , ","Semi palmated plover fresh dropping","",13,88.1,2
+"283","ESV_025058",", , , , , , ","Semi palmated plover fresh dropping","",12,NA,NA
+"284","ESV_025059","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Semi palmated plover fresh dropping","",12,99.1,15
+"285","ESV_025060","Bacteria, Proteobacteria, , , , , ","Semi palmated plover fresh dropping","",12,99.1,3
+"286","ESV_025061","Eukaryota, Amoebozoa, Tubulinea, Euamoebida, Euamoebida, , ","Least Sandpiper fresh dropping","",111,78.7,2
+"287","ESV_025061","Eukaryota, Amoebozoa, Tubulinea, Euamoebida, Euamoebida, , ","Semi palmated plover fresh dropping","",12,78.7,2
+"288","ESV_025062",", , , , , , ","Semi palmated plover fresh dropping","",12,NA,NA
+"289","ESV_025063","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Choreotrichia, Choreotrichia, ","Semi palmated plover fresh dropping","",12,96.7,1
+"290","ESV_025064","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Semi palmated plover fresh dropping","",12,98.1,30
+"291","ESV_025065","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",12,84.4,2
+"292","ESV_025066","Eukaryota, Protalveolata, Syndiniales, Syndiniales, , , ","Semi palmated plover fresh dropping","",12,83.1,2
+"293","ESV_025067","Bacteria, Bdellovibrionota, Oligoflexia, Silvanigrellales, Silvanigrellaceae, Silvanigrella, ","Semi palmated plover fresh dropping","",12,90.3,2
+"294","ESV_025068","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, Marivita, ","Least Sandpiper fresh dropping","",9,100,2
+"295","ESV_025068","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, Marivita, ","Semi palmated plover fresh dropping","",12,100,2
+"296","ESV_025069","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, ","Semi palmated plover fresh dropping","",12,96.9,3
+"297","ESV_025070","Eukaryota, Pavlovophyceae, Pavlovophyceae, Pavlovophyceae, Pavlovophyceae, , ","Semi palmated plover fresh dropping","",12,97.7,2
+"298","ESV_025071","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, Halorubrum, ","Semi palmated plover fresh dropping","",12,100,4
+"299","ESV_025072","Eukaryota, Chlorophyta, Chlorodendrophyceae, , , , ","Semi palmated plover fresh dropping","",12,98.4,4
+"300","ESV_025073","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Least Sandpiper fresh dropping","",30,99.2,2
+"301","ESV_025073","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Semi palmated plover fresh dropping","",11,99.2,2
+"302","ESV_025074","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, , ","Semi palmated plover fresh dropping","",11,97.7,2
+"303","ESV_025075","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",11,87.4,2
+"304","ESV_025076","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",11,84.4,2
+"305","ESV_025077","Eukaryota, Cryptomycota, LKM11, LKM11, LKM11, LKM11, ","Semi palmated plover fresh dropping","",11,97.6,2
+"306","ESV_025078","Archaea, Halobacterota, Halobacteria, Halobacterales, Halomicrobiaceae, Halomarina, rubra","Semi palmated plover fresh dropping","",11,98.9,1
+"307","ESV_025079","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Semi palmated plover fresh dropping","",11,94.5,6
+"308","ESV_025080","Eukaryota, Holozoa, Ichthyosporea, Rhinosporideacae, Rhinosporideacae, Rhinosporideacae, ","Semi palmated plover fresh dropping","",11,95.3,1
+"309","ESV_025081","Eukaryota, Ochrophyta, Chrysophyceae, , , , ","Least Sandpiper fresh dropping","",21,89.2,4
+"310","ESV_025081","Eukaryota, Ochrophyta, Chrysophyceae, , , , ","Semi palmated plover fresh dropping","",11,89.2,4
+"311","ESV_025082","Eukaryota, Amoebozoa, Discosea, Dactylopodida, Dactylopodida, Korotnevella, jeppesenii","Semi palmated plover fresh dropping","",10,94.1,1
+"312","ESV_025083","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Semi palmated plover fresh dropping","",10,99.2,2
+"313","ESV_025084","Bacteria, Planctomycetota, Planctomycetes, Isosphaerales, Isosphaeraceae, , ","Semi palmated plover fresh dropping","",10,97,3
+"314","ESV_025085","Bacteria, Gemmatimonadota, , , , , ","Semi palmated plover fresh dropping","",10,95.2,4
+"315","ESV_025086","Eukaryota, Chlorophyta, Chlorodendrophyceae, , , , ","Semi palmated plover fresh dropping","",10,98.4,4
+"316","ESV_025087","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, Tropicimonas, arenosa","Semi palmated plover fresh dropping","",10,99.1,1
+"317","ESV_025088","Bacteria, Dependentiae, Babeliae, Babeliales, , , ","Semi palmated plover fresh dropping","",10,91.5,2
+"318","ESV_025089","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Semi palmated plover fresh dropping","",10,100,4
+"319","ESV_025090","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Opitutales, Puniceicoccaceae, Verruc-01, ","Semi palmated plover fresh dropping","",10,96.1,2
+"320","ESV_025091","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodospirillales, Rhodospirillaceae, Caenispirillum, bisanense","Semi palmated plover fresh dropping","",10,100,1
+"321","ESV_025092","Bacteria, Proteobacteria, Gammaproteobacteria, Chromatiales, Chromatiaceae, , ","Semi palmated plover fresh dropping","",10,100,3
+"322","ESV_025093","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",10,85,3
+"323","ESV_025094","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Choreotrichia, Choreotrichia, ","Semi palmated plover fresh dropping","",10,96.7,1
+"324","ESV_025095","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, Halobellus, ","Semi palmated plover fresh dropping","",10,100,2
+"325","ESV_025096","Bacteria, Acidobacteriota, Thermoanaerobaculia, Thermoanaerobaculales, Thermoanaerobaculaceae, Subgroup_23, ","Semi palmated plover fresh dropping","",9,99,5
+"326","ESV_025097","Eukaryota, Amoebozoa, Tubulinea, Arcellinida, , , ","Semi palmated plover fresh dropping","",9,81.2,5
+"327","ESV_025098","Eukaryota, Nucleariidae_and_Fonticula_group, Nucleariidae_and_Fonticula_group, Nucleariidae_and_Fonticula_group, Nucleariidae, Nuclearia, ","Semi palmated plover fresh dropping","",9,90,1
+"328","ESV_025099","Bacteria, Planctomycetota, Planctomycetes, Pirellulales, Pirellulaceae, , ","Semi palmated plover fresh dropping","",9,98.1,8
+"329","ESV_025100","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Semi palmated plover fresh dropping","",9,99.2,1
+"330","ESV_025101","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Verrucomicrobiales, Rubritaleaceae, Luteolibacter, ","Semi palmated plover fresh dropping","",9,99,1
+"331","ESV_025102","Archaea, Halobacterota, Halobacteria, Halobacterales, , , ","Semi palmated plover fresh dropping","",9,100,4
+"332","ESV_025103","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, , ","Semi palmated plover fresh dropping","",9,97.7,4
+"333","ESV_025104","Eukaryota, Diatomea, , , , , ","Semi palmated plover fresh dropping","",9,96.9,15
+"334","ESV_025105","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, Halorubrum, ","Semi palmated plover fresh dropping","",9,100,3
+"335","ESV_025106","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Semi palmated plover fresh dropping","",9,96.1,11
+"336","ESV_025107","Bacteria, Gemmatimonadota, BD2-11_terrestrial_group, BD2-11_terrestrial_group, BD2-11_terrestrial_group, BD2-11_terrestrial_group, ","Semi palmated plover fresh dropping","",9,97.1,15
+"337","ESV_025108","Bacteria, Gemmatimonadota, , , , , ","Semi palmated plover fresh dropping","",9,98.1,20
+"338","ESV_025109","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",9,82,2
+"339","ESV_025110","Eukaryota, Cercozoa, Glissomonadida, Glissomonadida, Glissomonadida, Heteromita, ","Semi palmated plover fresh dropping","",8,85.4,2
+"340","ESV_025111","Eukaryota, , , , , , ","Semi palmated plover fresh dropping","",8,89,2
+"341","ESV_025112","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, Halorubrum, gandharaense","Semi palmated plover fresh dropping","",8,97.7,1
+"342","ESV_025113","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Semi palmated plover fresh dropping","",8,98.1,10
+"343","ESV_025114","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Semi palmated plover fresh dropping","",8,98.1,9
+"344","ESV_025115","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Verrucomicrobiales, Rubritaleaceae, Luteolibacter, ","Semi palmated plover fresh dropping","",8,96.2,6
+"345","ESV_025116","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",8,84.9,5
+"346","ESV_025117","Archaea, Halobacterota, Halobacteria, Halobacterales, Haloferacaceae, Haloferax, ","Semi palmated plover fresh dropping","",8,100,1
+"347","ESV_025118","Eukaryota, Apicomplexa, Conoidasida, Coccidia, Eimeriorina, Eimeria, ","Semi palmated plover fresh dropping","",8,84.9,4
+"348","ESV_025119","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",11169,96.9,4
+"349","ESV_025120","Bacteria, Campilobacterota, Campylobacteria, Campylobacterales, Helicobacteraceae, Helicobacter, ","Killdeer fresh dropping","",8352,100,4
+"350","ESV_025121","Bacteria, Firmicutes, Clostridia, Clostridiales, Clostridiaceae, Arthromitus, ","Killdeer fresh dropping","",668,100,1
+"351","ESV_025122","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",631,100,1
+"352","ESV_025123","Eukaryota, Ciliophora, Intramacronucleata, Conthreep, Phyllopharyngea, Cyrtophoria, ","Killdeer fresh dropping","",406,78.2,1
+"353","ESV_025124","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",397,99.2,5
+"354","ESV_025125","Eukaryota, Apicomplexa, Conoidasida, Cryptosporida, Cryptosporida, Cryptosporidium, ","Killdeer fresh dropping","",350,84.3,2
+"355","ESV_025126","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",312,96.1,4
+"356","ESV_025127","Bacteria, Proteobacteria, Gammaproteobacteria, Alteromonadales, Idiomarinaceae, Idiomarina, ","Killdeer fresh dropping","",272,100,4
+"357","ESV_025128","Bacteria, Campilobacterota, Campylobacteria, Campylobacterales, Helicobacteraceae, Helicobacter, ","Killdeer fresh dropping","",267,99,4
+"358","ESV_025129","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",218,95.3,4
+"359","ESV_025130","Eukaryota, Ascomycota, Eurotiomycetes, Eurotiales, Aspergillaceae, , ","Killdeer fresh dropping","",194,96.1,24
+"360","ESV_025131","Eukaryota, Platyhelminthes, Trematoda, Plagiorchiida, Plagiorchiida, Plagiorchiida, ","Killdeer fresh dropping","",154,99.2,1
+"361","ESV_025132",", , , , , , ","Killdeer fresh dropping","",143,NA,NA
+"362","ESV_025133","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",136,98.4,5
+"363","ESV_025134","Eukaryota, Basidiomycota, Agaricomycetes, , , , ","Killdeer fresh dropping","",112,98.4,7
+"364","ESV_025135","Bacteria, Proteobacteria, Gammaproteobacteria, Oceanospirillales, Halomonadaceae, , ","Killdeer fresh dropping","",102,100,15
+"365","ESV_025135","Bacteria, Proteobacteria, Gammaproteobacteria, Oceanospirillales, Halomonadaceae, , ","Least Sandpiper fresh dropping","",10,100,15
+"366","ESV_025136","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",99,99.2,5
+"367","ESV_025137","Eukaryota, Arthropoda, Malacostraca, Peracarida, Peracarida, Peracarida, ","Killdeer fresh dropping","",69,90.1,1
+"368","ESV_025138",", , , , , , ","Killdeer fresh dropping","",55,NA,NA
+"369","ESV_025139","Bacteria, , , , , , ","Killdeer fresh dropping","",53,97.1,2
+"370","ESV_025140","Eukaryota, Apicomplexa, Conoidasida, Eugregarinorida, Cephaloidophoridae, Cephaloidophora, ","Killdeer fresh dropping","",49,95.1,1
+"371","ESV_025141","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Killdeer fresh dropping","",49,98.1,9
+"372","ESV_025141","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Least Sandpiper fresh dropping","",10,98.1,9
+"373","ESV_025142","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Killdeer fresh dropping","",49,100,14
+"374","ESV_025143","Bacteria, Firmicutes, Clostridia, Clostridiales, Clostridiaceae, Arthromitus, ","Killdeer fresh dropping","",48,99,4
+"375","ESV_025144","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Killdeer fresh dropping","",42,94.2,24
+"376","ESV_025145","Bacteria, Campilobacterota, Campylobacteria, Campylobacterales, Helicobacteraceae, , ","Killdeer fresh dropping","",37,97.9,6
+"377","ESV_025146","Eukaryota, , , , , , ","Killdeer fresh dropping","",37,98.4,2
+"378","ESV_025147","Eukaryota, Platyhelminthes, Cestoda, Diphyllobothriidea, Diphyllobothriidea, Diphyllobothriidea, ","Killdeer fresh dropping","",37,73.3,1
+"379","ESV_025148","Eukaryota, Parabasalia, , , , , ","Killdeer fresh dropping","",33,94.1,4
+"380","ESV_025149","Bacteria, Proteobacteria, Gammaproteobacteria, Oceanospirillales, Halomonadaceae, Marinospirillum, ","Killdeer fresh dropping","",32,100,1
+"381","ESV_025150","Bacteria, Firmicutes, Clostridia, Clostridiales, Clostridiaceae, Arthromitus, ","Killdeer fresh dropping","",31,99,2
+"382","ESV_025151","Eukaryota, , , , , , ","Killdeer fresh dropping","",31,96,1
+"383","ESV_025152","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, salinicola","Killdeer fresh dropping","",29,99.2,1
+"384","ESV_025153","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Killdeer fresh dropping","",28,100,9
+"385","ESV_025154","Bacteria, Firmicutes, Clostridia, Clostridiales, Clostridiaceae, Arthromitus, ","Killdeer fresh dropping","",27,99,2
+"386","ESV_025155","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",25,99.2,2
+"387","ESV_025156","Eukaryota, Vertebrata, Aves, Aves, Aves, Aves, ","Killdeer fresh dropping","",25,99.2,3
+"388","ESV_025157","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, salinicola","Killdeer fresh dropping","",22,98.4,1
+"389","ESV_025158","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",22,95.3,4
+"390","ESV_025159",", , , , , , ","Killdeer fresh dropping","",22,NA,NA
+"391","ESV_025160","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, salinicola","Killdeer fresh dropping","",19,99.2,1
+"392","ESV_025160","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, salinicola","Least Sandpiper fresh dropping","",19,99.2,1
+"393","ESV_025161","Bacteria, Proteobacteria, Gammaproteobacteria, Diplorickettsiales, Diplorickettsiaceae, , ","Killdeer fresh dropping","",19,99,2
+"394","ESV_025162","Eukaryota, , , , , , ","Killdeer fresh dropping","",17,74,3
+"395","ESV_025163","Eukaryota, Apicomplexa, Conoidasida, Cryptosporida, Cryptosporida, Cryptosporidium, ","Killdeer fresh dropping","",17,83.5,2
+"396","ESV_025164","Eukaryota, Vertebrata, Aves, Aves, Aves, Aves, ","Killdeer fresh dropping","",16,98.5,3
+"397","ESV_025165","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, salinicola","Killdeer fresh dropping","",16,99.2,1
+"398","ESV_025166","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",15,97.6,5
+"399","ESV_025167","Eukaryota, Platyhelminthes, Trematoda, Plagiorchiida, Plagiorchiida, Plagiorchiida, ","Killdeer fresh dropping","",15,98.5,2
+"400","ESV_025168","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",15,98.4,2
+"401","ESV_025169","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Killdeer fresh dropping","",13,99,8
+"402","ESV_025170","Eukaryota, Ascomycota, , , , , ","Killdeer fresh dropping","",13,98.4,53
+"403","ESV_025171","Bacteria, Proteobacteria, Gammaproteobacteria, Alteromonadales, , , ","Killdeer fresh dropping","",12,99,19
+"404","ESV_025172","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",12,94.5,4
+"405","ESV_025173","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",12,99.2,2
+"406","ESV_025174","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",11,98.4,3
+"407","ESV_025175","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, salinicola","Killdeer fresh dropping","",11,99.2,1
+"408","ESV_025176","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, salinicola","Killdeer fresh dropping","",11,99.2,1
+"409","ESV_025177","Eukaryota, , , , , , ","Killdeer fresh dropping","",11,95.2,1
+"410","ESV_025178","Bacteria, Proteobacteria, Alphaproteobacteria, Rickettsiales, Mitochondria, Mitochondria, ","Killdeer fresh dropping","",10,80.9,1
+"411","ESV_025179","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",10,95.3,4
+"412","ESV_025180","Eukaryota, Ascomycota, Eurotiomycetes, Eurotiales, Aspergillaceae, , ","Killdeer fresh dropping","",10,95.3,26
+"413","ESV_025181","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Killdeer fresh dropping","",10,100,15
+"414","ESV_025182",", , , , , , ","Killdeer fresh dropping","",10,NA,NA
+"415","ESV_025183","Eukaryota, Arthropoda, Malacostraca, Eucarida, Eucarida, Eucarida, ","Killdeer fresh dropping","",9,76.7,4
+"416","ESV_025184","Eukaryota, Ascomycota, Saccharomycetes, Saccharomycetales, Debaryomycetaceae, Hypopichia-Candida_clade, ","Killdeer fresh dropping","",9,100,5
+"417","ESV_025185","Eukaryota, Arthropoda, Insecta, Coleoptera, Coleoptera, Coleoptera, ","Killdeer fresh dropping","",8,100,4
+"418","ESV_025186","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Killdeer fresh dropping","",8,99,25
+"419","ESV_025187","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",8,98.4,2
+"420","ESV_025188","Eukaryota, Ciliophora, Intramacronucleata, Conthreep, Phyllopharyngea, Cyrtophoria, ","Killdeer fresh dropping","",8,78.2,1
+"421","ESV_025189","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Killdeer fresh dropping","",8,98.1,10
+"422","ESV_025190","Bacteria, Proteobacteria, Gammaproteobacteria, Oceanospirillales, Halomonadaceae, Halomonas, ","Killdeer fresh dropping","",8,100,4
+"423","ESV_025191","Eukaryota, Chlorophyta, Chlorophyceae, Chlorophyceae, Chlorophyceae, Chlorophyceae, ","Killdeer fresh dropping","",8,98.4,5
+"424","ESV_025192","Bacteria, , , , , , ","Killdeer fresh dropping","",8,98.1,2
+"425","ESV_025193","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Hypotrichia, Holosticha, heterofoissneri","Least Sandpiper fresh dropping","",279,93.9,1
+"426","ESV_025194","Eukaryota, Ciliophora, Intramacronucleata, Conthreep, Nassophorea, Zosterodasys, agamalievi","Least Sandpiper fresh dropping","",260,98.2,1
+"427","ESV_025195","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Euplotia, Diophrys, oligothrix","Least Sandpiper fresh dropping","",248,96.5,1
+"428","ESV_025196","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Hypotrichia, Hypotrichia, ","Least Sandpiper fresh dropping","",229,98.3,3
+"429","ESV_025197","Eukaryota, Ciliophora, Postciliodesmatophora, Heterotrichea, Heterotrichea, Condylostoma, magnum","Least Sandpiper fresh dropping","",186,100,1
+"430","ESV_025198","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Hypotrichia, Anteholosticha, manca","Least Sandpiper fresh dropping","",172,99.2,1
+"431","ESV_025199","Eukaryota, Ciliophora, Postciliodesmatophora, Heterotrichea, Heterotrichea, Condylostoma, magnum","Least Sandpiper fresh dropping","",136,99,1
+"432","ESV_025200",", , , , , , ","Least Sandpiper fresh dropping","",128,NA,NA
+"433","ESV_025201","Eukaryota, Chlorophyta, Chlorodendrophyceae, , , , ","Least Sandpiper fresh dropping","",120,99.2,4
+"434","ESV_025202","Eukaryota, Ciliophora, Intramacronucleata, Litostomatea, Haptoria, Arcuospathidium, ","Least Sandpiper fresh dropping","",114,100,1
+"435","ESV_025203","Eukaryota, Cryptophyceae, Cryptophyceae, Cryptomonadales, Cryptomonadales, Teleaulax, ","Least Sandpiper fresh dropping","",109,70.1,1
+"436","ESV_025204","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Least Sandpiper fresh dropping","",89,98.4,6
+"437","ESV_025205","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Least Sandpiper fresh dropping","",79,96.8,11
+"438","ESV_025206","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Least Sandpiper fresh dropping","",77,94.4,11
+"439","ESV_025207","Eukaryota, Amoebozoa, Tubulinea, Leptomyxida, Leptomyxida, , ","Least Sandpiper fresh dropping","",70,82.5,3
+"440","ESV_025208","Eukaryota, Holozoa, Choanoflagellida, Craspedida, Salpingoecidae, Salpingoeca, rosetta","Least Sandpiper fresh dropping","",68,93.5,1
+"441","ESV_025209","Eukaryota, Rotifera, Monogononta, Ploimida, Ploimida, Ploimida, ","Least Sandpiper fresh dropping","",62,98.5,8
+"442","ESV_025210","Eukaryota, Ciliophora, Intramacronucleata, Litostomatea, Haptoria, Haptoria, ","Least Sandpiper fresh dropping","",61,98.1,1
+"443","ESV_025211","Eukaryota, Arthropoda, Maxillopoda, , , , ","Least Sandpiper fresh dropping","",59,96.1,4
+"444","ESV_025212","Eukaryota, Amoebozoa, Tubulinea, Leptomyxida, Leptomyxida, Flabellula, ","Least Sandpiper fresh dropping","",57,100,1
+"445","ESV_025213","Eukaryota, Labyrinthulomycetes, Labyrinthulomycetes, Labyrinthulomycetes, Thraustochytriaceae, Ulkenia, profunda","Least Sandpiper fresh dropping","",56,94.5,1
+"446","ESV_025214","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Least Sandpiper fresh dropping","",55,99.2,2
+"447","ESV_025215","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Hypotrichia, , ","Least Sandpiper fresh dropping","",52,97.4,5
+"448","ESV_025216","Bacteria, Desulfobacterota, Desulfobacteria, Desulfobacterales, Desulfosarcinaceae, , ","Least Sandpiper fresh dropping","",52,98.1,3
+"449","ESV_025217","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Least Sandpiper fresh dropping","",51,96,13
+"450","ESV_025218","Eukaryota, Amoebozoa, Discosea, Dactylopodida, Dactylopodida, Dactylopodida, ","Least Sandpiper fresh dropping","",49,94.2,1
+"451","ESV_025219","Eukaryota, Amoebozoa, Tubulinea, Leptomyxida, Leptomyxida, Flabellula, ","Least Sandpiper fresh dropping","",47,100,1
+"452","ESV_025220","Eukaryota, Ciliophora, Intramacronucleata, Conthreep, Phyllopharyngea, Chlamydodon, excocellatus","Least Sandpiper fresh dropping","",45,99.1,1
+"453","ESV_025221","Eukaryota, Rotifera, Monogononta, Ploimida, Ploimida, Ploimida, ","Least Sandpiper fresh dropping","",39,97.7,1
+"454","ESV_025222",", , , , , , ","Least Sandpiper fresh dropping","",37,NA,NA
+"455","ESV_025223","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, ","Least Sandpiper fresh dropping","",36,100,1
+"456","ESV_025224","Eukaryota, Amoebozoa, Tubulinea, Euamoebida, Euamoebida, Ptolemeba, noxubium","Least Sandpiper fresh dropping","",36,78.7,1
+"457","ESV_025225","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, veneta","Least Sandpiper fresh dropping","",34,100,1
+"458","ESV_025226","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Least Sandpiper fresh dropping","",34,99,16
+"459","ESV_025227","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Euplotia, Euplotes, ","Least Sandpiper fresh dropping","",33,90.2,2
+"460","ESV_025228","Eukaryota, Ciliophora, Intramacronucleata, Litostomatea, Haptoria, , ","Least Sandpiper fresh dropping","",33,92.2,2
+"461","ESV_025229","Eukaryota, Phragmoplastophyta, Embryophyta, Magnoliophyta, Magnoliophyta, Magnoliophyta, ","Least Sandpiper fresh dropping","",32,96.9,1
+"462","ESV_025230","Eukaryota, Ciliophora, Postciliodesmatophora, Heterotrichea, Heterotrichea, Condylostoma, magnum","Least Sandpiper fresh dropping","",31,99,1
+"463","ESV_025231","Eukaryota, Ciliophora, Intramacronucleata, Conthreep, Phyllopharyngea, , ","Least Sandpiper fresh dropping","",29,94.6,2
+"464","ESV_025232","Eukaryota, Chlorophyta, Ulvophyceae, Ulvophyceae, Ulvophyceae, Ulvophyceae, ","Least Sandpiper fresh dropping","",28,92.2,2
+"465","ESV_025233",", , , , , , ","Least Sandpiper fresh dropping","",27,NA,NA
+"466","ESV_025234","Bacteria, Firmicutes, Clostridia, Clostridiales, Clostridiaceae, Proteiniclasticum, ","Least Sandpiper fresh dropping","",27,100,1
+"467","ESV_025235","Eukaryota, Euglenozoa, Kinetoplastea, Neobodonida, Neobodonida, Neobodo, designis","Least Sandpiper fresh dropping","",27,100,1
+"468","ESV_025236","Eukaryota, Breviatea, Breviatea, Breviatea, Breviatea, Breviata, ","Least Sandpiper fresh dropping","",25,97.7,1
+"469","ESV_025237","Eukaryota, Breviatea, Breviatea, Breviatea, Breviatea, Breviata, ","Least Sandpiper fresh dropping","",25,96.9,1
+"470","ESV_025238","Eukaryota, Ciliophora, Intramacronucleata, Litostomatea, Haptoria, Didinium, ","Least Sandpiper fresh dropping","",24,100,1
+"471","ESV_025239","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Least Sandpiper fresh dropping","",24,99.2,2
+"472","ESV_025240","Bacteria, Proteobacteria, Alphaproteobacteria, , , , ","Least Sandpiper fresh dropping","",23,93.2,19
+"473","ESV_025241","Eukaryota, Amoebozoa, Tubulinea, Euamoebida, Euamoebida, Hartmannella, abertawensis","Least Sandpiper fresh dropping","",22,94.1,1
+"474","ESV_025242","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Least Sandpiper fresh dropping","",22,99,6
+"475","ESV_025243","Eukaryota, Holozoa, Choanoflagellida, Acanthoecida, Stephanoecidae, Stephanoeca, diplocostata","Least Sandpiper fresh dropping","",21,100,1
+"476","ESV_025244","Eukaryota, unk_phylum, unk_class, unk_order, unk_family, Pirsonia, guinardiae","Least Sandpiper fresh dropping","",21,90.7,1
+"477","ESV_025245","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Least Sandpiper fresh dropping","",21,98.4,14
+"478","ESV_025246","Bacteria, , , , , , ","Least Sandpiper fresh dropping","",18,95.2,3
+"479","ESV_025247","Archaea, Halobacterota, Halobacteria, Halobacterales, , , ","Least Sandpiper fresh dropping","",17,98.9,6
+"480","ESV_025248","Eukaryota, Ciliophora, Intramacronucleata, Litostomatea, Haptoria, , ","Least Sandpiper fresh dropping","",17,99,4
+"481","ESV_025249","Eukaryota, Amoebozoa, Discosea, Discosea, Discosea, Discosea, ","Least Sandpiper fresh dropping","",17,93,1
+"482","ESV_025250",", , , , , , ","Least Sandpiper fresh dropping","",16,NA,NA
+"483","ESV_025251","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Hypotrichia, Hypotrichia, ","Least Sandpiper fresh dropping","",16,97.5,1
+"484","ESV_025252","Eukaryota, Heterolobosea, Tetramitia, Tetramitia, Tetramitia, Psalteriomonas, lanterna","Least Sandpiper fresh dropping","",16,75,1
+"485","ESV_025253","Eukaryota, , , , , , ","Least Sandpiper fresh dropping","",16,78.9,1
+"486","ESV_025254","Eukaryota, Euglenozoa, Kinetoplastea, Neobodonida, Neobodonida, Neobodo, designis","Least Sandpiper fresh dropping","",16,98.2,1
+"487","ESV_025255","Bacteria, Planctomycetota, Phycisphaerae, Phycisphaerales, Phycisphaeraceae, SM1A02, ","Least Sandpiper fresh dropping","",15,100,1
+"488","ESV_025256","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Hypotrichia, Metaurostylopsis, struederkypkeae","Least Sandpiper fresh dropping","",15,98.3,1
+"489","ESV_025257","Eukaryota, Ciliophora, Postciliodesmatophora, Heterotrichea, Heterotrichea, Condylostoma, magnum","Least Sandpiper fresh dropping","",15,98.1,1
+"490","ESV_025258","Eukaryota, Ciliophora, Intramacronucleata, Conthreep, Nassophorea, Zosterodasys, agamalievi","Least Sandpiper fresh dropping","",15,97.3,1
+"491","ESV_025259","Eukaryota, Nematozoa, Chromadorea, Monhysterida, Monhysterida, Monhysterida, ","Least Sandpiper fresh dropping","",15,94.6,1
+"492","ESV_025260","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Opitutales, Puniceicoccaceae, Lentimonas, ","Least Sandpiper fresh dropping","",14,99,1
+"493","ESV_025261","Eukaryota, , , , , , ","Least Sandpiper fresh dropping","",14,73.6,2
+"494","ESV_025262","Eukaryota, Holozoa, Choanoflagellida, Acanthoecida, Stephanoecidae, Stephanoeca, diplocostata","Least Sandpiper fresh dropping","",13,99.2,1
+"495","ESV_025263","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Least Sandpiper fresh dropping","",13,100,4
+"496","ESV_025264",", , , , , , ","Least Sandpiper fresh dropping","",13,NA,NA
+"497","ESV_025265","Eukaryota, Fornicata, Carpediomonas-like_organisms, Carpediomonas-like_organisms, Carpediomonas-like_organisms, Carpediomonas-like_organisms, ","Least Sandpiper fresh dropping","",13,100,1
+"498","ESV_025266","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Least Sandpiper fresh dropping","",13,98.4,6
+"499","ESV_025267","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Nitzschia, ","Least Sandpiper fresh dropping","",13,99.2,3
+"500","ESV_025268","Bacteria, Verrucomicrobiota, Verrucomicrobiae, Opitutales, Puniceicoccaceae, Coraliomargarita, ","Least Sandpiper fresh dropping","",12,100,1
+"501","ESV_025269","Archaea, Nanoarchaeota, Nanoarchaeia, Woesearchaeales, Woesearchaeales, Woesearchaeales, ","Least Sandpiper fresh dropping","",12,82.8,3
+"502","ESV_025270","Eukaryota, LKM15, LKM15, LKM15, LKM15, LKM15, ","Least Sandpiper fresh dropping","",12,95.9,1
+"503","ESV_025271","Eukaryota, Ancyromonadida, Ancyromonadida, Ancyromonadida, Ancyromonadida, Ancyromonas, ","Least Sandpiper fresh dropping","",12,100,1
+"504","ESV_025272","Eukaryota, Ciliophora, Intramacronucleata, Conthreep, Oligohymenophorea, , ","Least Sandpiper fresh dropping","",12,99.1,3
+"505","ESV_025273","Eukaryota, Cryptophyceae, Cryptophyceae, Cryptomonadales, Cryptomonadales, Teleaulax, ","Least Sandpiper fresh dropping","",12,70.9,1
+"506","ESV_025274","Bacteria, Verrucomicrobiota, Kiritimatiellae, WCHB1-41, WCHB1-41, WCHB1-41, ","Least Sandpiper fresh dropping","",12,97.1,2
+"507","ESV_025275","Eukaryota, Breviatea, Breviatea, Breviatea, Breviatea, Breviata, ","Least Sandpiper fresh dropping","",12,95.3,1
+"508","ESV_025276","Eukaryota, Ciliophora, Intramacronucleata, Litostomatea, , , ","Least Sandpiper fresh dropping","",12,82.5,4
+"509","ESV_025277","Bacteria, Proteobacteria, Gammaproteobacteria, Alteromonadales, Alteromonadaceae, , ","Least Sandpiper fresh dropping","",11,100,8
+"510","ESV_025278","Eukaryota, Amoebozoa, Tubulinea, Euamoebida, Euamoebida, , ","Least Sandpiper fresh dropping","",11,78.7,4
+"511","ESV_025279","Eukaryota, Euglenozoa, Kinetoplastea, Neobodonida, Neobodonida, Rhynchomonas, nasuta","Least Sandpiper fresh dropping","",11,96.5,1
+"512","ESV_025280","Archaea, Nanoarchaeota, Nanoarchaeia, Woesearchaeales, Woesearchaeales, Woesearchaeales, ","Least Sandpiper fresh dropping","",10,81.7,1
+"513","ESV_025281","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Hypotrichia, Hypotrichia, ","Least Sandpiper fresh dropping","",10,98.3,1
+"514","ESV_025282","Bacteria, Desulfobacterota, Desulfovibrionia, Desulfovibrionales, Desulfomicrobiaceae, Desulfomicrobium, ","Least Sandpiper fresh dropping","",10,100,2
+"515","ESV_025283","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Least Sandpiper fresh dropping","",10,96.9,15
+"516","ESV_025284","Eukaryota, Cercozoa, Metromonadea, Metromonadea, Metromonadea, Micrometopion, nutans","Least Sandpiper fresh dropping","",10,86.4,1
+"517","ESV_025285","Eukaryota, Amoebozoa, Tubulinea, Leptomyxida, Leptomyxida, , ","Least Sandpiper fresh dropping","",10,88.7,2
+"518","ESV_025286","Eukaryota, Cercozoa, Granofilosea, Granofilosea, Granofilosea, Massisteria, voersi","Least Sandpiper fresh dropping","",10,84.8,1
+"519","ESV_025287","Eukaryota, , , , , , ","Least Sandpiper fresh dropping","",9,78.6,9
+"520","ESV_025288","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Hypotrichia, Gonostomum, ","Least Sandpiper fresh dropping","",9,99.2,1
+"521","ESV_025289","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Hypotrichia, Holosticha, diademata","Least Sandpiper fresh dropping","",9,95.6,1
+"522","ESV_025290","Eukaryota, , , , , , ","Least Sandpiper fresh dropping","",9,73,19
+"523","ESV_025291","Eukaryota, Ciliophora, Intramacronucleata, Conthreep, Oligohymenophorea, , ","Least Sandpiper fresh dropping","",9,99.1,3
+"524","ESV_025292","Eukaryota, , , , , , ","Least Sandpiper fresh dropping","",9,75,3
+"525","ESV_025293","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, , ","Least Sandpiper fresh dropping","",9,98.4,15
+"526","ESV_025294","Eukaryota, Ciliophora, Intramacronucleata, Litostomatea, Trichostomatia, Bundleia, benbrooki","Least Sandpiper fresh dropping","",9,72,1
+"527","ESV_025295","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Navicula, salinicola","Least Sandpiper fresh dropping","",9,98.4,1
+"528","ESV_025296","Eukaryota, Ciliophora, Intramacronucleata, Spirotrichea, Hypotrichia, Holosticha, heterofoissneri","Least Sandpiper fresh dropping","",9,93,1
+"529","ESV_025297","Bacteria, Proteobacteria, Gammaproteobacteria, , , , ","Least Sandpiper fresh dropping","",9,100,30
+"530","ESV_025298","Eukaryota, Heterolobosea, Tetramitia, Tetramitia, Tetramitia, Tetramitia, ","Least Sandpiper fresh dropping","",9,100,1
+"531","ESV_025299","Eukaryota, Ciliophora, Intramacronucleata, Litostomatea, Haptoria, Phialina, salinarum","Least Sandpiper fresh dropping","",9,100,1
+"532","ESV_025300","Eukaryota, Chlorophyta, Trebouxiophyceae, Trebouxiophyceae, Trebouxiophyceae, Trebouxiophyceae, ","Least Sandpiper fresh dropping","",9,99.2,1
+"533","ESV_025301","Eukaryota, Ciliophora, Intramacronucleata, Conthreep, Oligohymenophorea, Scuticociliatia, ","Least Sandpiper fresh dropping","",8,100,1
+"534","ESV_025302","Bacteria, Campilobacterota, Campylobacteria, Campylobacterales, , , ","Least Sandpiper fresh dropping","",8,100,71
+"535","ESV_025303","Bacteria, Proteobacteria, Alphaproteobacteria, Holosporales, Holosporaceae, , ","Least Sandpiper fresh dropping","",8,91.3,1
+"536","ESV_025304","Eukaryota, Diatomea, Bacillariophyceae, Bacillariophyceae, Bacillariophyceae, Nitzschia, ","Least Sandpiper fresh dropping","",8,98.4,3
+"537","ESV_025305","Eukaryota, Amoebozoa, Discosea, Stygamoebida, Stygamoebida, Stygamoebida, ","Least Sandpiper fresh dropping","",8,97,1
+"538","ESV_025306","Eukaryota, Amoebozoa, Tubulinea, Euamoebida, Euamoebida, , ","Least Sandpiper fresh dropping","",8,77.8,3
+"539","ESV_025307","Eukaryota, Cercozoa, Novel_Clade_Gran-4, Novel_Clade_Gran-4, Novel_Clade_Gran-4, Novel_Clade_Gran-4, ","Least Sandpiper fresh dropping","",8,98.4,1
+"540","ESV_025308","Eukaryota, Ancyromonadida, Ancyromonadida, Ancyromonadida, Ancyromonadida, Ancyromonas, sigmoides","Least Sandpiper fresh dropping","",8,96.2,1
+"541","ESV_025309","Eukaryota, Ochrophyta, Eustigmatophyceae, Eustigmatales, Eustigmatales, Nannochloropsis, ","Least Sandpiper fresh dropping","",8,99.2,2
+"542","ESV_025310","Eukaryota, Euglenozoa, Diplonemea, Diplonemea, Diplonemea, Rhynchopus, ","Least Sandpiper fresh dropping","",8,70.6,1
+"543","ESV_025311","Eukaryota, Breviatea, Breviatea, Breviatea, Breviatea, Breviata, ","Least Sandpiper fresh dropping","",8,97.7,1
+"544","ESV_025312","Bacteria, Proteobacteria, Alphaproteobacteria, Rhodobacterales, Rhodobacteraceae, , ","Least Sandpiper fresh dropping","",8,98.1,2
+"545","ESV_025313","Eukaryota, Cercozoa, , , , , ","Least Sandpiper fresh dropping","",8,93.8,1
+"546","ESV_025314","Bacteria, , , , , , ","Least Sandpiper fresh dropping","",8,98.1,4
+"547","ESV_025315","Eukaryota, Ochrophyta, Eustigmatophyceae, Eustigmatales, Eustigmatales, Nannochloropsis, ","Least Sandpiper fresh dropping","",8,99.2,2
+"548","ESV_025316",", , , , , , ","Least Sandpiper fresh dropping","",8,NA,NA
+"549","ESV_025317","Eukaryota, Ciliophora, Postciliodesmatophora, Heterotrichea, Heterotrichea, Condylostoma, magnum","Least Sandpiper fresh dropping","",8,99,1
