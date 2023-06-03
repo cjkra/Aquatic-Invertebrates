@@ -219,7 +219,7 @@ rm(inv2021_insects, inv2021_water)
 ## Combine columns and fix factors
 ```{r}
 # Combine rows
-inv <- bind_rows(inv2018, inv2019, inv2021) %>%
+inv_factors <- bind_rows(inv2018, inv2019, inv2021) %>%
   # standardize sample_type column
   dplyr::mutate(sample_type = case_when(sample_type %in% c("FB", "FB 250") ~ "FB250", # Change FB and FB 250 to FB250
                                  str_detect(sample_type, "CORE") ~ "CORE", # Change anything with CORE to just CORE
@@ -254,10 +254,10 @@ inv <- bind_rows(inv2018, inv2019, inv2021) %>%
   select(date, year, season, sample_type, site, ostracod, copepod, amphipod, isopod, cladocera, clam_shrimp, annelida_sp, annelida_oligochaete, annelida_polychaete, nematode, mollusk, gastropod_snail, coleoptera_sp, coleoptera_hydrophilidae, coleoptera_tropiscernus, coleoptera_dytiscidae, coleoptera_dytiscidae_agabus, coleoptera_dytiscidae_liodessus_affinis, coleoptera_dytiscidae_colymbetinae, coleoptera_hydraenidae, coleoptera_curculionidae_weavil, coleoptera_gyrindae_gyrinini, dipteran_sp, diptera_chironomid, diptera_ceratopogonidae, diptera_ephydridae, diptera_stratiomyidae, diptera_culicidae, diptera_syrphidae, tipulidae_larva, ephemeroptera, plecoptera, trichoptera_sp, hemiptera_corixidae_boatman, hemiptera_notonectidae, hemiptera_mesoveliidae, odonate, collembola_springtail, lepidoptera_crambidae, arachnida_acari, hydrachnidia, larvae, terrestrials, DO_mg_L:pH)
 
 # Get list of columns with no IDs
-colNoID <- inv[, 10:length(inv)] %>% select_if(colSums(., na.rm = T) != 0) %>% colnames() %>% 
-  setdiff(colnames(inv[, 10:length(inv)]), .)  
+colNoID <- inv_factors[, 6:length(inv_factors)] %>% select_if(colSums(., na.rm = T) != 0) %>% colnames() %>% 
+  setdiff(colnames(inv_factors[, 6:length(inv_factors)]), .)  
 
-inv <- inv %>% select(-colNoID)
+inv_factors <- inv_factors %>% select(-colNoID)
 
 # check no columns are missing (except totals)
 unique(c(setdiff(colnames(inv2021), c(colnames(inv), colNoID)), setdiff(colnames(inv2019), c(colnames(inv), colNoID)), setdiff(colnames(inv2018), c(colnames(inv), colNoID))))
@@ -302,7 +302,7 @@ site_index <- data.frame(site = unique(inv$site)) %>%
                                 TRUE ~ "Extra"))
 
 # Add site metadata
-inv <- inv %>% left_join(site_index, by = c("site")) %>%
+inv_meta <- inv_factors %>% left_join(site_index, by = c("site")) %>%
   
 # Add breaching status
   mutate(breach_status = case_when(date < "2018-03-22" ~ "closed",
@@ -320,32 +320,37 @@ inv <- inv %>% left_join(site_index, by = c("site")) %>%
          
 # Add FB250 pre-filtration sample volume
                       filter_method = case_when(sample_type == "FB250" & year(date) >= "2020" ~ "70 liters",
-                                                sample_type == "FB250" & year(date) < "2020" ~ "7.5 liters")) %>%
+                                                sample_type == "FB250" & year(date) < "2020" ~ "7.5 liters"),
+                      
+# Add total organisms variable
+                      total = rowSums(across(ostracod:terrestrials), na.rm = T)) %>%
   
   select(date, year, season, breach_status, 
          site, site_type, site_reserve, site_desc, 
-         sample_type, filter_method, everything())
+         sample_type, filter_method, everything(), total, DO_mg_L:pH) 
+
+rm(inv2018csv, inv2019csv, inv2020_22csv, wq2020_22csv)
 ```
 
 ## Add sample normalization factors
 ```{r}
 # Make season and year sample slough totals
-inv_szn_samp <- inv %>% filter(site_type == "slough") %>% group_by(season, sample_type) %>%
+inv_szn_samp <- inv_meta %>% filter(site_type == "slough") %>% group_by(season, sample_type) %>%
   dplyr::summarize(season_samples = n())
 
-inv_yr_samp <- inv %>% filter(site_type == "slough") %>% group_by(year, sample_type) %>%
+inv_yr_samp <- inv_meta %>% filter(site_type == "slough") %>% group_by(year, sample_type) %>%
   dplyr::summarize(year_samples = n())
 
-inv_site_samp <- inv %>% filter(site_type == "slough") %>% group_by(site, sample_type) %>%
+inv_site_samp <- inv_meta %>% filter(site_type == "slough") %>% group_by(site, sample_type) %>%
   dplyr::summarize(site_samples = n())
 
 # Join sample totals to table
-inv <- inv %>% left_join(inv_szn_samp, by = c("season", "sample_type")) %>% 
+inv <- inv_meta %>% left_join(inv_szn_samp, by = c("season", "sample_type")) %>% 
   left_join(inv_yr_samp, by = c("year", "sample_type")) %>% 
   left_join(inv_site_samp, by = c("site", "sample_type")) %>%
   select(date, year, season, breach_status, 
          site, site_type, site_reserve, site_desc, 
-         sample_type, filter_method, season_samples, year_samples, site_samples, everything())
+         sample_type, filter_method, season_samples, year_samples, site_samples, everything(), total, DO_mg_L:pH)
 ```
 
 ```{r}
@@ -356,9 +361,8 @@ inv_log <- inv %>% mutate(across(ostracod:terrestrials, ~ log(.x + 1)))
 
 inv_log %>% write.csv("cleaned_data/invert_sampling_tables/all_invert_data_log.csv")
 
-rm(inv2018csv, inv2019csv, inv2020_22csv, wq2020_22csv, 
-   inv2018, inv2019, inv2021, colNoID, 
-   inv_site_samp, inv_szn_samp, inv_yr_samp)
+rm(inv2018, inv2019, inv2021, colNoID, 
+   inv_site_samp, inv_szn_samp, inv_yr_samp, inv_factors, inv_meta)
 ```
 
 # Make long table
