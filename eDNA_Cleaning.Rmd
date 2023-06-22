@@ -11,7 +11,7 @@ Note that raw_data/eDNA_sample_ids.csv needs to be manually updated with sample 
 
 ```{r setup}
 knitr::opts_chunk$set(message = FALSE)
-install.packages("ggforce")
+
 library(taxa) # special taxa data class
 library(taxize)
 library(rentrez) # data base connections for common names
@@ -24,9 +24,8 @@ library(ggforce)
 ```
 
 # Write cleaning function
-```{r clean batch eDNA}
-# The first three samples were stored in alcohol and did the DNA was degraded. 
-# Metadata for these samples was added manually and dates are approximate.
+The first three samples were stored in alcohol and the DNA was degraded. Metadata for these samples was added manually and dates are approximate.
+```{r}
 
 # Function cleans and combines all eDNA files from a folder
 eDNA_clean <- function(folder) {
@@ -36,8 +35,17 @@ eDNA_clean <- function(folder) {
     # Create list of all files in target folder
     list.files(., full.names = TRUE)  %>%
     
-    # Read CSV files and bind rows together
-    ldply(read_csv) %>% 
+    # Read CSV files
+    map(read_csv) %>% 
+    
+                              # fix first column type
+    lapply(function(x) {x %>% mutate(TestId = as.character(TestId)) %>%
+                              # remove replicate numbers in sample column names
+                              rename_with(~ str_replace(., "\\.[0-9]+$", "")) %>%
+                              return()}) %>%
+    
+    # Bind rows together
+    bind_rows() %>%
     
     # Clean names
     dplyr::rename(percent_match = "% match",
@@ -55,8 +63,8 @@ eDNA_clean <- function(folder) {
                  names_to = "sample_id", 
                  values_to = "sample_count") %>%
     
-    # remove sample replicate numbers
-    mutate(sample_id = str_replace(sample_id, "\\.[0-9]+$", ""))
+    # Remove empty columns created by parsing issues
+    filter(!is.na(sample_count), sample_count != 0)
   
     # One can remove all rows with no identifications using the following code, 
     # however having the rows with no IDs is useful for determining and visualizing species presence,
@@ -68,26 +76,30 @@ eDNA_clean <- function(folder) {
 ```
 
 # Load in raw data and clean
-```{r message=FALSE}
-# Some original downloads were edited due to errors in copying 1s/Is and Os/0s
-# Plyr package is required for ldply(), but overwrites functions that are needed later on
-library(plyr)
+Some original downloads were edited due to errors in copying 1s/Is and Os/0s.
+**The metadata file** `eDNA_sample_ids.csv` **needs to be manually updated with every added batch.**
 
+Each batch folder should contain only the read tables from JonahVentures. ESV tables should not be included.
+All files in each batch folder should contain the same number of columns.
 
-# Metadata file should be manually updated with each batch
+Some csv files contain unnecessary commas that create an empty column at the end and cause parsing issues. These empty columns are accounted for filtered out after the tables are pivoted.
+```{r message=FALSE, warning=FALSE}
+
+# Should be manually updated with each batch
 AQsampleIDs <- read_csv("C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_sample_ids.csv") %>% clean_names()
 
-# Each batch folder should contain only the read tables from JonahVentures. ESV tables should not be included.
+# AL represents the last column index in excel
 folder1470_AL <- "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_downloads/JVB1470_AL"
 JVB1470_AL <- eDNA_clean(folder1470_AL)
 
+# AN represents the last column index in excel
 folder1470_AN <- "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_downloads/JVB1470_AN"
 JVB1470_AN <- eDNA_clean(folder1470_AN)
 
+# AR represents the last column index in excel
 folder1470_AR <- "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_downloads/JVB1470_AR"
 JVB1470_AR <- eDNA_clean(folder1470_AR)
 
-# Unknown parsing issues below. Seven files in total are affected.
 folder1554 <- "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_downloads/JVB1554"
 JVB1554 <- eDNA_clean(folder1554)
 
@@ -100,13 +112,15 @@ JVB1703_nov <- eDNA_clean(folder1703_nov)
 folder2116 <- "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_downloads/JVB2116"
 JVB2116 <- eDNA_clean(folder2116)
 
-detach("package:plyr")
+folder2332 <- "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/raw_data/eDNA_downloads/JVB2332"
+JVB2332 <- eDNA_clean(folder2332)
+
 ```
 
 # Bind eDNA batches
 ```{r}
 # Combine all eDNA
-all_eDNA <- bind_rows(JVB1470_AL, JVB1470_AN, JVB1470_AR, JVB1554, JVB1703_july, JVB1703_nov, JVB2116) %>%
+all_eDNA <- bind_rows(JVB1470_AL, JVB1470_AN, JVB1470_AR, JVB1554, JVB1703_july, JVB1703_nov, JVB2116, JVB2332) %>%
   
   # Join sample information to IDs
   left_join(AQsampleIDs, by = c("sample_id" = "barcode")) %>%
@@ -121,10 +135,12 @@ all_eDNA <- bind_rows(JVB1470_AL, JVB1470_AN, JVB1470_AR, JVB1554, JVB1703_july,
                                         "bird dropping", "owl pellet", "pollen", "soil amendment"))) %>%
   
   # Remove rows without species IDs
-  filter(kpcofgs != "", sample_count != 0) %>%
+  filter(kpcofgs != "") %>%
   
   # Rename primer column
   rename(primer = TestId)
+
+write_csv(all_eDNA, "cleaned_data/eDNA_tables/all_eDNA.csv")
 ```
 
 # Get invertebrate eDNA
@@ -135,20 +151,20 @@ aqinv_eDNA <- all_eDNA %>%
   # Remove irrelevant samples
   filter(!site %in% c("pollen", "soil amendment"),
          
-         # Select invert taxa
+  # Select invert taxa
          Phylum %in% c("Arthropoda", "Mollusca", "Annelida", "Nematozoa", "Platyhelminthes"))
 
-# write clean table with aquatic invert eDNA
-write_csv(aqinv_eDNA, "C:/Users/Admin/Documents/Lab Work/CCBER/Aquatic-Invertebrates/cleaned_data/eDNA_tables/aqinv_eDNA.csv")
+# Write clean table with aquatic invert eDNA
+write_csv(aqinv_eDNA, "cleaned_data/eDNA_tables/aqinv_eDNA.csv")
 
-# write clean table with aquatic invert eDNA from only vernal pools
+# Write clean table with aquatic invert eDNA from only vernal pools
 aqinv_eDNA %>% 
   
-  # select only vernal pool data
+  # Select only vernal pool data
   filter(site %in% c("VP1", "NVP2", "NVP4")) %>% 
   write_csv("cleaned_data/eDNA_tables/vernal_pool_aqinv_eDNA.csv")
 
-rm(JVB1470_AL, JVB1470_AN, JVB1470_AR, JVB1554, JVB1703_july, JVB1703_nov, JVB2116, folder1470_AL, folder1470_AN, folder1470_AR, folder1554, folder1703_july, folder1703_nov, folder2116)
+rm(JVB1470_AL, JVB1470_AN, JVB1470_AR, JVB1554, JVB1703_july, JVB1703_nov, JVB2116, JVB2332, folder1470_AL, folder1470_AN, folder1470_AR, folder1554, folder1703_july, folder1703_nov, folder2116, folder2332)
 ```
 
 # Create summary tables
@@ -168,7 +184,7 @@ site_primer_taxa_count <- aqinv_eDNA %>% distinct(site, ESVId, .keep_all = T) %>
   summarize(taxa_count = n()) %>% write_csv("cleaned_data/eDNA_tables/site_primer_taxa_count.csv")
 ```
 
-## List findings by primer
+## List findings by primer (!)
 ```{r message=FALSE}
 # This chunk takes awhile to run!
 
@@ -313,6 +329,9 @@ aqinv_eDNA %>% filter(site == "NPB2") %>%
 
 aqinv_eDNA %>% filter(site == "VP1") %>% 
   heatTree(" Invertebrate Species detected at Vernal Pool 1, All Dates")
+
+all_eDNA %>% filter(sample_type == "Bulk Inverts") %>% 
+  heatTree(" Species detected in Bulk Invertebrate Sample")
 ```
 
 ```{r nmds}
@@ -348,7 +367,7 @@ NMDS_aqinv_eDNA.scores <- as.data.frame(scores(NMDS_aqinv_eDNA)$sites) %>%
   left_join(NCOScopr, by = "site")
 
 ggplot(NMDS_aqinv_eDNA.scores, aes(NMDS1, NMDS2, label = site, color = ncos_or_copr)) +
-  geom_mark_hull(aes(fill = ncos_or_copr), alpha = 0.2) + 
+  #geom_mark_hull(aes(fill = ncos_or_copr), alpha = 0.2) + 
   geom_point() + geom_text_repel() + labs(color = "Site Type") 
 
 rm(presence_aqinv_eDNA, NMDS_aqinv_eDNA, NCOScopr)

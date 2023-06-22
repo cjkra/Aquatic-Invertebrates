@@ -1,0 +1,25 @@
+site,site_name,site_type,site_reserve,site_desc
+CUL1,Culvert,slough,COPR,Slough in COPR
+NMC,Main Channel,slough,NCOS,Slough in NCOS
+NVBR,North of Venoco Bridge,slough,NCOS,Slough in NCOS
+VBR1,South of Venoco Bridge,slough,COPR,Slough in COPR
+NEC,East Channel,slough,NCOS,Slough in NCOS
+MO1,Mouth of Slough,slough,COPR,Slough in COPR
+NPB,Phelps Bridge,slough,NCOS,Slough in NCOS
+DSP,Dune Swale Pond,pool,COPR,Pond
+NDC,Devereux Creek,slough,NCOS,Slough Inlet
+NWP,West Pond,slough,NCOS,Pond
+NVP2,NCOS Vernal Pool 2,pool,NCOS,Vernal Pool
+NVP4,NCOS Vernal Pool 4,pool,NCOS,Vernal Pool
+VWCB6,West Campus Vernal Pool 6,pool,COPR,Vernal Pool
+VDSN,Del Sol Vernal Pool N,pool,Other,Vernal Pool
+VP1,COPR Vernal Pool 1,pool,COPR,Vernal Pool
+VNVP10,NCOS Vernal Pool 10,pool,NCOS,Vernal Pool
+VCC7,Camino Corto Vernal Pool 7,pool,Other,Vernal Pool
+VM7,Manzanita Vernal Pool 7,pool,Other,Vernal Pool
+VOW1,Ocean Walk Lane Vernal Pool 1,pool,NCOS,Vernal Pool
+VMMesa,More Mesa Vernal Pool,pool,Other,Vernal Pool
+VM3,Manzanita Vernal Pool 3,pool,Other,Vernal Pool
+PIER,COPR Pier,slough,COPR,Slough in COPR
+NPB2,Upper Phelps Creek,slough,NCOS,Slough Inlet
+NPB1,Lower Phelps Creek,slough,NCOS,Slough Inlet

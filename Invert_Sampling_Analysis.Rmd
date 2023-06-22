@@ -1,0 +1,1119 @@
+---
+title: "Invert_Sampling_Analysis"
+author: "Chris Kracha"
+date: "2023-05-17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(igraph) # networks
+library(widyr) # pairwise correlation
+library(ggrepel) # repel text
+library(ggforce) # convex hull
+library(ggraph) # network plots
+library(tidygraph)
+library(ecolTest) # for Hutcheson's t
+library(tidyverse)
+library(lubridate)
+library(nlme) # mixed effects modeling
+library(vegan) # analyses, permanova
+library(ggvegan) # nMDS visualization
+```
+
+# Setup analysis tables
+
+## Load in data
+The cleaned tables include data from all sample types, and have slough data as well as vernal pool and other miscellaneous data. We only need slough data for this analysis. Any clam shimp identifications not in vernal pools are incorrect, so we will remove those.
+```{r message=T}
+# Read in cleaned data
+inv_all  <- read_csv("cleaned_data/invert_sampling_tables/all_invert_data.csv") %>% select(-clam_shrimp)
+inv_log <- read_csv("cleaned_data/invert_sampling_tables/all_invert_data_log.csv") %>% select(-clam_shrimp)
+invLong <- read_csv("cleaned_data/invert_sampling_tables/all_invert_data_long.csv") %>% filter(taxa != "clam_shrimp")
+
+site_index <- read_csv("cleaned_data/site_index.csv")
+```
+
+## Filter data
+For analysis, we will only need data that is from sites in the slough and its inlets. Almost all analyses will require the sample types to be separated, because they have organism counts on different orders of magnitude. Only mixed effects models use both sample types in one table.
+```{r}
+# Make analysis tables
+inv <- list()
+seasons <- c("winter", "spring", "summer", "fall")
+site_order <- c("MO1", "PIER", "CUL1", "VBR1", # COPR slough
+                "NVBR", "NMC", "NEC",  # NCOS slough
+                "NPB", "NPB1", "NPB2", "NWP", "NDC")
+
+
+inv$wide$all <- inv_all %>% filter(site_type == "slough") %>% 
+  mutate(season = factor(season, seasons),
+         site = factor(site, levels = site_order))
+inv$wide$fb <- inv_all %>% filter(site_type == "slough", sample_type == "FB250") %>% 
+  mutate(season = factor(season, seasons),
+         site = factor(site, levels = site_order))
+inv$wide$core <- inv_all %>% filter(site_type == "slough", sample_type == "CORE") %>% 
+  mutate(season = factor(season, seasons),
+         site = factor(site, levels = site_order))
+inv$wide$fb_log <- inv_log %>% filter(site_type == "slough", sample_type == "FB250") %>% 
+  mutate(season = factor(season, seasons),
+         site = factor(site, levels = site_order))
+inv$wide$core_log <- inv_log %>% filter(site_type == "slough", sample_type == "CORE") %>% 
+  mutate(season = factor(season, seasons),
+         site = factor(site, levels = site_order))
+
+inv$long$all <- invLong %>% filter(site_type == "slough") %>% 
+  mutate(season = factor(season, seasons),
+         site = factor(site, levels = site_order))
+inv$long$fb <- invLong %>% filter(site_type == "slough", sample_type == "FB250") %>% 
+  mutate(season = factor(season, seasons),
+         site = factor(site, levels = site_order))
+inv$long$core <- invLong %>% filter(site_type == "slough", sample_type == "CORE") %>% 
+  mutate(season = factor(season, seasons),
+         site = factor(site, levels = site_order))
+
+rm(inv_all, inv_log, invLong, seasons)
+```
+
+## Create visualization aids
+
+### List most useful sites
+```{r}
+common_sites <- site_index %>% filter(site %in% c("MO1", "CUL1", "NVBR", "NEC", "NPB", "NWP", "NDC"))
+```
+
+### Get most common taxa
+```{r}
+common_taxa <- list()
+
+# From FB250 samples
+common_taxa$fb250$all_sites <- inv$long$fb %>% group_by(taxa) %>%
+  summarize(total_abundance = sum(organisms_L)) %>%
+  arrange(desc(total_abundance)) %>% 
+  filter(row_number() <= 8)
+
+# For each site FB250
+for (i in unique(inv$wide$fb$site)) {
+  common_taxa$fb250[[i]] <- inv$long$fb %>% filter(site == i) %>%
+  group_by(taxa) %>%
+  summarize(total_abundance = sum(organisms_L)) %>%
+  arrange(desc(total_abundance)) %>% 
+  filter(row_number() <= 8)
+}
+
+# From CORE samples
+common_taxa$core$all_sites <- inv$long$core %>% group_by(taxa) %>%
+  summarize(total_abundance = sum(organisms_L)) %>%
+  arrange(desc(total_abundance)) %>%
+  filter(row_number() <= 8)
+
+# For each site CORE
+for (i in unique(inv$wide$core$site)) {
+  common_taxa$core[[i]] <- inv$long$core %>% filter(site == i) %>%
+  group_by(taxa) %>%
+  summarize(total_abundance = sum(organisms_L)) %>%
+  arrange(desc(total_abundance)) %>% 
+  filter(row_number() <= 8)
+}
+
+# Differences in common taxa at all sites between sample types
+setdiff(common_taxa$core$all_sites$taxa, common_taxa$fb250$all_sites$taxa)
+```
+
+# Visualisation
+
+## Visualise data coverages
+```{r}
+inv$wide$all %>% ggplot(aes(x = date, y = site, color = sample_type)) + geom_point() +
+  ggtitle("Samples by site and date") + labs(color = "Sample type") + geom_jitter(height = 0.2)
+
+inv$wide$all %>% ggplot(aes(x = date, y = site, color = breach_status)) + geom_point() +
+  ggtitle("Samples by site and date") + labs(color = "Breach status") + geom_jitter(height = 0.2)
+
+inv$wide$all %>% ggplot(aes(fill = sample_type, x = year)) + geom_bar(stat = "count") +
+  ggtitle("Samples collected by year") + ylab("Sample count") + labs(fill = "Sample type")
+
+inv$wide$all %>% ggplot(aes(x = season, fill = sample_type)) + geom_bar(stat = "count") +
+  ggtitle("Samples collected by season") + labs(fill = "Sample type", y = "Sample count")
+
+inv$wide$all %>% group_by(year, site_reserve) %>% summarize(sal = mean(sal_ppt, na.rm = T))
+```
+
+## Organism concentrations
+
+### Concentration by time
+
+#### FB250
+```{r}
+# All taxa by season
+inv$long$fb %>% ggplot(aes(y = organisms_L_season, x = season, fill = season)) + 
+  geom_bar(stat = "identity") + 
+  ggtitle("Average organisms per FB250 sample collected by season") + 
+  labs(x = "Season", y = "Organisms/L Per Sample", fill = "taxa group") + guides(fill="none") + 
+  theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+# Eight most common taxa by season
+inv$long$fb %>% filter(taxa %in% common_taxa$fb250$all_sites$taxa) %>% 
+  ggplot(aes(y = organisms_L_season, x = season, 
+             fill = reorder(taxa, organisms_L_season))) + 
+  geom_bar(stat = "identity", position = "stack") + 
+  scale_fill_manual(labels = c("Amphipods", "Shore Flies", "Non-biting Midges", 
+                                 "Beetles", "Water Boatmen", "Seed Shrimp", "Water Fleas", "Copepods"),
+                      values = c("green", "blueviolet", "magenta", "coral", "cyan",
+                                 "darkolivegreen1", "darkolivegreen3","darkolivegreen")) +
+  ggtitle("Eight most common taxa in FB250 samples") + labs(x = "Season", y = "Organisms/L Per Sample", fill = "Taxa") + 
+  theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+# Visualize yearly difference in abundance
+inv$long$fb %>% filter(taxa %in% common_taxa$fb250$all_sites$taxa) %>% 
+  ggplot(aes(x = as.factor(year), y = organisms_L_year, fill = reorder(taxa, organisms_L_year))) +
+  geom_bar(stat = "identity") + 
+  scale_fill_manual(labels = c("Amphipods", "Non-biting Midges", "Beetles", "Shore Flies",
+                                 "Water Boatmen", "Seed Shrimp", "Water Fleas", "Copepods"),
+                      values = c("green", "magenta", "coral",  "blueviolet", "cyan",
+                                 "darkolivegreen1", "darkolivegreen3","darkolivegreen"))+
+  ggtitle("Average concentration of species per year in FB250 samples") + theme_bw() +
+  labs(y = "Average organisms/L in samples", x = "Year", fill = "Year")
+```
+
+#### CORE
+```{r}
+# All by season
+inv$long$core %>% ggplot(aes(y = organisms_L_season, x = season, fill = season)) + geom_bar(stat = "identity") + 
+  ggtitle("Average organisms per CORE sample collected by season, slough sites") + ylab("organisms/L per sample") + 
+  theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + guides(fill="none")
+
+# Eight most common taxa by season
+inv$long$core %>% filter(taxa %in% common_taxa$core$all_sites$taxa) %>% 
+  ggplot(aes(y = log((organisms_L_season/1000)+1), x = season, fill = reorder(taxa, organisms_L_season))) + 
+  geom_bar(stat = "identity") + 
+  ggtitle("Average organisms per CORE sample collected by season, slough sites") + 
+  ylab("organisms/L per sample") + labs(fill = "taxa") +
+  scale_fill_manual(labels = c("Roundworm", "Biting Midges", "Water Fleas", 
+                               "Non-Biting Midges", "Earthworms", "Water Boatmen", "Ostracods", "Copepods"),
+                    values = c("coral", "blueviolet", "darkolivegreen1", "magenta", "green", "cyan",
+                               "darkolivegreen3","darkolivegreen")) + theme_bw()
+
+# Visualize yearly difference in abundance
+inv$long$core %>% filter(taxa %in% common_taxa$core$all_sites$taxa) %>% 
+  ggplot(aes(x = as.factor(year), y = organisms_L_year, fill = taxa)) +
+  geom_bar(stat = "identity") + 
+  ggtitle("Average concentration of species per year in CORE samples") + theme_bw() +
+  labs(y = "Average organisms/L in samples", x = "Year", fill = "Year")
+```
+
+
+### Concentration by site
+
+#### FB250
+```{r}
+# Stacked taxa by site
+inv$long$fb %>% filter(taxa %in% common_taxa$fb250$all_sites$taxa) %>%
+  ggplot(aes(x = site, y = organisms_L_site, fill = taxa)) + geom_bar(stat = "identity") +
+  ggtitle("Common taxa by slough site, filter beaker method") + ylab("organisms/L") + labs(fill = "taxa") + 
+  theme()
+
+# Stacked taxa by site, facet by season
+inv$long$fb %>% filter(taxa %in% common_taxa$fb250$all_sites$taxa) %>%
+  ggplot(aes(x = site, y = organisms_L_site, fill = taxa)) + geom_bar(stat = "identity") +
+  ggtitle("Common taxa by slough site, filter beaker method") + ylab("organisms/L") + labs(fill = "taxa") + 
+  facet_wrap(~season) + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+
+# Individual sites
+for (i in common_sites$site){
+  print(inv$long$fb %>% filter(site == i, taxa %in% common_taxa$fb250[[i]]$taxa) %>%
+    ggplot(aes(x = season, y = organisms_L_season, fill = taxa)) + geom_bar(stat = "identity") +
+    ggtitle(paste("Common taxa by season at", common_sites$site_name[common_sites$site == i], "using filter beaker method")) + 
+      labs(y = "Organisms/L per sample", fill = "taxa"))
+}
+```
+
+#### CORE
+```{r}
+inv$long$fb %>% filter(taxa %in% common_taxa$core$all_sites$taxa) %>%
+  ggplot(aes(x = site, y = organisms_L_site, fill = taxa)) + geom_bar(stat = "identity") +
+  ggtitle("Common taxa by slough site, CORE method") + ylab("organisms/L") + labs(fill = "taxa group") + 
+  theme()
+
+inv$long$fb %>% filter(taxa %in% common_taxa$core$all_sites$taxa) %>%
+  ggplot(aes(x = site, y = organisms_L_site, fill = taxa)) + geom_bar(stat = "identity") +
+  ggtitle("Common taxa by slough site, CORE method") + ylab("organisms/L") + labs(fill = "taxa group") + 
+  facet_wrap(~season) + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+
+# Individual sites
+for (i in common_sites$site){
+  print(inv$long$fb %>% filter(site == i, taxa %in% common_taxa$core[[i]]$taxa) %>%
+    ggplot(aes(x = season, y = organisms_L_season, fill = taxa)) + geom_bar(stat = "identity") +
+    ggtitle(paste("Common taxa by season at", common_sites$site_name[common_sites$site == i], "using core method")) + 
+      labs(y = "organisms/L per sample", fill = "taxa"))
+}
+```
+
+## PerMANOVA
+
+### Setup
+
+#### FB250
+```{r}
+perma <- list()
+
+env <- list()
+comm <- list()
+
+# Environmental + community matrix, for enviro perMANOVA (many NAs)
+env$salinity$fb <- inv$wide$fb %>% select(ostracod:terrestrials, site, year, season, sal_ppt) %>% filter(!is.na(sal_ppt))
+env$cond$fb <- inv$wide$fb %>% select(ostracod:terrestrials, site, year, season, cond_spec_mS_cm) %>% 
+  filter(!is.na(cond_spec_mS_cm))
+env$DO$fb <- inv$wide$fb %>% select(ostracod:terrestrials, site, year, season, DO_pct) %>% filter(!is.na(DO_pct))
+
+# Community matrix, for metadata perMANOVA (no NAs)
+comm$fb <- inv$wide$fb %>% select(ostracod:terrestrials) %>% as.matrix() 
+```
+
+#### CORE
+```{r}
+# Environmental + community matrix, for enviro perMANOVA (many NAs)
+env$salinity$core <- inv$wide$core%>% select(ostracod:terrestrials, site, year, season, sal_ppt) %>% filter(!is.na(sal_ppt))
+env$cond$core <- inv$wide$core%>% select(ostracod:terrestrials, site, year, season, cond_spec_mS_cm) %>% 
+  filter(!is.na(cond_spec_mS_cm))
+env$DO$core <- inv$wide$core%>% select(ostracod:terrestrials, site, year, season, DO_pct) %>% filter(!is.na(DO_pct))
+
+# Community matrix, for metadata perMANOVA (no NAs)
+comm$core <- inv$wide$core%>% select(ostracod:terrestrials) %>% as.matrix()
+```
+
+### Metadata
+
+#### FB250
+```{r}
+# Per site
+perma$site$fb <- adonis2(comm$fb ~  inv$wide$fb$site,  permutations = 999, method = "euclidean", na.rm = T)
+perma$site$fb # significant
+
+# Per season
+perma$season$fb <- adonis2(comm$fb ~  inv$wide$fb$season,  permutations = 999, method = "euclidean", na.rm = T)
+perma$season$fb # significant
+
+# Per season and site
+perma$siteSeason$fb <- adonis2(comm$fb ~  site*season, data = inv$wide$fb,  permutations = 999, method = "euclidean", na.rm = T)
+perma$siteSeason$fb # significant, site:season interaction is NOT significant
+
+# Per year
+perma$year$fb <- adonis2(comm$fb ~  inv$wide$fb$year,  permutations = 999, method = "euclidean", na.rm = T)
+perma$year$fb # significant
+
+# Per filter volume
+perma$method$fb <- adonis2(comm$fb ~ site * season + filter_method, data = inv$wide$fb,
+                           permutations = 999, method = "euclidean", na.rm = T)
+perma$method$fb # filter method does not have significant influence on species assemblage when accounting for site and time
+```
+
+#### CORE
+```{r}
+# By site
+perma$site$core <- adonis2(comm$core~  inv$wide$core$site,  permutations = 999, method = "euclidean", na.rm = T)
+perma$site$core # not significant
+
+# By season
+perma$season$core<- adonis2(comm$core~  inv$wide$core$season,  permutations = 999, method = "euclidean", na.rm = T)
+perma$season$core # not significant
+
+# By site and season
+perma$siteSeason$core<- adonis2(comm$core~  site*season, data = inv$wide$core,  permutations = 999, method = "euclidean", na.rm = T)
+perma$siteSeason$core # not significant
+
+# By year
+perma$year$core<- adonis2(comm$core~  inv$wide$core$year,  permutations = 999, method = "euclidean", na.rm = T)
+perma$year$core # not significant but close
+``` 
+
+### Environmental variables
+
+#### FB250
+```{r}
+perma$enviro$breach$fb <- adonis2(comm$fb ~  year + breach_status, data = inv$wide$fb, permutations = 999, 
+                                  method = "euclidean", na.rm = T)
+perma$enviro$breach$fb # significant
+
+perma$enviro$salinityYear$fb <- adonis2(select(env$salinity$fb, ostracod:terrestrials) ~ year + sal_ppt, 
+                                    data = env$salinity$fb, permutations = 999, method = "euclidean", na.rm = T)
+perma$enviro$salinityYear$fb # salinity significant when year is accounted for
+
+perma$enviro$salinitySite$fb <- adonis2(select(env$salinity$fb, ostracod:terrestrials) ~ site + sal_ppt, 
+                                    data = env$salinity$fb, permutations = 999, method = "euclidean", na.rm = T)
+perma$enviro$salinitySite$fb # salinity NOT significant when site is accounted for
+
+perma$enviro$cond$fb <- adonis2(select(env$cond$fb, ostracod:terrestrials) ~ cond_spec_mS_cm, 
+                                    data = env$cond$fb, permutations = 999, method = "euclidean", na.rm = T)
+perma$enviro$cond$fb # conductivity is significant
+
+perma$enviro$condSite$fb <- adonis2(select(env$cond$fb, ostracod:terrestrials) ~ site + cond_spec_mS_cm, 
+                                    data = env$cond$fb, permutations = 999, method = "euclidean", na.rm = T)
+perma$enviro$condSite$fb # conductivity is NOT significant when site is accounted for
+
+perma$enviro$DO$fb <- adonis2(select(env$DO$fb, ostracod:terrestrials) ~ DO_pct, 
+                                    data = env$DO$fb, permutations = 999, method = "euclidean", na.rm = T)
+perma$enviro$DO$fb # DO is NOT significant
+```
+
+#### CORE
+```{r}
+# Nothing is significant!
+perma$enviro$breach$core <- adonis2(comm$core ~  year + breach_status, data = inv$wide$core, permutations = 999, 
+                                  method = "euclidean", na.rm = T)
+perma$enviro$breach$core 
+
+perma$enviro$salinityYear$core <- adonis2(select(env$salinity$core, ostracod:terrestrials) ~ year + sal_ppt, 
+                                    data = env$salinity$core, permutations = 999, method = "euclidean", na.rm = T)
+perma$enviro$salinityYear$core
+
+perma$enviro$salinitySite$core <- adonis2(select(env$salinity$core, ostracod:terrestrials) ~ site + year + sal_ppt, 
+                                    data = env$salinity$core, permutations = 999, method = "euclidean", na.rm = T)
+perma$enviro$salinitySite$core 
+
+perma$enviro$cond$core <- adonis2(select(env$cond$core, ostracod:terrestrials) ~ cond_spec_mS_cm, 
+                                    data = env$cond$core, permutations = 999, method = "euclidean", na.rm = T)
+perma$enviro$cond$core 
+
+perma$enviro$condSite$core <- adonis2(select(env$cond$core, ostracod:terrestrials) ~ site + cond_spec_mS_cm, 
+                                    data = env$cond$core, permutations = 999, method = "euclidean", na.rm = T)
+perma$enviro$condSite$core 
+
+perma$enviro$DO$core <- adonis2(select(env$DO$core, ostracod:terrestrials) ~ DO_pct, 
+                                    data = env$DO$core, permutations = 999, method = "euclidean", na.rm = T)
+perma$enviro$DO$core 
+```
+
+
+## Community analyses
+
+### Shannon diversity
+
+Shannon diversity is less sensitive to abundance than Simpson diversity, but more sensitive than species evenness. Diversity can be compared between sites and reserves
+
+```{r}
+diversity <- list()
+```
+
+#### By sample
+```{r fig.width = 12}
+# Create species matrix
+diversity$sample$matrix <- inv$wide$fb %>%
+  select(ostracod:terrestrials) %>% select_if(~ !any(is.na(.)))
+
+# Calculate Shannon diversity
+diversity$sample$result <- diversity$sample$matrix %>% 
+  mutate(diversity = vegan::diversity(., "shannon")) %>% select(diversity) %>%
+  cbind(inv$wide$fb)
+
+# Compare Shannon diversity to date
+diversity$sample$result %>% ggplot() + geom_line(aes(x = date, y = diversity, color = site))
+
+View(diversity$sample$result)
+```
+
+```{r}
+# Create species matrix
+#diversity$sample$matrix <- inv$wide$core %>%
+  #select(ostracod:terrestrials) %>% select_if(~ !any(is.na(.)))
+
+# Calculate Shannon diversity
+#diversity$sample$result <- diversity$sample$matrix %>% 
+  #mutate(diversity = vegan::diversity(., "shannon")) %>% select(diversity) %>%
+  #cbind(inv$wide$core)
+
+# Over half of CORE samples had no diversity- only one species detected
+```
+
+#### By site
+```{r}
+diversity$site$matrix <- inv$wide$fb %>%
+  group_by(site) %>%
+  summarize(across(ostracod:terrestrials, ~sum(., na.rm = T))) %>% 
+  column_to_rownames("site") %>%
+  select(ostracod:terrestrials)
+
+diversity$site$result <- diversity$site$matrix %>% vegan::diversity("shannon") %>% as.data.frame() %>% 
+  rename(diversity = 1) %>%
+  rownames_to_column("site")
+
+# All differences are significant
+diversity$site$result %>% left_join(site_index, by = "site") %>%
+ggplot(aes(x = reorder(site_name, diversity), y = diversity, fill = site_desc)) + 
+geom_bar(stat = "identity", position = "dodge") + 
+  labs(x = "Site", y = "Shannon diversity") +
+  ggtitle("Shannon diversity by site, FB250") +
+  theme(axis.text.x = element_text(angle = -45, hjust = 0, vjust = 1))
+```
+
+#### By season
+```{r}
+diversity$season$matrix <- inv$wide$fb %>%
+  group_by(season) %>%
+  summarize(across(ostracod:terrestrials, ~sum(., na.rm = T))) %>% 
+  column_to_rownames("season") %>%
+  select(ostracod:terrestrials)
+
+diversity$season$result <- diversity$season$matrix %>% vegan::diversity("shannon") %>% as.data.frame() %>% 
+  rename(diversity = 1) %>%
+  rownames_to_column("season")
+
+# All differences are significant
+diversity$season$result %>%
+ggplot(aes(x = fct_relevel(season, c("winter", "spring", "summer", "fall")),  y = diversity)) + 
+geom_bar(stat = "identity") + 
+  labs(x = "Season", y = "Shannon diversity") +
+  ggtitle("Shannon diversity by season, FB250") +
+  theme(axis.text.x = element_text(angle = -45, hjust = 0, vjust = 1))
+
+Hutcheson_t_test(diversity$season$matrix[3,], diversity$season$matrix[4,], 
+                 alternative = "auto") # NCOS significantly higher
+```
+
+#### By site and season
+```{r}
+# Create species matrix
+diversity$seasonSite$matrix <- inv$wide$fb %>%
+  group_by(season, site) %>%
+  summarize(across(ostracod:terrestrials, ~sum(., na.rm = T))) %>% 
+  mutate(szn_site = paste(season, site)) %>%
+  column_to_rownames("szn_site") %>%
+  select(ostracod:terrestrials)
+
+# Calculate Shannon diversity
+diversity$seasonSite$result <- diversity$seasonSite$matrix %>% vegan::diversity("shannon") %>% as.data.frame() %>% 
+  rename(diversity = 1) %>%
+  rownames_to_column("szn_site") %>% 
+  separate(szn_site, c("season", "site"), sep = " ")
+
+# All differences are significant (using Hutcheson's t-Test)
+
+# Diversity by season and site
+ggplot(diversity$seasonSite$result, aes(x = site, 
+                                    y = diversity, 
+                                    fill = fct_relevel(season, c("winter", "spring", "summer", "fall")))) +
+geom_bar(stat = "identity", position = "dodge") + 
+  labs(x = "Season", y = "Shannon Diversity", fill = "Site") +
+  ggtitle("Shannon diversity by season and site, FB250")
+```
+
+#### By year group and reserve
+```{r}
+# Create species matrix
+diversity$year$matrix <- inv$wide$fb %>%
+  # Combine pre=pandemic and post-pandemic
+  mutate(yearcomb = case_when(year %in% c(2018, 2019, 2020) ~ "2018-20",
+                              year %in% c(2021, 2022) ~ "2021-22")) %>%
+  group_by(yearcomb, site_reserve) %>%
+  # Sum all species in year|reserve category
+  # Shannon diversity uses relative abundance, so different numbers of samples does not matter when summing
+  summarize(across(ostracod:terrestrials, ~sum(., na.rm = T))) %>%
+  # Remove columns that are only in one year group
+  select(-c(isopod, diptera_syrphidae, larvae, terrestrials)) %>%
+  mutate(year_reserve = paste(yearcomb, site_reserve)) %>%
+  column_to_rownames("year_reserve") %>%
+  select(ostracod:arachnida_acari)
+
+# Calculate Shannon diversity
+diversity$year$result <- vegan::diversity(diversity$year$matrix, "shannon") %>% 
+  as.data.frame() %>% 
+  rename(diversity = 1) %>%
+  rownames_to_column("year_reserve") %>% 
+  separate(year_reserve, c("year", "site_reserve"), sep = " ")
+
+# Visualize table
+diversity$year$result
+
+# Create graph
+ggplot(diversity$year$result, aes(x = year, y = diversity, fill = site_reserve)) + 
+  geom_bar(stat = "identity", position="dodge") +
+  #geom_errorbar() +
+  labs(title = "Shannon diversity by year and reserve, FB250", x = "Year", y = "Shannon diversity", fill ="Reserve")
+
+# Compares 2018-19 COPR and NCOS
+Hutcheson_t_test(diversity$year$matrix[1,], diversity$year$matrix[2,], 
+                 alternative = "auto") # NCOS significantly higher
+# Compares 2020-21 COPR and NCOS
+Hutcheson_t_test(diversity$year$matrix[3,], diversity$year$matrix[4,], 
+                 alternative = "auto") # NCOS significantly higher
+# Compares COPR between years
+Hutcheson_t_test(diversity$year$matrix[1,], diversity$year$matrix[3,], 
+                 alternative = "auto") # No significant difference
+# Compares NCOS between years
+Hutcheson_t_test(diversity$year$matrix[2,], diversity$year$matrix[4,], 
+                 alternative = "auto") # No significant difference (but close!)
+```
+
+#### By season and reserve
+```{r}
+# Create species matrix
+diversity$season$matrix <- inv$wide$fb %>%
+  group_by(season, site_reserve) %>%
+  summarize(across(ostracod:terrestrials, ~sum(., na.rm = T))) %>% 
+  mutate(szn_reserve = paste(season, site_reserve)) %>%
+  column_to_rownames("szn_reserve") %>%
+  select(ostracod:terrestrials)
+
+# Calculate Shannon diversity
+diversity$season$result <- diversity$season$matrix %>% vegan::diversity("shannon") %>% as.data.frame() %>% 
+  rename(diversity = 1) %>%
+  rownames_to_column("szn_reserve") %>% 
+  separate(szn_reserve, c("season", "site_reserve"), sep = " ")
+
+# All differences are significant (using Hutcheson's t-Test)
+
+ggplot(diversity$season$result, aes(x = fct_relevel(season, c("winter", "spring", "summer", "fall")), 
+                                    y = diversity, fill = site_reserve)) +
+geom_bar(stat = "identity", position = "dodge") + 
+  labs(x = "Season", y = "Shannon Diversity", fill = "Preserve") +
+  ggtitle("Shannon diversity by season and reserve, FB250")
+```
+
+#### By breach
+```{r}
+# Create species matrix
+diversity$breach$matrix <- inv$wide$fb %>%
+  select(ostracod:terrestrials) %>% select_if(~ !any(is.na(.)))
+
+# Calculate Shannon diversity
+diversity$breach$result <- diversity$breach$matrix %>%
+  mutate(diversity = vegan::diversity(., "shannon")) %>% select(diversity) %>%
+  cbind(inv$wide$fb %>% select(year, season, site, filter_method, breach_status))
+
+diversity$breach$lm <- lm(diversity ~ breach_status, data = diversity$breach$result)
+summary(diversity$breach$lm) # Tidal has significantly higher diversity
+
+diversity$breach$lme <- lme(fixed = diversity ~ breach_status, random = ~ 1|site, data = diversity$breach$result)
+summary(diversity$breach$lme) # Tidal has significantly higher diversity
+```
+
+### NMDS
+```{r}
+nmds <- list()
+```
+
+#### By Site
+
+##### FB250
+```{r fig.height=6, fig.width=10}
+# All sites, stress = 0.06
+nmds$site$fb250 <- inv$wide$fb %>% select(site, ostracod:terrestrials) %>%
+  group_by(site) %>% 
+  summarize(across(ostracod:terrestrials, ~sum(.x, na.rm = T))) %>%
+  column_to_rownames("site") %>% metaMDS(autotransform = F) %>% # much less stress without transformation
+  fortify() %>% left_join(site_index, by = c("Label" = "site")) %>% 
+  group_by(Score) %>% arrange(desc(sqrt(NMDS1^2 + NMDS2^2)), .by_group = T)
+
+# NMDS with species vectors
+ggplot() + 
+  # Site points
+  geom_point(aes(x = NMDS1, y = NMDS2, color = site_desc), 
+             subset(nmds$site$fb250 , Score == "sites")) + 
+  # Site labels
+  geom_text_repel(aes(label = Label, x = NMDS1, y = NMDS2, color = site_desc), 
+                  subset(nmds$site$fb250 , Score == "sites"), force = 2, show.legend = F) +
+  # Species arrows
+  geom_segment(aes(x = 0, y = 0, xend = NMDS1*0.3, yend = NMDS2*0.3), 
+               filter(nmds$site$fb250, Score == "species") %>% head(15), # get 15 most influential species
+               arrow = arrow(length = unit(0.015, "npc"), type = "closed"),  color = "darkgray", size = 0.8, alpha = 0.5) +
+  # Species labels
+  geom_text_repel(aes(x = NMDS1*0.3, y = NMDS2*0.3, label = Label), 
+            filter(nmds$site$fb250, Score == "species") %>% head(15), 
+            size = 2, force = 3, alpha = 0.5) +
+  labs(title = "NMDS by site, FB250 method", color = "Site Type") + theme_bw()
+
+# NMDS without species vectors
+ggplot() + 
+  # Site points
+  geom_point(aes(x = NMDS1, y = NMDS2, color = site_desc), 
+             subset(nmds$site$fb250 , Score == "sites")) + 
+  # Site labels
+  geom_text_repel(aes(label = site_name, x = NMDS1, y = NMDS2, color = site_desc), 
+                  subset(nmds$site$fb250 , Score == "sites"), force = 2, show.legend = F) +
+  labs(title = "NMDS by site, FB250 method", color = "Site Type") + theme_bw()
+```
+
+##### CORE
+```{r}
+# All sites, stress = 0.07
+nmds$site$core <- inv$wide$core %>% select(site, ostracod:terrestrials) %>%
+  group_by(site) %>% 
+  summarize(across(ostracod:terrestrials, ~sum(.x, na.rm = T))) %>%
+  column_to_rownames("site") %>% metaMDS(autotransform = F) %>% # much less stress without transformation
+  fortify() %>% left_join(site_index, by = c("Label" = "site")) %>% 
+  group_by(Score) %>% arrange(desc(sqrt(NMDS1^2 + NMDS2^2)), .by_group = T)
+
+# NMDS with species vectors
+ggplot() + 
+  # Site points
+  geom_point(aes(x = NMDS1, y = NMDS2, color = site_desc), 
+             subset(nmds$site$core , Score == "sites")) + 
+  # Site labels
+  geom_text_repel(aes(label = Label, x = NMDS1, y = NMDS2, color = site_desc), 
+                  subset(nmds$site$core , Score == "sites"), force = 2, show.legend = F) +
+  # Species arrows
+  geom_segment(aes(x = 0, y = 0, xend = NMDS1, yend = NMDS2), 
+               filter(nmds$site$core, Score == "species") %>% head(15), # get 15 most influential species
+               arrow = arrow(length = unit(0.015, "npc"), type = "closed"),  color = "darkgray", size = 0.8, alpha = 0.5) +
+  # Species labels
+  geom_text_repel(aes(x = NMDS1, y = NMDS2, label = Label), 
+            filter(nmds$site$core, Score == "species") %>% head(15), 
+            size = 2, force = 3, alpha = 0.5) +
+  labs(title = "NMDS by site, CORE method", color = "Site Type") + theme_bw()
+
+# NMDS without species vectors
+ggplot() + 
+  # Site points
+  geom_point(aes(x = NMDS1, y = NMDS2, color = site_desc), 
+             subset(nmds$site$core , Score == "sites")) + 
+  # Site labels
+  geom_text_repel(aes(label = site_name, x = NMDS1, y = NMDS2, color = site_desc), 
+                  subset(nmds$site$core , Score == "sites"), force = 2, show.legend = F) +
+  labs(title = "NMDS by site, CORE method", color = "Site Type") + theme_bw()
+```
+
+#### By Season
+
+##### FB250
+
+###### By site and season
+```{r fig.height=6, fig.width=10}
+# All sites, stress = 0.06
+nmds$season$fb250 <- inv$wide$fb %>% select(site, season, ostracod:terrestrials) %>%
+  group_by(site, season) %>% 
+  summarize(across(ostracod:terrestrials, ~sum(.x, na.rm = T))) %>% 
+  mutate(site_season = paste(site, season)) %>% column_to_rownames("site_season") %>% select(-c(site, season)) %>%
+  metaMDS(autotransform = F) %>% # much less stress without transformation
+  fortify() %>% mutate(species = Label) %>% separate(Label, c("site", "season")) %>% left_join(site_index, by = "site") %>% 
+  group_by(Score) %>% arrange(desc(sqrt(NMDS1^2 + NMDS2^2)), .by_group = T)
+
+# NMDS with species vectors
+ggplot() + 
+  # Site points
+  geom_point(aes(x = NMDS1, y = NMDS2, color = season), 
+             subset(nmds$season$fb250 , Score == "sites")) + 
+  # Site labels
+  geom_text_repel(aes(label = site, x = NMDS1, y = NMDS2, color = season), 
+                  subset(nmds$season$fb250 , Score == "sites"), force = 2, show.legend = F) +
+  # Species arrows
+  geom_segment(aes(x = 0, y = 0, xend = NMDS1, yend = NMDS2), 
+               filter(nmds$season$fb250, Score == "species") %>% head(15), # get 15 most influential species
+               arrow = arrow(length = unit(0.015, "npc"), type = "closed"),  color = "darkgray", size = 0.8, alpha = 0.5) +
+  # Species labels
+  geom_text_repel(aes(x = NMDS1, y = NMDS2, label = species), 
+            filter(nmds$season$fb250, Score == "species") %>% head(15), 
+            size = 2, force = 3, alpha = 0.5) +
+  labs(title = "NMDS by site, FB250 method", color = "Season") + theme_bw()
+
+# NMDS without species vectors
+ggplot() + 
+  # Site points
+  geom_point(aes(x = NMDS1, y = NMDS2, color = season), 
+             subset(nmds$season$fb250 , Score == "sites")) + 
+  # Site labels
+  geom_text_repel(aes(label = site_name, x = NMDS1, y = NMDS2, color = season), 
+                  subset(nmds$season$fb250 , Score == "sites"), force = 2, show.legend = F) +
+  labs(title = "NMDS by site, FB250 method", color = "Site Type") + theme_bw()
+```
+###### By reserve and season
+```{r}
+nmds$season_reserve$fb250 <- inv$wide$fb %>% select(site_reserve, season, ostracod:terrestrials) %>%
+  group_by(site_reserve, season) %>% 
+  summarize(across(ostracod:terrestrials, ~sum(.x, na.rm = T))) %>% 
+  mutate(reserve_season = paste(site_reserve, season)) %>% column_to_rownames("reserve_season") %>% 
+  select(-c(site_reserve, season)) %>%
+  metaMDS(autotransform = F) %>% # much less stress without transformation
+  fortify() %>% mutate(species = Label) %>% separate(Label, c("reserve", "season")) %>%
+  group_by(Score) %>% arrange(desc(sqrt(NMDS1^2 + NMDS2^2)), .by_group = T)
+
+# NMDS with species vectors
+ggplot() + 
+  # Site points
+  geom_point(aes(x = NMDS1, y = NMDS2, color = season), 
+             subset(nmds$season_reserve$fb250 , Score == "sites")) + 
+  # Site labels
+  geom_text_repel(aes(label = reserve, x = NMDS1, y = NMDS2, color = season), 
+                  subset(nmds$season_reserve$fb250 , Score == "sites"), force = 2, show.legend = F) +
+  # Species arrows
+  geom_segment(aes(x = 0, y = 0, xend = NMDS1, yend = NMDS2), 
+               filter(nmds$season_reserve$fb250, Score == "species") %>% head(15), # get 15 most influential species
+               arrow = arrow(length = unit(0.015, "npc"), type = "closed"),  color = "darkgray", size = 0.8, alpha = 0.5) +
+  # Species labels
+  geom_text_repel(aes(x = NMDS1, y = NMDS2, label = species), 
+            filter(nmds$season_reserve$fb250, Score == "species") %>% head(15), 
+            size = 2, force = 3, alpha = 0.5) +
+  labs(title = "NMDS by site, FB250 method", color = "Season") + theme_bw()
+```
+
+#### By Year
+```{r}
+nmds$year_reserve$fb250 <- inv$wide$fb %>% select(site_reserve, year, ostracod:terrestrials) %>%
+  group_by(site_reserve, year) %>% 
+  summarize(across(ostracod:terrestrials, ~sum(.x, na.rm = T))) %>% 
+  mutate(reserve_year = paste(site_reserve, year)) %>% column_to_rownames("reserve_year") %>% 
+  select(-c(site_reserve,year)) %>%
+  metaMDS(autotransform = F) %>% # much less stress without transformation
+  fortify() %>% mutate(species = Label) %>% separate(Label, c("reserve", "year")) %>%
+  group_by(Score) %>% arrange(desc(sqrt(NMDS1^2 + NMDS2^2)), .by_group = T)
+
+# NMDS with species vectors
+ggplot() + 
+  # Site points
+  geom_point(aes(x = NMDS1, y = NMDS2, color = year), 
+             subset(nmds$year_reserve$fb250 , Score == "sites")) + 
+  # Site labels
+  geom_text_repel(aes(label = reserve, x = NMDS1, y = NMDS2, color = year), 
+                  subset(nmds$year_reserve$fb250 , Score == "sites"), force = 2, show.legend = F) +
+  # Species arrows
+  geom_segment(aes(x = 0, y = 0, xend = NMDS1*0.3, yend = NMDS2*0.3), 
+               filter(nmds$year_reserve$fb250, Score == "species") %>% head(15), # get 15 most influential species
+               arrow = arrow(length = unit(0.015, "npc"), type = "closed"),  color = "darkgray", size = 0.8, alpha = 0.5) +
+  # Species labels
+  geom_text_repel(aes(x = NMDS1*0.3, y = NMDS2*0.3, label = species), 
+            filter(nmds$year_reserve$fb250, Score == "species") %>% head(15), 
+            size = 2, force = 3, alpha = 0.5) +
+  labs(title = "NMDS by site, FB250 method", color = "Season") + theme_bw()
+```
+
+### Network analysis
+
+This is for fun. I was hoping that food chain relationships would be evident, but crustaceans are not very well represented.
+
+#### Create network
+```{r}
+network <- list()
+
+network$adjacency <- invLong %>% 
+  
+  # remove all rows with a taxa that has less than 5 nonzero counts
+  group_by(taxa) %>%
+  filter(sum(organisms_L != 0) >= 5) %>%
+  ungroup() %>%
+  
+  select(taxa, organisms_L) %>%
+  group_by(taxa) %>%
+  pairwise_cor(taxa, organisms_L, method = "pearson") %>%
+  arrange(item1, item2) %>%
+  ungroup() %>%
+  select(item1, item2, correlation) %>%
+  pivot_wider(names_from = item2, values_from = correlation) %>%
+  column_to_rownames("item1") %>% as.matrix()
+
+network$adjacencyBinary <- network$adjacency %>% as.data.frame() %>% 
+  mutate(across(everything(), ~ifelse(.x > 
+                                        quantile(as.vector(network$adjacency), 
+                                                 probs = 0.90, # Choose quantile cutoff here
+                                                 na.rm = T)
+                                        , 1,0))) %>% as.matrix()
+
+# create network graph
+network$graph <- graph_from_adjacency_matrix(network$adjacencyBinary, mode = "undirected") %>% as_tbl_graph()
+
+network$degree <- degree(network$graph)
+network$betweenness <- betweenness(network$graph)
+network$closeness <- closeness(network$graph)
+network$eccentricity <- eccentricity(network$graph)
+```
+
+#### Visualize network
+```{r fig.height = 8, fig.width = 10}
+network$graph %>% 
+  activate(nodes) %>%
+  filter(centrality_degree() > 1) %>%
+  mutate(degree = centrality_degree()) %>%
+  ggraph(layout = "dh") + 
+    geom_edge_link() + 
+    geom_node_point(aes(size = degree), colour = 'steelblue') +
+    geom_node_label(aes(label = name), size = 2, repel = T)+
+    theme_graph()
+
+# layouts available: c('star', 'circle', 'gem', 'dh', 'graphopt', 'grid', 'mds', 'randomly', 'fr', 'kk', 'drl', 'lgl')
+```
+
+
+
+## Models based on environmental and site variables
+### Water quality and diversity
+#### Per sample
+
+```{r}
+diversity$sample$result
+ggplot(diversity$sample$result) + geom_boxplot(aes(x = breach_status, y = diversity))
+ggplot(diversity$sample$result) + geom_point(aes(x = DO_pct, y = diversity))
+ggplot(diversity$sample$result) + geom_point(aes(x = sqrt(sal_ppt), y = diversity))
+
+diversity$salinity$lm <- lm(diversity ~ sal_ppt + sal_ppt:pH, data = diversity$sample$result)
+summary(diversity$salinity$lm) # Significant, R2 = 0.08, not useful
+```
+
+#### Per site
+```{r}
+# Comparing salinity and diversity per site
+diversity$site$salinity<- inv$wide$all %>% group_by(site) %>% 
+  summarize(sal_ppt_range = diff(range(sal_ppt, na.rm = T)),
+            across(DO_mg_L:baro_mm_Hg, ~mean(., na.rm = T)),
+            pH = exp(mean(log(pH), na.rm = T))) %>% 
+  left_join(diversity$site$result, by = "site")
+
+# Quadratic regression (for IDH)
+ggplot(diversity$site$salinity, aes(x = cond_spec_mS_cm, y = diversity)) + 
+  geom_point(aes(color = pH)) +
+  geom_smooth(inherit.aes = T, method = "glm", formula = y ~ x + I(x^2)) +
+  geom_text_repel(aes(label = site))
+
+lm(diversity ~ cond_spec_mS_cm + I(cond_spec_mS_cm^2), data = diversity$siteAvg$result) %>% summary() # 0.07, R2 = 0.44
+lm(diversity ~ sal_ppt + I(sal_ppt^2) + pH, data = diversity$siteAvg$result) %>% summary() # 0.03, R2 = 0.64
+
+# Splines (for IDH)
+ggplot(diversity$siteAvg$result, aes(x = sal_ppt, y = diversity)) + 
+  geom_point(aes(color = pH)) +
+  geom_smooth(inherit.aes = T, method = "gam")
+
+gam(diversity ~ s(sal_ppt, bs = "cs"), data = diversity$siteAvg$result) %>% summary()
+
+# Salinity range and diversity
+ggplot(diversity$siteAvg$result, aes(x = sal_ppt_range, y = diversity)) + 
+  geom_point() +
+  geom_smooth(inherit.aes = T, method = "lm", formula = y ~ x + I(x^2))
+lm(diversity ~ sal_ppt_range + I(sal_ppt_range^2), data = diversity$siteAvg$result) %>% summary()
+
+# Conductivity and diversity
+ggplot(diversity$siteAvg$result, aes(x = cond_spec_mS_cm, y = diversity)) + 
+  geom_point() +
+  geom_smooth(inherit.aes = T, method = "lm", formula = y ~ x + I(x^2))
+lm(diversity ~ cond_spec_mS_cm + I(cond_spec_mS_cm^2), data = diversity$siteAvg$result) %>% summary()
+
+```
+
+#### Per site and season
+```{r}
+# Make table diversite per site/season and water quality
+diversity$sitesznAvg$result <- inv$wide$all %>% group_by(site, season) %>% 
+  summarize(across(DO_mg_L:baro_mm_Hg, ~mean(., na.rm = T)),
+            pH = exp(mean(log(pH), na.rm = T))) %>% 
+  left_join(diversity$seasonSite$result, by = c("site", "season")) %>% 
+  mutate(season = fct_reorder(season, c("winter", "spring", "summer", "fall")))
+# graph of salinity by site and season
+ggplot(diversity$sitesznAvg$result) + 
+  geom_bar(aes(x = site, y = sal_ppt, fill = season), stat = "identity", position = "dodge")
+
+# summarize per site
+diversity$sitesznAvg$resultAvg <- diversity$sitesznAvg$result %>% group_by(site) %>% summarize(sal_ppt = mean(sal_ppt, na.rm = T))
+# Graph of site salinity with seasons averaged
+ggplot(diversity$sitesznAvg$resultAvg) + 
+  geom_bar(aes(x = fct_reorder(site, sal_ppt), y = sal_ppt), stat = "identity")
+
+# Quadratic regression of diversity and salinity
+ggplot(diversity$sitesznAvg$result, aes(x = sal_ppt, y = diversity)) + 
+  geom_point(aes(color = pH)) +
+  geom_smooth(inherit.aes = T, method = "lm", formula = y ~ x + I(x^2))
+lm(diversity ~ sal_ppt + I(sal_ppt^2), data = diversity$sitesznAvg$result) %>% summary()
+lm(diversity ~ sal_ppt + I(sal_ppt^2) + pH, data = diversity$sitesznAvg$result) %>% summary()
+
+# Quadratic regression of diversity and conductivity
+ggplot(diversity$sitesznAvg$result, aes(x = cond_spec_mS_cm, y = diversity)) + 
+  geom_point() +
+  geom_smooth(inherit.aes = T, method = "lm")
+lm(diversity ~ cond_spec_mS_cm + I(cond_spec_mS_cm^2), data = diversity$sitesznAvg$result) %>% summary()
+
+
+# Splines of diversity and salinity
+ggplot(diversity$sitesznAvg$result, aes(x = sal_ppt, y = diversity)) + 
+  geom_point(aes(color = pH)) +
+  geom_smooth(inherit.aes = T, method = "gam")
+
+gam(diversity ~ s(sal_ppt, bs = "cs"), data = diversity$sitesznAvg$result) %>% summary()
+gam(diversity ~ s(sal_ppt, bs = "cs"), data = diversity$sitesznAvg$result) %>% summary()
+```
+### Water quality and abundance
+
+#### Get organism and water quality variable names
+```{r}
+invSpeciesName <- list()
+invSpeciesName$fb$smooth <- inv$wide$fb %>% select(ostracod:terrestrials) %>% names()
+
+invEnviroName <- list()
+invEnviroName$fb$smooth <- inv$wide$fb %>% select(DO_mg_L:pH) %>% names()
+```
+
+#### Overall abundance
+```{r}
+abundance <- list()
+```
+```{r}
+abundance$cond$matrix <- inv$wide$fb %>%
+  select(total, cond_spec_mS_cm) %>% na.omit()
+abundance$salinity$matrix <- inv$wide$fb %>%
+  select(total, sal_ppt) %>% na.omit()
+abundance$DO$matrix <- inv$wide$fb %>%
+  select(total, DO_pct) %>% na.omit()
+abundance$pH$matrix <- inv$wide$fb %>%
+  select(total, pH) %>% na.omit()
+
+cor.test(abundance$cond$matrix$total, abundance$cond$matrix$cond_spec_mS_cm, method = "spearman") # not significant
+cor.test(abundance$salinity$matrix$total, abundance$salinity$matrix$sal_ppt, method = "spearman") # not significant
+cor.test(abundance$DO$matrix$total, abundance$DO$matrix$DO_pct, method = "spearman") # significant, r = -0.17
+cor.test(abundance$pH$matrix$total, abundance$pH$matrix$pH, method = "spearman") # not significant
+
+abundance$salinity$lm <- lm(log(total+1) ~ sal_ppt, data = inv$wide$fb)
+summary(abundance$salinity$lm)
+
+abundance$sal_DO$lm <- lm(log(total+1) ~ sal_ppt + DO_pct, data = inv$wide$fb)
+summary(abundance$sal_DO$lm) # r = 0.23, R2 = 0.05
+```
+
+#### Individual species abundance
+
+##### Salinity
+```{r message=FALSE, warning=FALSE}
+for (i in invSpeciesName$fb$smooth) {
+    print(inv$long$fb %>% filter(taxa == i) %>%
+          ggplot(aes(x = log(sal_ppt+1), y = log(organisms_L+1))) + 
+          geom_point(aes(color = breach_status)) + 
+          geom_vline(xintercept = log(55), color = "blue") +
+          #geom_smooth(method = "gam") + 
+          ggtitle(paste("Salinity and", i, "abundance, log-transformed")))
+}
+
+inv$long$fb %>% filter(taxa == "ostracod") %>% lm(organisms_L_log ~ log(sal_ppt+1) + season, data = .) %>% summary()
+inv$long$fb %>% filter(taxa == "cladocera") %>% lm(organisms_L_log ~ log(sal_ppt+1) + season, data = .) %>% summary()
+
+inv$wide$fb %>% lm(log(total+1) ~ breach_status + site + year + , data = .) %>% summary()
+```
+
+##### pH
+```{r message=FALSE, warning=FALSE}
+for (i in invSpeciesName$fb$smooth) {
+  print(inv$long$fb %>% filter(sample_type == "FB250", taxa == i) %>%
+          ggplot(aes(x = pH, y = log(organisms_L + 1))) + 
+          geom_point(aes(color = breach_status)) + geom_smooth(aes(color = breach_status), method = "gam") + 
+          ggtitle(paste("pH and log-transformed", i, "abundance")))
+}
+```
+
+
+##### Spec Cond
+```{r message=FALSE, warning=FALSE}
+for (i in invSpeciesName$fb$smooth) {
+  print(inv$long$fb %>% filter(taxa == i) %>%
+          ggplot(aes(x = log(cond_spec_mS_cm + 1), y = log(organisms_L + 1))) + 
+          geom_point(aes(color = breach_status)) + geom_smooth(aes(color = breach_status), method = "gam") + 
+          ggtitle(paste("Conductivity and", i, "abundance, log-transformed")))
+}
+```
+
+##### Temperature
+```{r message=FALSE, warning=FALSE}
+for (i in invSpeciesName) {
+  print(invLong %>% filter(sample_type == "FB250", taxa == i) %>%
+          ggplot(aes(x = temp_c, y = log(organisms_L + 1))) + 
+          geom_point(aes(color = breach_status)) + geom_smooth(method = "gam") + 
+          ggtitle(paste("Temperature and log-transformed", i, "abundance")))
+}
+```
+
+##### Baro
+```{r message=FALSE, warning=FALSE}
+for (i in invSpeciesName) {
+  print(invLong %>% filter(sample_type == "FB250", taxa == i) %>%
+          ggplot(aes(x = baro_mm_Hg, y = log(organisms_L + 1))) + 
+          geom_point(aes(color = breach_status)) + geom_smooth(method = "gam") + 
+          ggtitle(paste("Barometric pressure and log-transformed", i, "abundance")))
+}
+```
+
+### Breaching mixed model
+
+```{r}
+mixedModel <- list()
+```
+```{r}
+# Get names of all species with at least one observation
+invSpeciesName$fb$lme$breach <- inv$wide$fb %>% filter(site %in% c("MO1", "PIER", "VBR1", "NVBR", "NEC", "NMC")) %>% 
+  select(ostracod:terrestrials) %>% 
+  select(where(function(x) sum(x != 0, na.rm = T) > 1)) %>% 
+  names() %>% c(., "total")
+```
+
+#### Separate tidal and post-breach periods
+```{r}
+# Breach effect
+mixedModel$breach <- list()
+for (i in invSpeciesName$fb$lme$breach) {
+  mixedModel$breach[[i]] <- inv$wide$fb %>% 
+    filter(site %in% c("MO1", "PIER", "VBR1", "NVBR", "NEC", "NMC"), 
+           if_all(c(i, breach_status), ~!is.na(.))) %>%
+    lme(fixed = as.formula(paste(i, "~ breach_status")), 
+        random = list(site = ~ 1|site,
+                      filter_method = ~ 1|filter_method),
+        data = .)
+  
+  summary <- summary(mixedModel$breach[[i]])
+  
+  if (any(summary$tTable[,"p-value"] <0.05)) {
+    print(paste(i, "is significant"))
+  }
+}
+
+summary(mixedModel$breach$cladocera) # more tidal
+summary(mixedModel$breach$annelida_oligochaete) # more tidal
+summary(mixedModel$breach$annelida_polychaete) # more post-breach
+summary(mixedModel$breach$nematode) # more post-breach
+summary(mixedModel$breach$coleoptera_sp) # more post-breach
+summary(mixedModel$breach$collembola_springtail) # more tidal
+summary(mixedModel$breach$terrestrials) # more post-breach
+# rest have significant intercept
+```
+
+#### Combined todal and post-breach periods
+```{r}
+breachSimpleTable  <- inv$wide$fb %>% 
+  mutate(breach_status_simple = case_when(breach_status %in% c("tidal", "post-breach") ~ "opened", 
+                                          TRUE ~ "closed"))
+# Breach effect
+mixedModel$breach_simple <- list()
+for (i in invSpeciesName$fb$lme$breach) {
+  mixedModel$breach_simple[[i]] <- breachSimpleTable %>% 
+    filter(site %in% c("MO1", "PIER", "VBR1", "NVBR", "NEC", "NMC"),
+           if_all(c(i, breach_status), ~!is.na(.))) %>%
+    lme(fixed = as.formula(paste(i, "~ breach_status_simple")), 
+        random = list(site = ~ 1|site,
+                      filter_method = ~ 1|filter_method),
+        data = .)
+  
+  summary <- summary(mixedModel$breach_simple[[i]])
+  
+  if (any(summary$tTable[,"p-value"] <0.05)) {
+    print(paste(i, "is significant"))
+  }
+}
+
+summary(mixedModel$breach_simple$cladocera) # more opened
+summary(mixedModel$breach_simple$annelida_polychaete) # more opened
+summary(mixedModel$breach_simple$terrestrials) # more opened
+# rest have significant intercept
+
+rm(breachSimpleTable)
+```
+
+
+## Macroinvertebrate Index
+```{r}
+tolerance_index <- read_csv("raw_data/macro_index.csv")
+
+MacIndex <- function(longTable, grouping) {
+  indexResult <- longTable %>% 
+    filter(!taxa %in% c("copepod", "ostracod", "cladocera", "amphipod", "isopod", 
+                        "trichoptera_sp", "larvae", "terrestrials")) %>% 
+    group_by({{grouping}}) %>%
+    mutate(percent = organisms_L/sum(organisms_L)) %>%
+    left_join(tolerance_index, by = "taxa") %>%
+    mutate(tolerance_product = tolerance*percent) %>%
+    summarize(tolerance_index = sum(tolerance_product))
+           
+  return(indexResult)
+}
+
+MacIndex(inv$long$fb, site) %>% left_join(site_index, by = "site") %>% ggplot() + 
+  geom_bar(aes(x = fct_reorder(site, tolerance_index), y = tolerance_index, fill = site_desc), stat = "identity") + 
+  coord_cartesian(ylim = c(6,8.5))
+```

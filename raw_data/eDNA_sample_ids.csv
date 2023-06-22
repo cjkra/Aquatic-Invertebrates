@@ -1,71 +1,77 @@
-﻿Barcode,Site,Date,NCOS or COPR,Full site Name
-XOCTKIVA,NPB,11/16/2021,NCOS,Phelps Bridge
-CVI9JR2K,CUL1,11/16/2021,COPR,Culvert
-LLWCAYM3,PIER,11/16/2021,COPR,Pier
-PSKOYG86,MO1,11/16/2021,COPR,Mouth
-RPSYC3SA,NPB2,11/23/2021,NCOS,Phelps Bridge 2
-53CM7JPJ,VP1,1/14/2022,COPR,Vernal Pool 1
-17OXC1IX,NVP2,1/20/2022,NCOS,Vernal Pool 2
-5J7FNP4O,NVP4,1/20/2022,NCOS,Vernal Pool 4
-GJDV8PYM,NWP,1/28/2022,NCOS,West Pond
-XEL7KT2G,NDC,1/28/2022,NCOS,Devereux Creek
-0CEL3NO8,NPB,2/21/2022,NCOS,Phelps Bridge
-38WW1C5A,CUL1,2/22/2022,COPR,Culvert
-XFXCT0L6,NVBR,2/23/2022,NCOS,Venoco Bridge
-0IOX2T8L,NPB1,2/23/2022,NCOS,Phelps Bridge 1
-CGEMAYKY,MO1,2/24/2022,COPR,Mouth
-O0LYM0YU,PIER,2/26/2022,COPR,Pier
-0NOSWX7W,NEC,2/25/2022,NCOS,East Channel
-GHYRWQ8W,NEC,5/5/2022,NCOS,East Channel
-A76BYNY4,NMC,5/6/2022,NCOS,Main Channel
-8RHC0YBR,CUL1,5/10/2022,COPR,Culvert
-VAVM5TF7,MO1,5/10/2022,COPR,Mouth
-1PE37FGF,NWP,5/11/2022,NCOS,West Pond
-WS7KZWVL,NDC,5/11/2022,NCOS,Devereux Creek
-1VSWCRMT,NPB1,5/12/2022,NCOS,Phelps Bridge 1
-DTDENWBP,NPB,5/12/2022,NCOS,Phelps Bridge
-0L0KTXL0,PIER,5/12/2022,COPR,Pier
-6XDCL142,NVBR,5/13/2022,NCOS,Venoco Bridge
-12AI55MM,NEC,6/24/2022,NCOS,East Channel
-ZWDZ7WZK,NPB2,8/8/2022,NCOS,Phelps Bridge 2
-BMUDL134,PIER,8/9/2022,COPR,Pier
-91TGAHP8,NPB,8/10/2022,NCOS,Phelps Bridge
-RJD00L2Q,CUL1,8/18/2022,COPR,Culvert
-NO77X77Z,NEC,8/12/2022,NCOS,East Channel
-F0XPDBKX,NVBR,8/12/2022,NCOS,Venoco Bridge
-3LAFC32T,NMC,8/15/2022,NCOS,Main Channel
-AV00ETE1,MO1,8/26/2022,COPR,Mouth
-S034210,MO1,11/16/2021,COPR,Mouth
-S034179,NVBR,11/16/2021,NCOS,Venoco Bridge
-S034195,NPB2,11/16/2021,NCOS,Phelps Bridge 2
-S034169,owl pellet,,CCBER,ground owl pellet
-S034170,owl pellet,,CCBER,ground owl pellet
-S034149,owl pellet,,CCBER,ground owl pellet
-S034168,owl pellet,,CCBER,ground owl pellet
-S034214,owl pellet,,CCBER,unground owl pellet
-S034127,pollen,,CCBER,Pollen from VMMV on Melissodes
-S034199,pollen,,CCBER,Pollen from Bombus vosnesenskii from Lagoon island
-S034126,pollen,,CCBER,Pollen from Bombus crotchii
-S034148,bird dropping,,CCBER,Semi palmated plover fresh dropping
-S034208,bird dropping,,CCBER,Least Sandpiper fresh dropping
-S034171,bird dropping,,CCBER,Killdeer fresh dropping
-S034158,soil amendment,,CCBER,BCOC-S (0-10)
-S034147,soil amendment,,CCBER,BCOC-D (30-40)
-S034166,soil amendment,,CCBER,BCBC-S (0-10)
-S034191,soil amendment,,CCBER,BCBC-D (30-40)
-S034138,soil amendment,,CCBER,BCOO-S (0-10)
-S034128,soil amendment,,CCBER,BCOO-D (30-40)
-S034202,soil amendment,,CCBER,OCBC-S (0-10)
-S034187,soil amendment,,CCBER,OCBC-D (30-40)
-S034155,soil amendment,,CCBER,OCOC-S (0-10)
-S034173,soil amendment,,CCBER,OCOC-D (30-40)
-S034150,soil amendment,,CCBER,OCOO-S (0-10)
-S034174,soil amendment,,CCBER,OCOO-D (30-40)
-S034205,owl pellet,,CCBER,ground owl pellet
-VUKMSLPR,NPB1,11/19/2022,NCOS,Phelps Bridge 1
-RJRB1V9F,MO1,11/11/2022,COPR,Mouth
-M8XO50RP,PIER ,11/11/2022,COPR,Pier
-9CXHHFVN,NEC,11/12/2022,NCOS,East Channel
-3CHOPUC7,,,CCBER,
-0XUIGO0E,NVBR,11/18/2022,NCOS,Venoco Bridge
-04Q3DGUX,NDC,11/19/2022,NCOS,Devereux Creek
+﻿Barcode,Site,Date,Sample_Type,NCOS or COPR,Full site Name
+XOCTKIVA,NPB,11/16/2021,Aquatic,NCOS,Phelps Bridge
+CVI9JR2K,CUL1,11/16/2021,Aquatic,COPR,Culvert
+LLWCAYM3,PIER,11/16/2021,Aquatic,COPR,Pier
+PSKOYG86,MO1,11/16/2021,Aquatic,COPR,Mouth
+RPSYC3SA,NPB2,11/23/2021,Aquatic,NCOS,Phelps Bridge 2
+53CM7JPJ,VP1,1/14/2022,Aquatic,COPR,Vernal Pool 1
+17OXC1IX,NVP2,1/20/2022,Aquatic,NCOS,Vernal Pool 2
+5J7FNP4O,NVP4,1/20/2022,Aquatic,NCOS,Vernal Pool 4
+GJDV8PYM,NWP,1/28/2022,Aquatic,NCOS,West Pond
+XEL7KT2G,NDC,1/28/2022,Aquatic,NCOS,Devereux Creek
+0CEL3NO8,NPB,2/21/2022,Aquatic,NCOS,Phelps Bridge
+38WW1C5A,CUL1,2/22/2022,Aquatic,COPR,Culvert
+XFXCT0L6,NVBR,2/23/2022,Aquatic,NCOS,Venoco Bridge
+0IOX2T8L,NPB1,2/23/2022,Aquatic,NCOS,Phelps Bridge 1
+CGEMAYKY,MO1,2/24/2022,Aquatic,COPR,Mouth
+O0LYM0YU,PIER,2/26/2022,Aquatic,COPR,Pier
+0NOSWX7W,NEC,2/25/2022,Aquatic,NCOS,East Channel
+GHYRWQ8W,NEC,5/5/2022,Aquatic,NCOS,East Channel
+A76BYNY4,NMC,5/6/2022,Aquatic,NCOS,Main Channel
+8RHC0YBR,CUL1,5/10/2022,Aquatic,COPR,Culvert
+VAVM5TF7,MO1,5/10/2022,Aquatic,COPR,Mouth
+1PE37FGF,NWP,5/11/2022,Aquatic,NCOS,West Pond
+WS7KZWVL,NDC,5/11/2022,Aquatic,NCOS,Devereux Creek
+1VSWCRMT,NPB1,5/12/2022,Aquatic,NCOS,Phelps Bridge 1
+DTDENWBP,NPB,5/12/2022,Aquatic,NCOS,Phelps Bridge
+0L0KTXL0,PIER,5/12/2022,Aquatic,COPR,Pier
+6XDCL142,NVBR,5/13/2022,Aquatic,NCOS,Venoco Bridge
+12AI55MM,NEC,6/24/2022,Aquatic,NCOS,East Channel
+ZWDZ7WZK,NPB2,8/8/2022,Aquatic,NCOS,Phelps Bridge 2
+BMUDL134,PIER,8/9/2022,Aquatic,COPR,Pier
+91TGAHP8,NPB,8/10/2022,Aquatic,NCOS,Phelps Bridge
+RJD00L2Q,CUL1,8/18/2022,Aquatic,COPR,Culvert
+NO77X77Z,NEC,8/12/2022,Aquatic,NCOS,East Channel
+F0XPDBKX,NVBR,8/12/2022,Aquatic,NCOS,Venoco Bridge
+3LAFC32T,NMC,8/15/2022,Aquatic,NCOS,Main Channel
+AV00ETE1,MO1,8/26/2022,Aquatic,COPR,Mouth
+S034210,MO1,11/16/2021,Aquatic,COPR,Mouth
+S034179,NVBR,11/16/2021,Aquatic,NCOS,Venoco Bridge
+S034195,NPB2,11/16/2021,Aquatic,NCOS,Phelps Bridge 2
+S034169,owl pellet,,Feces,CCBER,ground owl pellet
+S034170,owl pellet,,Feces,CCBER,ground owl pellet
+S034149,owl pellet,,Feces,CCBER,ground owl pellet
+S034168,owl pellet,,Feces,CCBER,ground owl pellet
+S034214,owl pellet,,Feces,CCBER,unground owl pellet
+S034127,pollen,,Pollen,CCBER,Pollen from VMMV on Melissodes
+S034199,pollen,,Pollen,CCBER,Pollen from Bombus vosnesenskii from Lagoon island
+S034126,pollen,,Pollen,CCBER,Pollen from Bombus crotchii
+S034148,bird dropping,,Feces,CCBER,Semi palmated plover fresh dropping
+S034208,bird dropping,,Feces,CCBER,Least Sandpiper fresh dropping
+S034171,bird dropping,,Feces,CCBER,Killdeer fresh dropping
+S034158,soil amendment,,Soil,CCBER,BCOC-S (0-10)
+S034147,soil amendment,,Soil,CCBER,BCOC-D (30-40)
+S034166,soil amendment,,Soil,CCBER,BCBC-S (0-10)
+S034191,soil amendment,,Soil,CCBER,BCBC-D (30-40)
+S034138,soil amendment,,Soil,CCBER,BCOO-S (0-10)
+S034128,soil amendment,,Soil,CCBER,BCOO-D (30-40)
+S034202,soil amendment,,Soil,CCBER,OCBC-S (0-10)
+S034187,soil amendment,,Soil,CCBER,OCBC-D (30-40)
+S034155,soil amendment,,Soil,CCBER,OCOC-S (0-10)
+S034173,soil amendment,,Soil,CCBER,OCOC-D (30-40)
+S034150,soil amendment,,Soil,CCBER,OCOO-S (0-10)
+S034174,soil amendment,,Soil,CCBER,OCOO-D (30-40)
+S034205,owl pellet,,feces,CCBER,ground owl pellet
+VUKMSLPR,NPB1,11/19/2022,Aquatic,NCOS,Phelps Bridge 1
+RJRB1V9F,MO1,11/11/2022,Aquatic,COPR,Mouth
+M8XO50RP,PIER ,11/11/2022,Aquatic,COPR,Pier
+9CXHHFVN,NEC,11/12/2022,Aquatic,NCOS,East Channel
+3CHOPUC7,,,,CCBER,
+0XUIGO0E,NVBR,11/18/2022,Aquatic,NCOS,Venoco Bridge
+04Q3DGUX,NDC,11/19/2022,Aquatic,NCOS,Devereux Creek
+S034125,NPB2,9/5/2023,Bulk Inverts,NCOS,Phelps Bridge 2
+S034182,NWP,9/5/2023,Bulk Inverts,NCOS,West Pond
+S034203,NPB2,9/5/2023,Sediment,NCOS,Phelps Bridge 2
+S034204,NWP,9/5/2023,Sediment,NCOS,West Pond
+S034188,NVBR,9/5/2023,Bulk Inverts,NCOS,Venoco Bridge
+S034139,NVBR,9/5/2023,Sediment,NCOS,Venoco Bridge

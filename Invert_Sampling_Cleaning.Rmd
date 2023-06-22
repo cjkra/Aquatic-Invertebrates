@@ -83,6 +83,9 @@ inv2018 <- inv2018csv %>% clean_names() %>%
          
   # Format date
          date = dmy(date))
+
+# Remove erroneous clam_shrimp identification
+inv2018[inv2018$clam_shrimp <= 0.1, "clam_shrimp"] <- 0
 ```
 
 ### 2019 data
@@ -260,14 +263,24 @@ colNoID <- inv_factors[, 6:length(inv_factors)] %>% select_if(colSums(., na.rm =
 inv_factors <- inv_factors %>% select(-colNoID)
 
 # check no columns are missing (except totals)
-unique(c(setdiff(colnames(inv2021), c(colnames(inv), colNoID)), setdiff(colnames(inv2019), c(colnames(inv), colNoID)), setdiff(colnames(inv2018), c(colnames(inv), colNoID))))
+unique(c(setdiff(colnames(inv2021), c(colnames(inv_factors), colNoID)), setdiff(colnames(inv2019), c(colnames(inv_factors), colNoID)), setdiff(colnames(inv2018), c(colnames(inv_factors), colNoID))))
 ```
+
+## Combine redundant taxa
+```{r}
+inv_redundant <- inv_factors %>%
+  mutate(arachnida_acari = rowSums(.[c("arachnida_acari", "hydrachnidia")], na.rm = T),
+         gastropod_snail = rowSums(.[c("gastropod_snail", "mollusk")], na.rm = T)) %>%
+  select(-mollusk, -hydrachnidia)
+```
+
+
 # Add metadata
 
 ## Add variables for site metadata, breaching, and methods
 ```{r}
 # Create site metadata
-site_index <- data.frame(site = unique(inv$site)) %>% 
+site_index <- data.frame(site = unique(inv_redundant$site)) %>% 
   
 # Full site names
   mutate(site_name = c("Culvert", "Main Channel", "North of Venoco Bridge", "South of Venoco Bridge", "East Channel",
@@ -302,7 +315,7 @@ site_index <- data.frame(site = unique(inv$site)) %>%
                                 TRUE ~ "Extra"))
 
 # Add site metadata
-inv_meta <- inv_factors %>% left_join(site_index, by = c("site")) %>%
+inv_meta <- inv_redundant %>% left_join(site_index, by = c("site")) %>%
   
 # Add breaching status
   mutate(breach_status = case_when(date < "2018-03-22" ~ "closed",
@@ -329,47 +342,50 @@ inv_meta <- inv_factors %>% left_join(site_index, by = c("site")) %>%
          site, site_type, site_reserve, site_desc, 
          sample_type, filter_method, everything(), total, DO_mg_L:pH) 
 
+site_index %>% write_csv("cleaned_data/site_index.csv")
+
 rm(inv2018csv, inv2019csv, inv2020_22csv, wq2020_22csv)
 ```
 
 ## Add sample normalization factors
 ```{r}
 # Make season and year sample slough totals
-inv_szn_samp <- inv_meta %>% filter(site_type == "slough") %>% group_by(season, sample_type) %>%
+inv_szn_samp <- inv_meta %>% group_by(season, sample_type, site_type) %>%
   dplyr::summarize(season_samples = n())
 
-inv_yr_samp <- inv_meta %>% filter(site_type == "slough") %>% group_by(year, sample_type) %>%
+inv_yr_samp <- inv_meta %>% group_by(year, sample_type, site_type) %>%
   dplyr::summarize(year_samples = n())
 
-inv_site_samp <- inv_meta %>% filter(site_type == "slough") %>% group_by(site, sample_type) %>%
+inv_site_samp <- inv_meta %>% group_by(site, sample_type, site_type) %>%
   dplyr::summarize(site_samples = n())
 
 # Join sample totals to table
-inv <- inv_meta %>% left_join(inv_szn_samp, by = c("season", "sample_type")) %>% 
-  left_join(inv_yr_samp, by = c("year", "sample_type")) %>% 
-  left_join(inv_site_samp, by = c("site", "sample_type")) %>%
+inv_all <- inv_meta %>% left_join(inv_szn_samp, by = c("season", "sample_type", "site_type")) %>% 
+  left_join(inv_yr_samp, by = c("year", "sample_type", "site_type")) %>% 
+  left_join(inv_site_samp, by = c("site", "sample_type", "site_type")) %>%
   select(date, year, season, breach_status, 
-         site, site_type, site_reserve, site_desc, 
+         site, site_name, site_type, site_reserve, site_desc, 
          sample_type, filter_method, season_samples, year_samples, site_samples, everything(), total, DO_mg_L:pH)
 ```
 
+# Transform and write tables
 ```{r}
-inv %>% write.csv("cleaned_data/invert_sampling_tables/all_invert_data.csv")
+inv_all %>% write.csv("cleaned_data/invert_sampling_tables/all_invert_data.csv")
 
 # Make log transformation
-inv_log <- inv %>% mutate(across(ostracod:terrestrials, ~ log(.x + 1)))
+inv_log <- inv_all %>% mutate(across(ostracod:terrestrials, ~ log(.x + 1)))
 
 inv_log %>% write.csv("cleaned_data/invert_sampling_tables/all_invert_data_log.csv")
 
 rm(inv2018, inv2019, inv2021, colNoID, 
-   inv_site_samp, inv_szn_samp, inv_yr_samp, inv_factors, inv_meta)
+   inv_site_samp, inv_szn_samp, inv_yr_samp, inv_factors, inv_redundant, inv_meta)
 ```
 
 # Make long table
 
 ```{r}
 # All data long table
-invLong <- inv %>% pivot_longer(ostracod:terrestrials, 
+invLong <- inv_all %>% pivot_longer(ostracod:terrestrials, 
                                 names_to = "taxa", 
                                 values_to = "organisms_L") %>%
   
